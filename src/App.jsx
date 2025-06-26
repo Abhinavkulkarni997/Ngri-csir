@@ -1,11 +1,14 @@
 import './App.css'
-import Navbar from './components/Navbar'
-
+import Banner from './components/Banner/Banner';
+import Navbar from './components/Navbar/Navbar'
+import Navbar1 from './components/Navbar/Navbar1';
 function App() {
   return (
     <>
-      <div>
-      <Navbar/>
+      <div className="pt-0 w-full min-h-screen">
+      {/* <Navbar/> */}
+      <Navbar1/>
+      <Banner/>
       </div>
       
     </>
