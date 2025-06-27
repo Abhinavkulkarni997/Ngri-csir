@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/CCMB-logo.png"; 
 import logo1 from "../../assets/images/ngri-logo.png"; 
-import { FaBars } from 'react-icons/fa';
+import { FaBars} from 'react-icons/fa';
+import {RiCloseFill} from 'react-icons/ri';
 
 const Navbar1 = () => {
   const[isMenuOpen,setIsMenuOpen]=useState(false);
@@ -41,8 +42,8 @@ const Navbar1 = () => {
 
 
 {/* Mobile Menu Button */}
-<button onClick={()=>toggleMenuOpen()} className="rounded-lg">
-<FaBars />
+<button onClick={toggleMenuOpen} className="rounded-lg">
+{isMenuOpen?<RiCloseFill size={20}/>:<FaBars size={20} />}
 
 </button>
 {/*Mobile view of Navigation Menu*/}
