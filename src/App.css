@@ -5,7 +5,13 @@
   text-align: center;
   background-color:whitesmoke;
 }
-
+/* Better text wrapping on very small screens */
+@media (max-width: 320px) {
+  .navbar-title {
+    font-size: 0.625rem !important; /* 10px */
+    line-height: 1.2 !important;
+  }
+}
 /* .logo {
   height: 6em;
   padding: 1.5em;
