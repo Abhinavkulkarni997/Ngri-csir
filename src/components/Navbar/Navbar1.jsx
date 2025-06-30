@@ -12,7 +12,7 @@ const Navbar1 = () => {
     setIsMenuOpen(!isMenuOpen);
   }
   return (
-  <nav className="fixed top-0 left-0 bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full shadow-md z-50 ">
+  <nav className="fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-hidden shadow-md z-50">
   <div className="flex items-center justify-between p-4">
 {/* Logo and Title Section */}
 <div className="flex items-center space-x-2 md:space-x-4 flex-shrink-0">
@@ -29,15 +29,15 @@ const Navbar1 = () => {
 
 
 {/*Desktop view of Navigation */}
-<ul className=" hidden  gap-6 lg:flex item-center space-x-4 xl:space-x-6 ">
+<ul className=" hidden  flex-wrap  sm:flex-wrap md:flex-wrap xl:flex-wrap 2xl:flex-wrap lg:flex justify-center space-x-4 xl:space-x-6">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white  ">Home</a></li>
-  <li><a href="#about" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">About Us </a></li>
-  <li><a href="#R&DGroups" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">R & D Groups</a></li>
-<li><a href="People" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">People</a></li>
- <li><a href="#Resources" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" >Resources</a></li>
- <li> <a href="#JoinUs" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">Join Us</a></li>
- <li><a href="#language" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">English</a></li>
- <li><a href="#screenreaderaccess" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white">Screenreaderaccess</a></li>
+  <li><a href="#about" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">About Us </a></li>
+  <li><a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12 ">R & D Groups</a></li>
+<li><a href="People" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">People</a></li>
+ <li><a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12" >Resources</a></li>
+ <li> <a href="#JoinUs" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">Join Us</a></li>
+ <li><a href="#language" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">English</a></li>
+ <li><a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">Screenreaderaccess</a></li>
  {/* <div className="flex items-center"> */}
  <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500 rounded-xl px-4 py-4 ">Staff Corner</a></li>
  {/* </div> */}
