@@ -55,28 +55,28 @@ const Footer = () => {
     </div>
 
 
-<div className="flex flex-col items-end mr-20 mb-20">
+<div className="flex flex-col items-end mr-20 px-20 space-y-10 ">
   <p className="text-[30px] font-bold text-white">Find Us Online</p> 
 
   {/* Facebook */}
   <a href="https://facebook.com/csirngrihyd" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
-    <FaSquareFacebook size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300 " />
+    <FaSquareFacebook size={30} className="text-white z-10 group-hover:scale-125 transition-transform duration-300 " />
   </a> 
 
   {/* Twitter / X */}
  <a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
-    <FaSquareXTwitter size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
+    <FaSquareXTwitter size={30} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
   </a> 
 
   {/* YouTube */}
   <a href="https://youtube.com/yourpage" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
-    <FaYoutubeSquare size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
+    <FaYoutubeSquare size={30} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
   </a>
 
   
