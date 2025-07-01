@@ -1,77 +1,76 @@
 import React from "react";
 import logo1 from "../../assets/images/ngri-logo.png";
-import { FaSquareFacebook,FaSquareXTwitter} from "react-icons/fa6";
-import { FaYoutubeSquare } from "react-icons/fa";
+import { FaArrowPointer, FaArrowRight, FaArrowRotateRight, FaChevronRight, FaSquareFacebook,FaSquareXTwitter} from "react-icons/fa6";
+import { FaArrowCircleRight, FaYoutubeSquare } from "react-icons/fa";
+import VisitorsCount from "./visitorsCount";
 
 const Footer = () => {
   return (
-    <footer className=" bg-gradient-to-br from-purple-500 via-blue-900 to indigo-900 bg-sky-500 backdrop-blur-md border-t border-white/20 shadow-md  ">
+    <footer className=" relative bg-gradient-to-br from-purple-600 via-blue-900 to-sky-600 backdrop-blur-md border-t border-white/20 shadow-md  ">
       {/* Footer content */}
-      <div className="grid grid-cols-1">
-        <a href="#">
+      <div className="grid grid-cols-1 max-w-[1240px] mx-auto py-16 px-4 gap-8 md:grid-cols-5 sm:grid-cols-5 lg:grid-cols-5">
+        <a href="#" className="flex mx-auto max-w-[1240px]">
           <img src={logo1} alt="logo" className="h-24 w-24 md:h-24 md:w-24" />
         </a>
-      </div>
+      
 
-      <div className="grid grid-cols-5 gap-x-5  md:grid-cols-5">
-        <ul>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">POSH</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">LGC</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">RTI</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">Tenders</li></a>
+      <div className="flex  max-w-[1241px]  mx-auto justify-center gap-x-4 text-center md:text-left sm:text-left lg:text-left">
+    
+        <ul className="space-y-3">
+        <li> <FaChevronRight  size={20} className="text-white">
+
+        </FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">POSH</a></li>
+
+         <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">LGC</a></li>
+         <li> <FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">RTI</a></li>
+         <li> <FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">Tenders</a></li>
         </ul>
 
-        <ul>
-         <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CSIR</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CSIR-AMS</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">E-OFFICE</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">E-HRMS 2.0</li></a>
+        <ul className="space-y-3 mt-5">
+         <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CSIR</a></li>
+         <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CSIR-AMS</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">E-OFFICE</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">E-HRMS 2.0</a></li>
         </ul>
-          <ul>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">AeBAS</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">WEB-MAIL</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">SHE-BOX</li></a>
+          <ul className="space-y-3 mt-5">
+            <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">AeBAS</a></li>
+            <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">WEB-MAIL</a></li>
+            <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">SHE-BOX</a></li>
+          </ul>
+        <ul className="space-y-3 mt-5">
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">GUEST HOUSE</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">STAFF CLUB</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">INCOME TAX</a></li>
+
         </ul>
-        <ul>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">GUEST HOUSE</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">STAFF CLUB</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">INCOME TAX</li></a>
-        
-        </ul>
-        <ul>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CONTACT US</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">WEBSITE POLICIES</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">DISCLAIMER</li></a>
-          <a href="#"><li className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">ARCHIVE</li></a>
+        <ul className="space-y-3 mt-5">
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">CONTACT US</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">WEBSITE POLICIES</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">DISCLAIMER</a></li>
+          <li><FaChevronRight  size={20} className="text-white"></FaChevronRight><a href="#" className="font-semibold text-white hover:underline underline-offset-2 text-decoration:none">ARCHIVE</a></li>
         </ul>
       
       </div>
-      <div className="flex flex-wrap gap-5 justify-center items-center  mt-10">
-        <p className="text-[30px] font-bold text-white w-full text-center mb-4">Find Us Online</p>
-       <a href="https://www.facebook.com/csirngrihyd/"> 
-       <FaSquareFacebook size={30} className="text-white text-2xl rounded-4xl hover:bg-sky-500 bg-transparent transition duration-500 shadow-md" />
-       </a>
-       <a href="https://x.com/csirngri"> <FaSquareXTwitter size={30} className="text-white text-2xl rounded-lg hover:bg-black bg-transparent transition duration-500 shadow-md" /></a>
-       <a href="https://www.youtube.com/@csir-ngri"> <FaYoutubeSquare size={30} className="text-white text-2xl rounded-lg hover:bg-red-500 bg-transparent transition duration-500 shadow-md" /></a>
-      </div>
+
+    </div>
 
 
-<div className="flex justify-center items-center gap-5 mt-10 flex-wrap">
-  <p className="text-[30px] font-bold text-white w-full text-center mb-4">Find Us Online</p>
+<div className="flex  justify-left items-center gap-5 mt-10 flex-wrap">
+  <p className="text-[30px] font-bold text-white w-full text-center mb-4">Find Us Online</p> 
 
   {/* Facebook */}
-  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer"
+  <a href="https://facebook.com/csirngrihyd" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
     <FaSquareFacebook size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
-  </a>
+  </a> 
 
   {/* Twitter / X */}
-  <a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer"
+ <a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
     <FaSquareXTwitter size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
-  </a>
+  </a> 
 
   {/* YouTube */}
   <a href="https://youtube.com/yourpage" target="_blank" rel="noopener noreferrer"
@@ -79,13 +78,21 @@ const Footer = () => {
     <span className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
     <FaYoutubeSquare size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
   </a>
-</div> 
+
+  
+</div>  
+
+
+      {/* Visitors Count Section */}
+      <div className="flex justify-center items-center mt-6">
+  <span className="text-white"><VisitorsCount size={30} /></span>
+      </div>
 
 
 
-      
-      <div className="text-center text-white py-4 mt-40">
-        <p className="text-sm font-semibold">
+      {/* Bottom section: All rights reserved*/}
+      <div className="border-t  text-center text-white py-8 px-4 border-white/20 ">
+        <p className="text-xs sm:text-sm font-semibold max-w-4xl mx-auto loading-relaxed">
   © 2025 Crafted and maintained by CSIR-NGRI's IT Division, Hyderabad. All rights reserved.
 </p>
   </div>
