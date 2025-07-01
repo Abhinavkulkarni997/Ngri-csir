@@ -55,14 +55,14 @@ const Footer = () => {
     </div>
 
 
-<div className="flex  justify-left items-center gap-5 mt-10 flex-wrap">
-  <p className="text-[30px] font-bold text-white w-full text-center mb-4">Find Us Online</p> 
+<div className="flex flex-col items-end mr-20 mb-20">
+  <p className="text-[30px] font-bold text-white">Find Us Online</p> 
 
   {/* Facebook */}
   <a href="https://facebook.com/csirngrihyd" target="_blank" rel="noopener noreferrer"
      className="relative group w-14 h-14 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
-    <FaSquareFacebook size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300" />
+    <FaSquareFacebook size={28} className="text-white z-10 group-hover:scale-125 transition-transform duration-300 " />
   </a> 
 
   {/* Twitter / X */}
