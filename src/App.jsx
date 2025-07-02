@@ -7,10 +7,14 @@ import Footer1 from './components/Footer/Footer1.jsx';
 function App() {
   return (
     <>
-      <div className="pt-0 w-full min-h-screen">
+      <div className="min-h-screen flex flex-col">
       {/* <Navbar/> */}
       <Navbar1/>
+      <main className='flex-grow'>
+
       <Hero/>
+      </main>
+      
       <Footer/>
       {/* <Footer1/> */}
       </div>

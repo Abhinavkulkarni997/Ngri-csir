@@ -6,24 +6,18 @@ const VisitorsCount = () => {
     // logic to fetch visitors count from the database
 
     useEffect(()=>{
-        const getVisitorsCount=()=>{
-            fetch()
-            .then((response) => response.json())
-            .then((data) => {
-                setVisitorsCount(data.count);
-            })
-            .catch((error) => {
-                console.error("Error fetching visitors count:", error);
-            });
-        };
-
-        getVisitorsCount();
+        const initialCount = Number(localStorage.getItem('visitorsCount')) || 0;
+        setVisitorsCount(initialCount+1);
     },[]);
+    useEffect(()=>{
+        localStorage.setItem('visitorsCount', visitorsCount);
+    },[visitorsCount]);
 
   return (
 
 
-    <div>Visitors Count:{visitorsCount}</div>
+    <div>Visitors Count : <br/>
+    Total: <span className='text-white'>{visitorsCount}</span> | Today: <span className='text-white'>{visitorsCount}</span></div>
   )
 }
 
