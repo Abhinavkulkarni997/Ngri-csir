@@ -7,8 +7,8 @@ import './meteors.css';
 const Footer = () => {
   return (
     <footer className=" bg-gradient-to-br from-purple-900 via-blue-600 to-sky-900 backdrop-blur-md border-t border-white/20 shadow-md  ">
-{/*<div className="meteors-container">
-   {Array.from({ length: 25 }).map((_, i) => (
+<div className="meteors-container">
+   {/* {Array.from({ length: 25 }).map((_, i) => (
     <div
       key={i}
       className="meteor"
@@ -19,8 +19,8 @@ const Footer = () => {
         animationDelay: `${Math.random() * 10}s`,
       }}
     />
-  ))}
-</div> */}
+  ))} */}
+</div> 
       {/* Footer content */}
       <div className="grid grid-cols-1 justify-center max-w-[1240px] gap-6  mx-auto py-16 px-4 gap-x-1 md:grid-cols-4 sm:grid-cols-5 lg:grid-cols-5">
         <a href="#" className="flex mx-auto max-w-[1240px]">
