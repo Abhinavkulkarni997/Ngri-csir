@@ -12,7 +12,7 @@ const Hero = () => {
     <MdOutlineKeyboardDoubleArrowDown className="hover:bg-black" size={32} />
   </button>
 </div>
-    <video src={video} className='w-full h-auto shadow-lg object-cover min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px]'  autoPlay muted loop type="video/mp4">
+    <video src={video} className='w-full rounded-2xl h-auto shadow-lg object-cover min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px]'  autoPlay muted loop type="video/mp4">
      
     </video>
     </div>

@@ -5,6 +5,8 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Navbar1 from './components/Navbar/Navbar1';
 import Footer1 from './components/Footer/Footer1.jsx';
 import ProfileCard from './components/ProfileCards/ProfileCard.jsx';
+import ResearchDevelopment from './components/ResearchandDevelopment/ResearchandDevelopment.jsx';
+
 function App() {
   return (
     <>
@@ -14,6 +16,8 @@ function App() {
       <main className='flex-grow'>
 
       <Hero/>
+      <ResearchDevelopment/>
+
       <ProfileCard/>
       </main>
       
