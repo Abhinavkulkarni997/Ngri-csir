@@ -38,7 +38,7 @@ const ResearchData = [
     title: "Geo-resources (Hydrocarbon, Minerals, Water)",
     image: c2,
     researchPageURL: "https://www.ngri.res.in/cms/georesources.php",
-    description: "",
+    description: "Magnetotelluric (MT) is a passive EM technique that uses variations in the naturally occurring Electromagnetic fields to model the subsurface resistivity structure. Due to the broad range of frequency (104 – 10-4 Hz) utilized in MT, this tool can give subsurface information of the order of a few 10’s meters to a few 100’s kms. Therefore, MT finds applications in shallow exploration studies for various earth resources and deep crustal and upper mantle imaging to understand the dynamics and evolution of the lithosphere. Since resistivity of earth materials shows a huge range of variation (10-2 to 106) as compared to other physical properties, measurement of resistivity property helps to distinguish between different rock formations and in-situ physical conditions. In hydrocarbon studies, the generally conductive sedimentary formation can be easily mapped from the encompassing resistive formations. Therefore, MT is used as a complementary tool along with seismic data to de-risk exploration. In seismically poor geological settings, such as volcanic or basaltic covered and complex overthrust settings, MT is more effective and provides better constraints on the target structure.",
   },
   {
     id: 3,
@@ -98,7 +98,7 @@ const ResearchDevelopment = () => {
 
   return (
     <section className="text-white bg-blue-900 py-12 px-4 sm:px-8">
-      <h2 className="text-white text-3xl font-bold text-center mb-14  uppercase md:uppercase ">
+      <h2 className=" text-5xl font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
         Research and Development
       </h2>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
@@ -111,27 +111,36 @@ const ResearchDevelopment = () => {
             hover:text-white hover:shadow-[inset_40rem_0_0_0] hover:shadow-yellow-500 
             ${
               activeId === research.id
-                ? "bg-yellow-500 text-black font-bold"
-                : "bg-white text-black"
-            }`}
+                ? "bg-yellow-500 text-black font-bold shadow-md"
+                : "bg-white text-blue-900 "
+            } hover:text-white hover:shadow-[inset_40rem_0_0_0] hover:shadow-yellow-500`}
             >
               <span className="font-bold text-blue-900 uppercase p-3">
                 {research.title}
               </span>
+              {activeId === research.id && (
               <span className="bg-white rounded-full p-4">
-                <FiArrowUpRight size={16} />
-              </span>
+                <FiArrowUpRight size={18} />
+              </span>)}
             </button>
           ))}
         </div>
 
         <div className="w-full lg:w-2/3 space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-white">
-            {activeResearch.title}
+          <h2 className="  text-2xl sm:text-3xl font-semibold text-white">  {activeResearch.title}
           </h2>
+         {activeResearch.image &&(
+          <img
+            src={activeResearch.image}
+            alt={activeResearch.title}
+            className="rounded-xl shadow-xl max-w-full max-h-[400px]  mx-auto object-cover lg:max-0 p-6 bg-blue-900"
+          />
+          )}
+        
+          
 
           {activeResearch.description &&(
-          <p className=" text-gray-100 leading-relaxed">
+          <p className=" text-gray-100 leading-relaxed p-12">
             {activeResearch.description}
             
           </p>)}
@@ -141,18 +150,14 @@ const ResearchDevelopment = () => {
             href={activeResearch.researchPageURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-500 text-black font-semibold px-5 py-2 rounded-full hover:bg-yellow-400 transition"
+            className="inline-block bg-white text-black font-semibold px-5 py-2 rounded-full
+            transition-all duration-700 
+            hover:text-white hover:shadow-[inset_8rem_0_0_0] hover:shadow-yellow-500 "
           >
             Read More
           </a>)}
 
-          {activeResearch.image &&(
-          <img
-            src={activeResearch.image}
-            alt={activeResearch.title}
-            className="rounded-lg shadow-lg w-full max-w-xl mt-4"
-          />
-          )}
+         
         </div>
       </div>
     </section>

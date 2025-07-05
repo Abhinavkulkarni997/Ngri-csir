@@ -10,7 +10,7 @@ import ResearchDevelopment from './components/ResearchandDevelopment/Researchand
 function App() {
   return (
     <>
-      <div className="min-h-screen flex flex-col w-full overflow-hidden">
+      <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       {/* <Navbar/> */}
       <Navbar1/>
       <main className='flex-grow'>

@@ -20,8 +20,8 @@ const Navbar1 = () => {
 <img src={logo} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
 <img src={logo1} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
   <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">
-       <span className="text-white">CSIR-NGRI</span><br/>
-        <span className="text-white">National Geophysical Research Institute</span>
+       <span className="text-white animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600">CSIR-NGRI</span><br/>
+        <span className="text-white animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600">National Geophysical Research Institute</span>
   </h1>
 </Link>
 
