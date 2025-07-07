@@ -10,8 +10,9 @@ import c4 from "../../assets/images/ResearchandDevelopment/c4.jpg";
 import c7 from "../../assets/images/ResearchandDevelopment/c7.jpg";
 import c6 from "../../assets/images/ResearchandDevelopment/c6.jpg";
 import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
-import { useState } from "react";
+import { useState ,useEffect,useRef} from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import {animate, motion} from 'framer-motion';
 
 
 const ResearchData = [
@@ -95,6 +96,11 @@ const ResearchData = [
 const ResearchDevelopment = () => {
   const [activeId, setActiveId] = useState(0);
   const activeResearch = ResearchData.find((research) => (research.id === activeId));
+  const contentRef=useRef(null);
+
+  useEffect(()=>{
+    contentRef.current?.scrollIntoView({behavior:'smooth',block:'start'})
+  },[activeId])
 
   return (
     <section className="text-white bg-blue-900 py-12 px-4 sm:px-8">
@@ -102,12 +108,20 @@ const ResearchDevelopment = () => {
         Research and Development
       </h2>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
-        <div className="w-full flex flex-col  lg:w-1/3  gap-4">
+        <div 
+       
+        className="w-full flex flex-col  lg:w-1/3  gap-4">
           {ResearchData.map((research) => (
-            <button
+        
+            <motion.button
+             initial={{opacity:0,
+             }}
+        animate={{opacity:1}}
+        whileHover={{scale:1.2}}
+        transition={{duration:10}}
               key={research.id}
               onClick={() => setActiveId(research.id)}
-              className={`flex justify-between items-center px-6 py-3 rounded-full rounded-r-lg text-left transition-all duration-700 
+              className={`flex justify-between items-start px-1 py-3 rounded-full rounded-r-lg text-left transition-all duration-700 
             hover:text-white hover:shadow-[inset_40rem_0_0_0] hover:shadow-yellow-500 
             ${
               activeId === research.id
@@ -119,20 +133,37 @@ const ResearchDevelopment = () => {
                 {research.title}
               </span>
               {activeId === research.id && (
-              <span className="bg-white rounded-full p-4">
+              <motion.span className="bg-white rounded-full p-4"
+              initial={{ x: -10, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.4, ease: "easeOut" }}
+              
+              >
                 <FiArrowUpRight size={18} />
-              </span>)}
-            </button>
+              </motion.span>)}
+            </motion.button>
           ))}
+          
         </div>
 
-        <div className="w-full lg:w-2/3 space-y-4">
-          <h2 className="  text-2xl sm:text-3xl font-semibold text-white">  {activeResearch.title}
-          </h2>
+
+
+
+        <div ref={contentRef} className="w-full lg:w-2/3 space-y-4">
+          <motion.h3
+           initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          // viewport={{once:true}}
+          className="  text-2xl sm:text-3xl font-semibold text-white">  {activeResearch.title}
+          </motion.h3>
          {activeResearch.image &&(
-          <img
+          <motion.img
             src={activeResearch.image}
             alt={activeResearch.title}
+            initial={{opacity:0,scale:0.95}}
+            animate={{opacity:1,scale:1}}
+            transition={{duration:1.05,delay:0.3}}
             className="rounded-xl shadow-xl max-w-full max-h-[400px]  mx-auto object-cover lg:max-0 p-6 bg-blue-900"
           />
           )}
@@ -140,22 +171,29 @@ const ResearchDevelopment = () => {
           
 
           {activeResearch.description &&(
-          <p className=" text-gray-100 leading-relaxed p-12">
+          <motion.p 
+            initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+          className=" text-gray-100 leading-relaxed p-12">
             {activeResearch.description}
             
-          </p>)}
+          </motion.p>)}
 
           {activeResearch.researchPageURL &&(
-          <a
+          <motion.a
             href={activeResearch.researchPageURL}
             target="_blank"
             rel="noopener noreferrer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
             className="inline-block bg-white text-black font-semibold px-5 py-2 rounded-full
             transition-all duration-700 
             hover:text-white hover:shadow-[inset_8rem_0_0_0] hover:shadow-yellow-500 "
           >
             Read More
-          </a>)}
+          </motion.a>)}
 
          
         </div>
