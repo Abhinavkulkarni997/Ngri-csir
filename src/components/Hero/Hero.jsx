@@ -158,7 +158,7 @@ const Hero = () => {
       <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
         <button
           onClick={handleScrollDown}
-          className="text-white p-4 rounded-full animate-bounce hover:bg-gray-800 transition-colors"
+          className="text-white p-4 rounded-full  hover:bg-white hover:text-black transition-colors"
         >
           <MdOutlineKeyboardDoubleArrowDown size={32} />
         </button>

@@ -12,7 +12,8 @@ import c6 from "../../assets/images/ResearchandDevelopment/c6.jpg";
 import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
 import { useState ,useEffect,useRef} from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import {animate, motion} from 'framer-motion';
+import {FcGlobe} from 'react-icons/fc';
+import {motion} from 'framer-motion';
 
 
 const ResearchData = [
@@ -104,7 +105,7 @@ const ResearchDevelopment = () => {
 
   return (
     <section className="text-white bg-blue-900 py-12 px-4 sm:px-8">
-      <h2 className=" text-5xl font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
+      <h2 className=" text-5xl font-sans font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
         Research and Development
       </h2>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
@@ -114,63 +115,73 @@ const ResearchDevelopment = () => {
           {ResearchData.map((research) => (
         
             <motion.button
-             initial={{opacity:0,
-             }}
+             initial={{opacity:0,}}
         animate={{opacity:1}}
         whileHover={{scale:1.2}}
         transition={{duration:10}}
               key={research.id}
               onClick={() => setActiveId(research.id)}
-              className={`flex justify-between items-start px-1 py-3 rounded-full rounded-r-lg text-left transition-all duration-700 
-            hover:text-white hover:shadow-[inset_40rem_0_0_0] hover:shadow-yellow-500 
+              className={`flex justify-between items-start px-1 py-3 rounded-full rounded-r-lg text-left transition-all duration-700 relative overflow-hidden
+           
             ${
               activeId === research.id
                 ? "bg-yellow-500 text-black font-bold shadow-md"
                 : "bg-white text-blue-900 "
             } hover:text-white hover:shadow-[inset_40rem_0_0_0] hover:shadow-yellow-500`}
             >
-              <span className="font-bold text-blue-900 uppercase p-3">
+              
+              <span className="font-bold text-blue-900  p-2  relative z-10">
                 {research.title}
               </span>
               {activeId === research.id && (
-              <motion.span className="bg-white rounded-full p-4"
-              initial={{ x: -10, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.4, ease: "easeOut" }}
+              <motion.span className="bg-white rounded-full  ml-auto relative z-10 transition-all duration-700 ${
+              activeId===research.id?' translate-x-0 opacity:100':'-translate-x-full opacity-0'}"
+              initial={{ x: -50, opacity: 0 }}
+    animate={{ x: activeId===research.id?0:-50, opacity: activeId===research.id?1:0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
               
               >
-                <FiArrowUpRight size={18} />
+                <FcGlobe size={40} />
               </motion.span>)}
             </motion.button>
           ))}
+
+          
           
         </div>
+        
 
 
 
 
-        <div ref={contentRef} className="w-full lg:w-2/3 space-y-4">
+        <div ref={contentRef} className="w-full lg:w-2/3 space-y-6  rounded-xl shadow-xl  border border-sky-500 p-2 relative">
           <motion.h3
            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           // viewport={{once:true}}
-          className="  text-2xl sm:text-3xl font-semibold text-white">  {activeResearch.title}
+          className="  text-2xl sm:text-3xl font-semibold text- p-4">  {activeResearch.title}
           </motion.h3>
-         {activeResearch.image &&(
+
+          
+
+         {activeResearch.image && (
+          <Link to={activeResearch.researchPageURL}>
           <motion.img
             src={activeResearch.image}
             alt={activeResearch.title}
             initial={{opacity:0,scale:0.95}}
             animate={{opacity:1,scale:1}}
             transition={{duration:1.05,delay:0.3}}
-            className="rounded-xl shadow-xl max-w-full max-h-[400px]  mx-auto object-cover lg:max-0 p-6 bg-blue-900"
+            className="rounded-xl shadow-xl max-w-full max-h-[400px]  mx-auto object-cover lg:max-0 p-6 bg-white"
           />
+          </Link>
+
           )}
         
           
 
-          {activeResearch.description &&(
+          {activeResearch.description && (
           <motion.p 
             initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -180,7 +191,7 @@ const ResearchDevelopment = () => {
             
           </motion.p>)}
 
-          {activeResearch.researchPageURL &&(
+          {activeResearch.researchPageURL && (
           <motion.a
             href={activeResearch.researchPageURL}
             target="_blank"
@@ -193,7 +204,8 @@ const ResearchDevelopment = () => {
             hover:text-white hover:shadow-[inset_8rem_0_0_0] hover:shadow-yellow-500 "
           >
             Read More
-          </motion.a>)}
+          </motion.a>
+          )}
 
          
         </div>
@@ -201,5 +213,6 @@ const ResearchDevelopment = () => {
     </section>
   );
 };
+
 
 export default ResearchDevelopment;
