@@ -70,14 +70,14 @@ const Footer = () => {
   </a> 
 
   {/* Twitter / X */}
- <a href="https://x.com/yourpage" target="_blank" rel="noopener noreferrer"
+ <a href="https://x.com/csirngri" target="_blank" rel="noopener noreferrer"
      className="relative group w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md ">
     <span className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full "></span>
     <FaSquareXTwitter size={30} className="text-white z-10 hover:animate-bounce  group-hover:scale-125 transition-transform duration-300" />
   </a> 
 
   {/* YouTube */}
-  <a href="https://youtube.com/yourpage" target="_blank" rel="noopener noreferrer"
+  <a href="https://youtube.com/@csir-ngri" target="_blank" rel="noopener noreferrer"
      className="relative group w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md">
     <span className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
     <FaYoutubeSquare size={30} className="text-white z-10 hover:animate-bounce group-hover:scale-125 transition-transform duration-300" />

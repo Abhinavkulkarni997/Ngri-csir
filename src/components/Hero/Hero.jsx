@@ -92,6 +92,7 @@ import video from '../../assets/videos/Herovideo.mp4';
 import { FaPlay, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
+
 const Hero = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
@@ -163,6 +164,7 @@ const Hero = () => {
           <MdOutlineKeyboardDoubleArrowDown size={32} />
         </button>
       </div>
+    
     </div>
   );
 };

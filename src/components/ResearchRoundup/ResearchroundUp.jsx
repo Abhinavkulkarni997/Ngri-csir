@@ -1,4 +1,3 @@
-import React from 'react'
 import RNMay1 from '../../assets/images/ResearchRoundUp/RN-May-1.jpeg';
 import RNMay2 from '../../assets/images/ResearchRoundUp/RN-May-2.jpeg';
 import RNMay3 from '../../assets/images/ResearchRoundUp/RN-May-3.jpeg';
@@ -6,6 +5,7 @@ import RNMay4 from '../../assets/images/ResearchRoundUp/RN-May-4.jpeg';
 import RNMay5 from '../../assets/images/ResearchRoundUp/RN-May-5.png';
 import RNMay6 from '../../assets/images/ResearchRoundUp/RN-May-6-1.jpg';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 const ResearchroundUp = () => {
     const ResearchroundUp=[{
       id:0,
@@ -45,34 +45,63 @@ const ResearchroundUp = () => {
     }
   
   ]
+  const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
   return (
     <section className=' bg-white  py-16 px-4 sm:px-8'>
-    <div className='max-w-7xl-mx-auto'>
-     <h1 className='text-4xl md:text-5xl bg-transparent uppercase md:uppercase mb-12 font-bold text-center '>Research RoundUP</h1>
+    <div className='max-w-7xl mx-auto'>
+     <h1 className='text-4xl md:text-5xl  uppercase  mb-12 font-bold text-center '>Research RoundUP</h1>
     <div className='flex  flex-wrap gap-6 justify-center'>
-    {ResearchroundUp.map(researchItem=>(
-      <div className='group' key={researchItem.id}>
+    {ResearchroundUp.map((researchItem,index)=>(
+      <motion.div className='group w-full sm:w-[300px] perspective border-4 border-transparent' key={researchItem.id}
+      variants={cardVariants}
+      initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+               whileHover={{ rotateY: 5, rotateX: 5, scale: 1.03 }}
+               style={{ transformStyle: "preserve-3d" }}
+      
+      >
+ <Link to={researchItem.pageURL} target="_blank" rel="noopener noreferrer"
+ className='block bg-white shadow-2xl rounded-2xl hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden' >
     <div className=" relative overflow-hidden">
-    <Link to={researchItem.pageURL} target="_blank" rel="noopener noreferrer">
-      <img src={researchItem.image} alt={researchItem.description} 
-      className='h-64 w-full  mx-auto object-cover mb-4 border-4 transition-transform duration-300 group-hover:scale-105' />
+      <motion.img src={researchItem.image} alt={researchItem.description} 
+      whileHover={{scale:1.05}}
+      transition={{duration:0.4}}
+      className='h-64 w-full   object-cover rounded-t-2xl mb-4 border-4 transition-transform duration-300 group-hover:scale-105' />
 
-         <div className='absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-      </Link></div>
-     
-            <div className='p-6 mx-auto bg-sky-700'> 
-        <h2 className='text-lg font-semibold  text-gray-900 hover:text-white line-clamp-3 loading-relaxed group-hover:text-blue-500 transition-colors duration-200'>
+         <motion.div className='absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+         whileHover={{scale:1.05}}
+         transition={{duration:0.3}}
+         ></motion.div>
+      </div>
+      {/*Description  */}
+            <motion.div className='p-6 border-t border-gray-200 mx-auto '
+            initial={{opacity:0,y:20}}
+            whileInView={{opacity:1,y:0}}
+            transition={{delay:0.2,duration:0.6}}
+            > 
+        <h2 className='text-lg font-semibold  text-gray-900  line-clamp-3 loading-relaxed group-hover:text-blue-600 transition-colors duration-200'>
           {researchItem.description}</h2>
-      </div>
-
       {/* Read More */}
-      <div className='mt-4 flex items-center font-bold '>Read More
-      </div>
-    
-    </div>
+          <motion.div className='mt-4 flex items-center text-blue-600 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 '
+          whileHover={{x:4}}
+          transition={{duration:0.3}}
+          >Read More
+        <svg className='w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1' fill= 'none' stroke='currentColor' viewBox='0 0 24 24'>
+          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+        </svg>
+      </motion.div>      
+      </motion.div>
+      </Link> 
+    </motion.div>
+  
     ))}
     </div>
-    
     </div>
     </section>
     )

@@ -7,6 +7,7 @@ import Footer1 from './components/Footer/Footer1.jsx';
 import ProfileCard from './components/ProfileCards/ProfileCard.jsx';
 import ResearchDevelopment from './components/ResearchandDevelopment/ResearchandDevelopment.jsx';
 import ResearchroundUp from './components/ResearchRoundup/ResearchroundUp.jsx';
+import SocialMedia from './components/SocialMediaEngagement/SocialMedia.jsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <ResearchDevelopment/>
 
       <ProfileCard/>
+      <SocialMedia/>
       </main>
       
       <Footer/>
