@@ -1,42 +1,47 @@
 import { FaFacebook,FaYoutube,FaXTwitter } from "react-icons/fa6";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialYoutube } from "react-icons/sl";
-const SocialMedia = () => {
-    const socialmedia=[{
+
+  const socialmedia=[{
         id:0,
         title:'Facebook',
-        URL:'https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/csirngrihyd&tabs=timeline&width=320&height=900&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true',
+        URL:'https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/csirngrihyd&tabs=timeline&width=470&height=875&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true',
         icon:SlSocialFacebook,
-    },{
+    },
+    {
         id:1,
         title:'Twitter',
-        URL:'https://twitter.com/csirngri',
+        //  URL:'https://twitframe.com/show?url=https://twitter.com/csirngri',
         icon:FaXTwitter,
-    },{
+    },
+    {
         id:2,
         title:'Youtube',
-        URL:'https://www.youtube.com/embed/mp02ZQZbbU8&t=1s',
+         URL:'https://www.youtube.com/embed/mp02ZQZbbU8',
         icon:SlSocialYoutube,
     }]
+const SocialMedia = () => {
+  
   return (
     <section className='bg-indigo-600 py-16 px-4 sm:px-8'>
     <div className='max-w-7xl mx-auto '>
         <h1 className='text-3xl font-bold text-white mb-10 '>Social Engagements</h1>
         <div className='flex flex-wrap gap-6 justify-center'>
             {socialmedia.map((mediaItem)=>(
-                <div className=' flex flex-wrap bg-white  rounded-2xl shadow-lg p-4 mx-auto w-[320px] h-[420px] overflow-hidden' key={mediaItem.id}>
-                <div className="overflow-y-scroll rounded-xl w-full h-full">
-                <mediaItem.icon size={30} className="mb-4"/>
+                <div className=' flex flex-col bg-white  rounded-2xl shadow-lg p-4  sm:w-[500px] h-[500px] ' key={mediaItem.id}>
+                <div className="flex items-center gap-3 mb-4  font-semibold ">
+                <mediaItem.icon size={30} className=" text-2xl" />
+                 <span >{mediaItem.title}</span> 
+                </div>
+                <div className="w-full h-full overflow-y-auto border border-gray-100 rounded-md">
+                {mediaItem.URL && (
                 <iframe 
                 title={mediaItem.title}
-                className="w-full h-[900px]"
+                className="w-full h-full  border-0"
                 src={mediaItem.URL}
-                allowFullScreen={true}
-                width="320"
-                height="450"
-                border='0'
+                allowFullScreen
                 allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share">
-                </iframe>
+                </iframe>)}
                 </div>
                 </div>
             ))}
@@ -49,3 +54,6 @@ const SocialMedia = () => {
 }
 
 export default SocialMedia
+
+
+
