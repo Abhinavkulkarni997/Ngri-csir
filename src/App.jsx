@@ -8,6 +8,7 @@ import ProfileCard from './components/ProfileCards/ProfileCard.jsx';
 import ResearchDevelopment from './components/ResearchandDevelopment/ResearchandDevelopment.jsx';
 import ResearchroundUp from './components/ResearchRoundup/ResearchroundUp.jsx';
 import SocialMedia from './components/SocialMediaEngagement/SocialMedia.jsx';
+import LatestNotifications from './components/Latestnotifications/LatestNotifications.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <main className='flex-grow'>
 
       <Hero/>
+      <LatestNotifications/>
       <ResearchroundUp/>
       <ResearchDevelopment/>
 
