@@ -26,10 +26,10 @@ const SocialMedia = () => {
     <section className='bg-indigo-600 py-16 px-4 sm:px-8'>
     <div className='max-w-7xl mx-auto '>
         <h1 className='text-3xl font-bold text-white mb-10 '>Social Engagements</h1>
-        <div className='flex flex-wrap gap-6 justify-center'>
+        <div className='flex flex-wrap gap-6 justify-center '>
             {socialmedia.map((mediaItem)=>(
-                <div className=' flex flex-col bg-white  rounded-2xl shadow-lg p-4  w-full sm:w-[48%] lg:w-[32%] h-[500px] ' key={mediaItem.id}>
-                <div className="flex items-center gap-3 mb-4  font-semibold ">
+                <div className=' flex flex-col bg-white  rounded-2xl shadow-lg p-4  w-full sm:w-[48%] lg:w-[32%] h-[500px] overflow-y-auto' key={mediaItem.id}>
+                <div className="flex items-center gap-3 mb-4  font-semibold  ">
                 <mediaItem.icon size={30} className=" text-2xl " />
                  <span  >{mediaItem.title}</span> 
                 </div>
