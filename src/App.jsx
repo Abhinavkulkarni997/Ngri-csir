@@ -9,6 +9,8 @@ import ResearchDevelopment from './components/ResearchandDevelopment/Researchand
 import ResearchroundUp from './components/ResearchRoundup/ResearchroundUp.jsx';
 import SocialMedia from './components/SocialMediaEngagement/SocialMedia.jsx';
 import LatestNotifications from './components/Latestnotifications/LatestNotifications.jsx';
+import EnewsLetter from './components/EnewsLetter/EnewsLetter.jsx';
+import ResearchNewsCard from './components/ResearchNewsCard/ResearchNewsCard.jsx';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
 
       <Hero/>
       <LatestNotifications/>
+      <ResearchNewsCard/>
+      <EnewsLetter/>
       <ResearchroundUp/>
       <ResearchDevelopment/>
 

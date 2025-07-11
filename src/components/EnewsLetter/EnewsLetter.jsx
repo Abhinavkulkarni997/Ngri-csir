@@ -1,17 +1,18 @@
 import React from 'react'
-
-const newsletter=[{
-  id:0,
-  title:'e-Newsletter',
-  pageURL:''
-}]
+import enews from '../../assets/images/EnewsLetter/enews_letter.jpeg';
+import { Link } from 'react-router-dom';
 const EnewsLetter = () => {
   return (
-    <section className=''>
-    
-    EnewsLetter
-    
-    </section>
+    <div className='bg-white border border-gray-500'>
+    <div className=''>
+ <img src={enews} alt='enews' className='w-48 h-48 mx-auto'/>  
+      <h1 className='text-2xl text-blue-500'>E-NewsLetter</h1>
+      <p>English</p><p>Hindi</p> 
+      <p>Volume 7, Issue 5,May2025</p>
+    </div>
+     
+      
+        </div>
   )
 }
 
