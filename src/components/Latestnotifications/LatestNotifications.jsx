@@ -49,18 +49,18 @@ const LatestNotifications = () => {
     };
   }, []);
   return (
-    <section className="bg-white py-8 sm:py-12 sm:px-6 lg:py-16  px-3 lg:px-8">
+    <section className="bg-white py-8 sm:py-12 sm:px-6 lg:py-16  px-3 lg:px-8 max-w-3xl mx-auto">
       <div className="max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto ">
         <div className="border border-blue-500 bg-white  rounded-lg shadow-lg  mx-auto overflow-hidden">
-          <div className="flex flex-col sm:flex-row sm:items-center px-3 sm:px-4 lg:px-6 py-3 sm:py-4 justify-between bg-blue-500">
-            <div className="flex items-center gap-2 sm:gap-3">
-              <span>
+          <div className="flex items-center   px-3 sm:px-4 lg:px-6 py-3 sm:py-4 justify-between bg-blue-500 ">
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+        
                 <AiOutlineNotification
                   size={30}
-                  className="text-white sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+                  className="text-white sm:w-6 sm:h-6 lg:w-7 lg:h-7 flex-shrink-0"
                 />{" "}
-              </span>
-              <span className=" text-lg sm:text-xl lg:text-2xl  text-white font-sans font-medium ">
+         
+              <span className=" text-lg sm:text-xl lg:text-2xl  text-white font-sans font-medium truncate ">
                 Latest Notifications
               </span>
             </div>
@@ -71,11 +71,13 @@ const LatestNotifications = () => {
               View All
             </a>
           </div>
+          {/* Notification list with auto-scrolling */}
           <div
             ref={scrollRef}
             className="h-48 sm:h-64 md:h-72 lg:h-80 xl:h-96 overflow-hidden relative"
           >
-            <div className="py-3 sm:py-4 lg:py-6 px-3 sm:px-4 lg:px-6 ">
+            {/* padding between notifications */}
+            <div className="py-2 sm:py-3 lg:py-4 px-3 sm:px-4 lg:px-6 ">
               {[...notifications, ...notifications].map(
                 (notification, index) => (
                   <div
@@ -88,7 +90,7 @@ const LatestNotifications = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="text-sm sm:text-sm lg:text-base leading-relaxed hover:underline block">
+                      <span className="text-xs sm:text-sm lg:text-base leading-relaxed hover:underline block">
                         {notification.title}
                       </span>
                       {index < notifications.length * 2 - 1 && (

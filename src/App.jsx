@@ -21,9 +21,31 @@ function App() {
       <main className='flex-grow'>
 
       <Hero/>
-      <LatestNotifications/>
-      <ResearchNewsCard/>
-      <EnewsLetter/>
+      
+       <LatestNotifications/>
+{/*     
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <LatestNotifications/>
+  <ResearchNewsCard />
+  <EnewsLetter />
+</div> */}
+
+ <section className="bg-gray-50 py-12 px-4 sm:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+       
+          <ResearchNewsCard />
+          <EnewsLetter />
+        </div>
+      </div>
+    </section>
+
+      {/* <div className='flex space-x-4 mr-4 max-w-x7l '>
+        
+          <ResearchNewsCard/>
+           <EnewsLetter/>
+      </div> */}
+     
       <ResearchroundUp/>
       <ResearchDevelopment/>
 

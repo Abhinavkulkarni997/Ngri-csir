@@ -132,8 +132,8 @@ const Hero = () => {
 
       {/* Center Content */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
-        <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-          Welcome to Our Research Portal
+        <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg ">
+          Welcome to National Geophysical Research Institute
         </h1>
         <p className="text-sm sm:text-lg text-white max-w-xl mb-6 drop-shadow-md">
           Discover innovations, explore breakthroughs, and collaborate on futuristic research.
