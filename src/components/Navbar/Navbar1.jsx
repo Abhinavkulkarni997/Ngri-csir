@@ -39,7 +39,7 @@ const Navbar1 = () => {
  <li><a href="#language" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">English</a></li>
  <li><a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">Screenreaderaccess</a></li>
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500 rounded-xl px-4 py-4 ">Staff Corner</a></li>
+ <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500  hover:text-white rounded-xl px-4 py-4 ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 
