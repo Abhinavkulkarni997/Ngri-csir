@@ -133,12 +133,12 @@ const ImageGallery = () => {
   };
 
   return (
-    <section className="bg-[#EDE8D0]  py-18 px-8 sm:py-8">
+    <section className="bg-[#EDE8D0]  py-8 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-red-500 font-bold text-center text-4xl mb-12">
           Image Gallery
         </h1>
-        <div className="relative h-96  mb-8 flex items-center justify-center">
+        <div className="relative h-48 sm:h-64 md:h-80 lg:h-96   mb-8 flex items-center justify-center">
           <div
             className="relative flex items-center justify-center w-full h-full"
             style={{ perspective: "1000px" }}
@@ -154,7 +154,7 @@ const ImageGallery = () => {
               >
                 {/* height and width of image */}
                 <div
-                  className={`w-[800px] h-[450px] bg-white rounded-lg shadow-2xl overflow-hidden relative border border-gray-300 ${
+                  className={`w-[800px] h-[450px] sm: md: lg: xl:w-[28rem] bg-white rounded-lg shadow-2xl overflow-hidden relative border border-gray-300 ${
                     hoveredIndex === index ? "ring-2 ring-blue-500" : ""
                   }`}
                 >
@@ -176,19 +176,19 @@ const ImageGallery = () => {
     </div> */}
 
                   {/* image description text  */}
-                  <div className="h-4/5 overflow-hidden">
+                  <div className="h-3/4 overflow-hidden">
                     <img
                       src={imageItem.image}
                       alt={imageItem.description}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <div className="p-4 h-1/3 flex flex-col justify-center">
+                  <div className="p-2 sm:p-3 md:p-4 h-1/4 flex flex-col justify-center">
                     <a
-                      href={imageItem.pageURL}
-                      target="_blank"
+                      href={imageItem.pageURL || "#"}
+                      target={imageItem.pageURL?"_blank":"_self"}
                       rel="noopener noreferrer"
-                      className="text-sm text-blue-500  hover:text-blue-700 text-center line-clamp-3 "
+                      className="text-xs sm:text-sm md:text-base text-blue-500  hover:text-blue-700 text-center line-clamp-2 transition-colors duration-200 "
                     >
                       {imageItem.description}
                     </a>
@@ -199,29 +199,29 @@ const ImageGallery = () => {
           </div>
 
           {/* left navigation arrow */}
-          <div className="absolute left-8 z-20">
+          <div className="absolute left-2 sm:left-4 md:left-8 z-20">
             <MdKeyboardArrowLeft
               size={60}
               onClick={handleLeftClick}
-              className="text-white hover:bg-blue-500 hover:rounded-full hover:text-white left-8  cursor-pointer p-2 transition-all duration-200 bg-black bg-opacity-50 rounded-full "
+              className="text-white hover:bg-blue-500 hover:rounded-full hover:text-white left-8  cursor-pointer p-2 transition-all duration-200 bg-black bg-opacity-50 rounded-full sm:w-12 sm:h-12 md:w-14 md:h-14 "
             />
           </div>
           {/* right navigation arrow */}
-          <div className="absolute right-8 z-20">
+          <div className="absolute right-2 sm:right-4 md:right-8 z-20">
             <MdKeyboardArrowRight
               size={60}
               onClick={handleRightClick}
-              className="text-white hover:bg-blue-500 hover:rounded-full hover:text-white right-8 cursor-pointer p-2 transition-all duration-200 bg-black bg-opacity-50 rounded-full"
+              className="text-white hover:bg-blue-500 hover:rounded-full hover:text-white right-8 cursor-pointer p-2 transition-all duration-200 bg-black bg-opacity-50 rounded-full sm:w-12 sm:h-12 md:w-14 md:h-14"
             />
           </div>
         </div>
         {/* DOts Indicator */}
-        <div className="flex justify-center mt-36 space-x-3">
+        <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 space-x-2 md:space-x-3">
           {Imagegallery.map((_, index) => (
             <button
               key={index}
               onClick={() => handleCard(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 md:h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? "bg-blue-500 scale-125"
                   : "bg-gray-400 hover:bg-gray-600"
