@@ -4,12 +4,19 @@ import logo from "../../assets/images/CSIR-logo.png";
 import logo1 from "../../assets/images/ngri-logo.png"; 
 import { FaBars} from 'react-icons/fa';
 import {RiCloseFill} from 'react-icons/ri';
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import {MdOutlineKeyboardArrowDown} from "react-icons/md";
 
 const Navbar1 = () => {
   const[isMenuOpen,setIsMenuOpen]=useState(false);
+  const [hoverOpen,setHoverOpen]=useState(false);
 
   const toggleMenuOpen=()=>{
     setIsMenuOpen(!isMenuOpen);
+  }
+
+  const toggleArrowDown=()=>{
+    setHoverOpen(true);
   }
   return (
   <nav className="fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-hidden shadow-md z-50">
@@ -30,18 +37,23 @@ const Navbar1 = () => {
 
 {/*Desktop view of Navigation */}
 <ul className=" hidden  flex-wrap  sm:flex-wrap md:flex-wrap xl:flex-wrap 2xl:flex-wrap lg:flex justify-center space-x-4 xl:space-x-6">
-  <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white  ">Home</a></li>
-  <li><a href="#about" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">About Us </a>
-  <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 
-  "></div>
+  <li><a href="#home" className="font-bold  hover:border-b-4 border-b-white py-12  text-white  ">Home</a></li>
+  <li><a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-12">About Us <MdOutlineKeyboardArrowDown onClick={toggleArrowDown} size={24} className="inline-flex"/>{isMenuOpen?<MdOutlineKeyboardArrowUp size={24}/>:''}</a>
+  <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w[50px] transform
+  ">
+
+
+
+  </div>
   
   </li>
-  <li><a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12 ">R & D Groups</a></li>
-<li><a href="People" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">People</a></li>
- <li><a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12" >Resources</a></li>
- <li> <a href="#JoinUs" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">Join Us</a></li>
- <li><a href="#language" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">English</a></li>
- <li><a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">Screenreaderaccess</a></li>
+  <li><a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-12 ">R & D Groups<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
+<li><a href="People" className="font-bold text-white hover:border-b-4 border-b-white py-12">People<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
+ <li><a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-12" >Resources<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
+ <li> <a href="#JoinUs" className="font-bold text-white hover:border-b-4 border-b-white py-12">Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
+ <li><a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-12">English<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
+ <li><a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-12">Screenreaderaccess<MdOutlineKeyboardArrowDown size={24} className="inline-flex"/></a></li>
  {/* <div className="flex items-center"> */}
  <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500  hover:text-white rounded-xl px-4 py-4 ">Staff Corner</a></li>
  {/* </div> */}
