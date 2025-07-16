@@ -31,7 +31,11 @@ const Navbar1 = () => {
 {/*Desktop view of Navigation */}
 <ul className=" hidden  flex-wrap  sm:flex-wrap md:flex-wrap xl:flex-wrap 2xl:flex-wrap lg:flex justify-center space-x-4 xl:space-x-6">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white  ">Home</a></li>
-  <li><a href="#about" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">About Us </a></li>
+  <li><a href="#about" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">About Us </a>
+  <div className="absolute top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 
+  "></div>
+  
+  </li>
   <li><a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12 ">R & D Groups</a></li>
 <li><a href="People" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12">People</a></li>
  <li><a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-indigo-700 py-12" >Resources</a></li>
