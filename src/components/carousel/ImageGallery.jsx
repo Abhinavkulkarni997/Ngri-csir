@@ -293,7 +293,7 @@ const ImageGallery = () => {
               
               {/* height and width of the image, change here for responsiveness  */}
 
-                <div
+                {/* <div
               className={`w-[90vw] h-[200px]
               sm:w-[600px] sm:h-[280px]
               md:w-[750px] md:h-[320px]
@@ -301,7 +301,19 @@ const ImageGallery = () => {
               bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-300 ${
                 hoveredIndex === index ? "ring-2 ring-blue-500" : ""
               } hover:shadow-3xl transition-shadow duration-300`}
+> */}
+
+<div
+  className={`w-[300px] h-[180px]
+              sm:w-[600px] sm:h-[300px]
+              md:w-[700px] md:h-[330px]
+              lg:w-[800px] lg:h-[350px]
+              xl:w-[850px] xl:h-[380px]
+              bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-300 ${
+                hoveredIndex === index ? "ring-2 ring-blue-500" : ""
+              } hover:shadow-3xl transition-shadow duration-300`}
 >
+
 
                   <div className="h-full overflow-hidden">
                     <a href={imageItem.pageURL}>
