@@ -6,7 +6,8 @@ import { FaBars} from 'react-icons/fa';
 import {RiCloseFill} from 'react-icons/ri';
 
 import {MdOutlineKeyboardArrowDown}  from "react-icons/md";
-
+import Language from '../../assets/images/Navbar/Language.png';
+import diff_abled from '../../assets/images/Navbar/diff_abled.png';
 
 
 const Navbar1 = () => {
@@ -36,13 +37,13 @@ const Navbar1 = () => {
 
 {/*Desktop view of Navigation */}
 <ul className=" hidden  flex-wrap  sm:flex-wrap md:flex-wrap xl:flex-wrap 2xl:flex-wrap lg:flex justify-center space-x-4 xl:space-x-6">
-  <li><a href="#home" className="font-bold  hover:border-b-4 border-b-white py-12  text-white  ">Home</a></li>
+  <li><a href="#home" className="font-bold  hover:border-b-2 border-b-white py-12  text-white  ">Home</a></li>
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
   <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-12">About
    <MdOutlineKeyboardArrowDown  size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
    <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform ">
+  <div className="relative top-6 p-6 bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
     <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -174,10 +175,55 @@ const Navbar1 = () => {
  </a>
  </li>
 
- <li className="relative group"><a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-12">English<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+ <li className="relative group">
+ 
+ <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/>
+ <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-12">
+ 
+ 
+{/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/> */}
+ <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+    </div>
+    <div className="relative z-10 ">
+    <div className="grid grid-cols-1 gap-6 ">
+    <ul className="mt-3 text-[15px] text-gray-600">
+ <li>English</li>
+ <li>Telugu</li>
+ <li>Hindi</li>
 
+    </ul>
+</div>
+</div>
+</div>
+</div>
  </a></li>
- <li><a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-12">Screenreaderaccess<MdOutlineKeyboardArrowDown size={24} className="inline-flex hover:rotate-180"/></a></li>
+ <li className="relative group">
+ <img src={diff_abled} alt={diff_abled} className="h-8 w-8 rounded-full"/>
+ <a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-12">
+ 
+{/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 hover:rotate-180"/> */}
+ 
+  <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+    </div>
+    <div className="relative z-10 ">
+    <div className="grid grid-cols-1 gap-6 ">
+    <ul className="mt-3 text-[15px] text-gray-600">
+ <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
+ 
+
+    </ul>
+</div>
+</div>
+</div>
+</div>
+ </a></li>
+
  {/* <div className="flex items-center"> */}
  <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500  hover:text-white rounded-xl px-4 py-4 ">Staff Corner</a></li>
  {/* </div> */}
@@ -200,8 +246,8 @@ const Navbar1 = () => {
   <li><a href="People" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>People</a></li>
  <li><a href="#Resources" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>Resources</a></li>
  <li> <a href="#JoinUs" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>Join Us</a></li>
- <li><a href="#language" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>English</a></li>
- <li><a href="#screenreaderaccess" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>Screenreaderaccess</a></li>
+ <li> <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/><a href="#language" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>English</a></li>
+ <li><img src={diff_abled} alt={diff_abled} className="h-8 w-8 rounded-full"/><a href="#screenreaderaccess" className="font-bold text-white hover:underline underline-offset-4 decoration-2 decoration-white" onClick={()=>setIsMenuOpen(false)}>Screenreaderaccess</a></li>
  {/* <div className="flex flex-col space-y-2 p-4"> */}
  <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500 rounded-xl px-4 py-2">Staff Corner</a></li>
  {/* </div> */}

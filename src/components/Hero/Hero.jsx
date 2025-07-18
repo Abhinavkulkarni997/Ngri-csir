@@ -112,7 +112,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-screen w-full mt-[129px] overflow-hidden">
+    <div className="relative h-screen w-full mt-[96px] overflow-hidden">
       {/* Video Background */}
       <video
         ref={videoRef}
