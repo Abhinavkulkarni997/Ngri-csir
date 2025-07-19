@@ -12,6 +12,7 @@ import LatestNotifications from './components/Latestnotifications/LatestNotifica
 import EnewsLetter from './components/EnewsLetter/EnewsLetter.jsx';
 import ResearchNewsCard from './components/ResearchNewsCard/ResearchNewsCard.jsx';
 import ImageGallery from './components/carousel/ImageGallery.jsx';
+import Brochures from './components/Brochures/Brochures.jsx';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
 
       <ProfileCard/>
       <SocialMedia/>
+      <Brochures/>
       </main>
       
       <Footer/>
