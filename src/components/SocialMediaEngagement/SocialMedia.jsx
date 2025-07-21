@@ -24,7 +24,8 @@ const socialmedia = [
 ];
 const SocialMedia = () => {
   return (
-    <section className="bg-indigo-600 py-16 px-4 sm:px-8">
+    // <section className="bg-indigo-600 py-16 px-4 sm:px-8">
+     <section className="bg-[#550000] py-16 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-3xl font-bold text-white mb-10 ">
           Social Engagements

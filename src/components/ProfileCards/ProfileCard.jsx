@@ -98,8 +98,8 @@ const ProfileCard = () => {
 
   return (
     // <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
-      <section className="bg-[white] py-10 px-6">
-      <h1 className="text-black text-3xl font-bold text-center mb-10 uppercase md:uppercase">Our Leadership</h1>
+      <section className="bg-[#FFFFE3] py-10 px-6">
+      <h1 className="text-[#550000] text-3xl font-bold text-center mb-10 uppercase md:uppercase">Our Leadership</h1>
       <div className="flex flex-wrap justify-center gap-8">
         {profiles.map((profile) => (
           <motion.div

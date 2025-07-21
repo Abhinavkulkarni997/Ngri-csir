@@ -13,13 +13,18 @@ import EnewsLetter from './components/EnewsLetter/EnewsLetter.jsx';
 import ResearchNewsCard from './components/ResearchNewsCard/ResearchNewsCard.jsx';
 import ImageGallery from './components/carousel/ImageGallery.jsx';
 import Brochures from './components/Brochures/Brochures.jsx';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
+import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
 
 function App() {
   return (
     <>
+   
       <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       {/* <Navbar/> */}
       <Navbar1/>
+    <ScrollProgressBar/>
+
       <main className='flex-grow'>
 
       <Hero/>
@@ -42,8 +47,9 @@ function App() {
        
       <Brochures/>
       </main>
-      
+         
       <Footer/>
+      <ScrollToTop/>
       {/* <Footer1/> */}
       </div>
       

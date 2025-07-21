@@ -25,7 +25,7 @@ const brochuresData = [
 const Brochures = () => {
   return (
     <div className='bg-[#FFFFE3] px-6 py-12 sm:px-8'>
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-8xl mx-auto'>
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-6 '>
       {brochuresData.map(brochure => (
         <motion.div key={brochure.id} 
@@ -34,9 +34,9 @@ const Brochures = () => {
         transition={{ duration: 0.5 ,delay: 0.3 * brochuresData.indexOf(brochure) }}
         whileFocus={{ scale: 1.05 }}
         whileHover={{ scale: 1.05 }}
-        className=" p-5 rounded-xl shadow-md hover:shadow-xl space-x-4 transition duration-300 flex font-semibold items-center font-sans cursor-pointer w-full bg-white ">
+        className=" p-5 rounded-xl shadow-md hover:shadow-xl space-x-4 transition duration-300 flex font-medium items-center font-sans cursor-pointer w-full bg-white hover:scale-105 ">
           <div className="shrink-0">{brochure.icon} </div>
-          <div className="text-base font-medium  whitespace-nowrap">{brochure.title}</div>
+          <div className="text-base font-medium  break-words">{brochure.title}</div>
         </motion.div>
       ))}
       </div>

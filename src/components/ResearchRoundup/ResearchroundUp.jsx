@@ -53,7 +53,7 @@ const ResearchroundUp = () => {
   return (
     <section className=' bg-white  py-16 px-4 sm:px-8'>
     <div className='max-w-7xl mx-auto'>
-     <h1 className='text-4xl md:text-5xl  uppercase  mb-12 font-bold text-center '>Research RoundUP</h1>
+     <h1 className='text-[#550000] text-4xl md:text-5xl  uppercase  mb-12 font-bold text-center '>Research RoundUP</h1>
     <div className='flex  flex-wrap gap-6 justify-center'>
     {ResearchroundUp.map((researchItem,index)=>(
       <motion.div className='group w-full sm:w-[300px] perspective border-4 border-transparent' key={researchItem.id}
