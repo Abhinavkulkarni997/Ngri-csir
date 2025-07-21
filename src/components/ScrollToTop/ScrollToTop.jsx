@@ -4,9 +4,14 @@ import { FaArrowCircleUp } from "react-icons/fa";
 
 const ScrollToTop = () => {
     const [isVisible,setIsVisible]=useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
 
     const toggleVisible=()=>{
-        window.scrollY > 300 ? setIsVisible(true) : setIsVisible(false);
+        const scrollY = window.scrollY;
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        scrollY > 300 ? setIsVisible(true) : setIsVisible(false);
+        const progress = (scrollY / totalHeight) * 100;
+        setScrollProgress(progress);
     }
 
     const ScrollToTop=()=>{
@@ -21,12 +26,44 @@ const ScrollToTop = () => {
                 window.removeEventListener('scroll',toggleVisible);
             }
         },[]);
+
+
+        const radius = 24;
+  const stroke = 4;
+  const normalizedRadius = radius - stroke * 2;
+  const circumference = normalizedRadius * 2 * Math.PI;
+  const strokeDashoffset = circumference - (scrollProgress / 100) * circumference;
   return (
-    <div className='fixed bottom-5 right-10 '>
+    <div className='fixed bottom-5 right-10 z-50 '>
     {isVisible &&(
-        <button onClick={ScrollToTop}>
+        <button onClick={ScrollToTop} className='relative w-16 h-16'>
+        <svg height={radius * 2} width={radius * 2} className='absolute top-0 left-0 transform -rotate-90' >
+        <circle
+        stroke="#e0e0e0"
+        fill="transparent"
+        r={normalizedRadius}
+        cx={radius}
+        cy={radius}
+        strokeWidth={stroke}
+          strokeDasharray={circumference}
+          strokeDashoffset= {strokeDashoffset}
+        />
+        <circle 
+        stroke="#f59e0b"
+        fill="transparent"
+        r={normalizedRadius}
+        cx={radius}
+        cy={radius}
+        strokeWidth={stroke}
+        strokeDasharray={circumference}
+        strokeLinecap= "round"
+        strokeDashoffset={strokeDashoffset}
+
+        />
+
+        </svg>
          {/* <FcGlobe className='cursor-pointer bg-white p-2 rounded-lg'size={48}/> */}
-         <FaArrowCircleUp className='text-amber-600 cursor-pointer p-2 rounded-lg absolute bottom-2 bg-white right-2' size={48} />
+         <FaArrowCircleUp className='text-amber-600 inset-0 m-auto w-10 h-10 bg-white rounded-full shadow-md cursor-pointer p-2  absolute bottom-2 right-2' size={48} />
         </button>
        
     )}
