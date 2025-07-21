@@ -37,8 +37,9 @@ function App() {
       <ResearchroundUp/>
       <ResearchDevelopment/>
 
-      <ProfileCard/>
+     <ProfileCard/>
       <SocialMedia/>
+       
       <Brochures/>
       </main>
       

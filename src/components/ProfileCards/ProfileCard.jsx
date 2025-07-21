@@ -64,71 +64,6 @@ import {motion} from 'framer-motion';
 //   )
 // }
 
-// const ProfileCard = () => {
-//   const profiles = [
-//     {
-//       id: 0,
-//       name: "SHRI. NARENDRA MODI",
-//       designation: "PRESIDENT, CSIR",
-//       profileURL: "https://www.pmindia.gov.in/en/",
-//       image: narendramodi
-//     },
-//     {
-//       id: 1,
-//       name: "DR. JITENDRA SINGH",
-//       designation: "VICE PRESIDENT, CSIR",
-//       profileURL: "https://www.csir.res.in/minister/dr-jitendra-singh",
-//       image: jitendrasingh
-//     },
-//     {
-//       id: 2,
-//       name: "DR.(MRS.) N.KALAISELVI",
-//       designation: "DG, CSIR",
-//       profileURL: "https://www.csir.res.in/dgrcsir/dr-mrs-n-kalaiselvi",
-//       image: kalaiselvi
-//     },
-//     {
-//       id: 3,
-//       name: "DR.PRAKASH KUMAR",
-//       designation: "DIRECTOR, NGRI",
-//       profileURL: "https://www.ngri.res.in/cms/our-director.php",
-//       image: Prakashkumar
-//     }
-//   ];
-
-//   return (
-//     <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
-//       <div className="flex flex-wrap justify-center gap-8">
-//         {profiles.map((profile) => (
-//           <motion.div
-//             whileHover={{ scale: 1.05 }}
-//             whileTap={{ scale: 0.95 }}
-//             key={profile.id}
-//             className="relative p-[2px] rounded-xl w-72
-//               bg-[length:200%_200%]
-//               bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400
-//               animate-border-animate shadow-xl"
-//           >
-//             <Link to={profile.profileURL} target="_blank" rel="noopener noreferrer">
-//               <div className="bg-black/80 rounded-xl p-5 backdrop-blur-md h-full">
-//                 <img
-//                   src={profile.image}
-//                   alt={profile.name}
-//                   className="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-4"
-//                 />
-//                 <h2 className="text-white font-semibold text-center text-base">{profile.name}</h2>
-//                 <p className="text-white text-xs text-center mt-1">{profile.designation}</p>
-//               </div>
-//             </Link>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-
-
 const ProfileCard = () => {
   const profiles = [
     {
@@ -162,31 +97,29 @@ const ProfileCard = () => {
   ];
 
   return (
-    <section className="bg-white py-12 px-6">
-      <div className="flex flex-wrap justify-center gap-10">
+    // <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
+      <section className="bg-[white] py-10 px-6">
+      <h1 className="text-black text-3xl font-bold text-center mb-10 uppercase md:uppercase">Our Leadership</h1>
+      <div className="flex flex-wrap justify-center gap-8">
         {profiles.map((profile) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: profile.id * 0.2 }}
             key={profile.id}
-            className="w-[320px] h-[420px] rounded-[30px] border  p-6 shadow-lg backdrop-blur-md hover:shadow-xl transition-all duration-300"
+            className="relative p-[2px] rounded-xl w-72
+              bg-[length:200%_200%]
+              bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400
+              animate-border-animate shadow-xl"
           >
             <Link to={profile.profileURL} target="_blank" rel="noopener noreferrer">
-              <div className="flex flex-col items-center justify-center h-full text-blue-500 ">
+              <div className="bg-black/80 rounded-xl p-5 backdrop-blur-md h-full">
                 <img
                   src={profile.image}
                   alt={profile.name}
-                  className="w-full h-180 rounded-t-lg mb-4"
+                  className="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-4"
                 />
-                <h2 className="text-lg font-bold text-center leading-tight mb-2">
-                  {profile.name}
-                </h2>
-                <p className="text-sm font-medium text-center opacity-80">
-                  {profile.designation}
-                </p>
+                <h2 className="text-white font-semibold text-center text-base">{profile.name}</h2>
+                <p className="text-white text-xs text-center mt-1">{profile.designation}</p>
               </div>
             </Link>
           </motion.div>
@@ -197,4 +130,73 @@ const ProfileCard = () => {
 };
 
 
-export default ProfileCard;
+
+// const ProfileCard = () => {
+//   const profiles = [
+//     {
+//       id: 0,
+//       name: "SHRI. NARENDRA MODI",
+//       designation: "PRESIDENT, CSIR",
+//       profileURL: "https://www.pmindia.gov.in/en/",
+//       image: narendramodi
+//     },
+//     {
+//       id: 1,
+//       name: "DR. JITENDRA SINGH",
+//       designation: "VICE PRESIDENT, CSIR",
+//       profileURL: "https://www.csir.res.in/minister/dr-jitendra-singh",
+//       image: jitendrasingh
+//     },
+//     {
+//       id: 2,
+//       name: "DR.(MRS.) N.KALAISELVI",
+//       designation: "DG, CSIR",
+//       profileURL: "https://www.csir.res.in/dgrcsir/dr-mrs-n-kalaiselvi",
+//       image: kalaiselvi
+//     },
+//     {
+//       id: 3,
+//       name: "DR.PRAKASH KUMAR",
+//       designation: "DIRECTOR, NGRI",
+//       profileURL: "https://www.ngri.res.in/cms/our-director.php",
+//       image: Prakashkumar
+//     }
+//   ];
+
+//   return (
+//     <section className="bg-white py-12 px-6">
+//       <div className="flex flex-wrap justify-center gap-10">
+//         {profiles.map((profile) => (
+//           <motion.div
+//             whileHover={{ scale: 1.05 }}
+//             whileTap={{ scale: 0.95 }}
+//             animate={{ opacity: 1 }}
+//             initial={{ opacity: 0 }}
+//             transition={{ duration: 0.5, delay: profile.id * 0.2 }}
+//             key={profile.id}
+//             className="w-[320px] h-[420px] rounded-[30px] border  p-6 shadow-lg backdrop-blur-md hover:shadow-xl transition-all duration-300"
+//           >
+//             <Link to={profile.profileURL} target="_blank" rel="noopener noreferrer">
+//               <div className="flex flex-col items-center justify-center h-full text-blue-500 ">
+//                 <img
+//                   src={profile.image}
+//                   alt={profile.name}
+//                   className="w-full h-180 rounded-t-lg mb-4"
+//                 />
+//                 <h2 className="text-lg font-bold text-center leading-tight mb-2">
+//                   {profile.name}
+//                 </h2>
+//                 <p className="text-sm font-medium text-center opacity-80">
+//                   {profile.designation}
+//                 </p>
+//               </div>
+//             </Link>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
+
+
+ export default ProfileCard;

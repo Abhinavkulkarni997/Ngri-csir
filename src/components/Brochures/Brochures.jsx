@@ -1,34 +1,46 @@
-import React from 'react'
-
-const BrochuresData=[{
-  id: 1,
-  title: "Exploring Earth For Six Decades",
-  image:''
-},
-{
-  id: 2,
-  title: "Geophysics for Sustainable Development Goals",
-  image:''
-},
-{
-  id: 3,
-  title: "Geothermal Energy Research",
-  image:''
-},{
-    id:4,
-    title:'Groundwater Exploration and Management Research',
-    image:''
-}]
+import {  FaChartLine } from "react-icons/fa";
+import { GiVolcano, GiEarthAsiaOceania } from "react-icons/gi";
+import { MdWhatshot } from "react-icons/md";
+import { FaArrowUpFromGroundWater } from "react-icons/fa6";
+import { motion } from "framer-motion";
+const brochuresData = [
+  {
+    icon: <GiEarthAsiaOceania className="text-4xl text-blue-600 hover:text-pink-500" size={48} />,
+    title: "Exploring Earth For 6 Decades"
+  },
+  {
+    icon: <FaChartLine className="text-4xl text-blue-500 rounded-lg hover:text-pink-500"  size={48}/>,
+    title: "Geophysics For Sustainable Development Goals (SDGs)"
+  },
+  {
+    icon: <MdWhatshot className="text-4xl text-blue-500 hover:text-pink-500" size={48} />,
+    title: "Geothermal Energy Research"
+  },
+  {
+    icon: <FaArrowUpFromGroundWater className="text-4xl text-blue-500 hover:text-pink-500" size={48}/>,
+    title: "Groundwater Exploration & Management"
+  },
+];
 
 const Brochures = () => {
   return (
-    <div>
-      {BrochuresData.map(brochure => (
-        <div key={brochure.id}>
-          <h2>{brochure.title}</h2>
-          <img src={brochure.image} alt={brochure.title} />
-        </div>
+    <div className='bg-[#FFFFE3] px-6 py-12 sm:px-8'>
+    <div className='max-w-7xl mx-auto'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-6 '>
+      {brochuresData.map(brochure => (
+        <motion.div key={brochure.id} 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 ,delay: 0.3 * brochuresData.indexOf(brochure) }}
+        whileFocus={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05 }}
+        className=" p-5 rounded-xl shadow-md hover:shadow-xl space-x-4 transition duration-300 flex font-semibold items-center font-sans cursor-pointer w-full bg-white ">
+          <div className="shrink-0">{brochure.icon} </div>
+          <div className="text-base font-medium  whitespace-nowrap">{brochure.title}</div>
+        </motion.div>
       ))}
+      </div>
+    </div>
     </div>
   )
 }
