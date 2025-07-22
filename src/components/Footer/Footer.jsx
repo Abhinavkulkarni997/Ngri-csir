@@ -223,7 +223,8 @@ const Footer = () => {
           </ul>
 
           {/* Social Media section */}
-          <div className="flex flex-col space-y-4 ">
+          {/* <div className="flex flex-col space-y-4 "> */}
+           <div className="col-span-full lg:col-span-1 flex flex-col items-end lg:items-start mt-8 lg:mt-0 space-y-4 ">
             <p className="text-2xl md:text-[30px] font-bold text-white text-right whitespace-nowrap">
               Find Us Online
             </p>

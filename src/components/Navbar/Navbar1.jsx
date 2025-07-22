@@ -50,7 +50,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-poppins font-semibold ">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-poppins font-semibold ">
 
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
@@ -108,7 +108,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-2">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-semibold font-poppins">
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
@@ -128,8 +128,8 @@ const Navbar1 = () => {
     <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <div className="grid grid-cols-1 gap-6 font-semibold font-poppins space-y-2 ">
+    <ul className="mt-3 text-[15px] text-gray-600 font-semibold font-poppins space-y-2">
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
@@ -144,7 +144,7 @@ const Navbar1 = () => {
  
 
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
-  <a href="#JoinUs" className="font-bold text-white hover:border-b-4 border-b-white py-12 hover:rotate-180">Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+  <a href="#JoinUs" className="font-bold text-white hover:border-b-4 border-b-white py-12 ">Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -152,7 +152,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <div className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-10">
  <ul className="relative" onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
  <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3]">Careers<MdOutlineKeyboardArrowRight className="inline-flex"/></li>
  {isMenuOpen && (
@@ -164,10 +164,12 @@ const Navbar1 = () => {
    </div>
  )}
  </ul>
+ 
+
  <ul className="relative" onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2">HRDG<MdOutlineKeyboardArrowRight className="inline-flex"/></li>
+ <li className="cursor-pointer font-semibold px-4 py-2 font-poppins">HRDG<MdOutlineKeyboardArrowRight className="inline-flex"/></li>
  {isMenuOpen && (
-  <div className="absolute top-0 right-0 bg-white shadow-lg rounded-lg p-4">
+  <div className="absolute top-0 right-0 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2">
     <ul>
       <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
       <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
@@ -184,7 +186,7 @@ const Navbar1 = () => {
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
- </ul>
+ </div>
  </div>
  </div>
  </div>
@@ -204,8 +206,8 @@ const Navbar1 = () => {
     <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10">
-    <div className="grid grid-cols-1 gap-6">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <div className="grid grid-cols-1 gap-6 ">
+    <ul className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2">
  <li className="hover:bg-[#FFFFE3]">English</li>
  <li className="hover:bg-[#FFFFE3]">Telugu</li>
  <li className="hover:bg-[#FFFFE3]">Hindi</li>
@@ -228,7 +230,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <ul className="mt-3 text-[15px] text-gray-600 font-bold font-poppins space-y-2">
  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
 </ul>
 </div>

@@ -67,7 +67,7 @@ const ResearchroundUp = () => {
       
       >
  <Link to={researchItem.pageURL} target="_blank" rel="noopener noreferrer"
- className='block bg-white shadow-2xl rounded-2xl hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden' >
+ className='block bg-white shadow-2xl rounded-2xl hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ' >
     <div className=" relative overflow-hidden">
       <motion.img src={researchItem.image} alt={researchItem.description} 
       whileHover={{scale:1.05}}
