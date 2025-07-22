@@ -50,7 +50,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-poppins font-semibold ">
 
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
@@ -65,7 +65,7 @@ const Navbar1 = () => {
   </a>
   </li>
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-12 ">R & D Groups
+  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-12">R & D Groups
   <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
        <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
@@ -73,8 +73,8 @@ const Navbar1 = () => {
     <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-2 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <div className="grid grid-cols-1 gap-6 font-semibold font-poppins ">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-2">
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
@@ -100,7 +100,7 @@ const Navbar1 = () => {
   </a>
   </li>
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-<a href="People" className="font-bold text-white hover:border-b-4 border-b-white py-12">People<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-12">People<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
    <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -108,7 +108,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-2">
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
 <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
@@ -193,7 +193,6 @@ const Navbar1 = () => {
  </li>
 
  <li className="relative group">
- 
  <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/>
  <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-12">
  
@@ -204,8 +203,8 @@ const Navbar1 = () => {
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
-    <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 ">
+    <div className="relative z-10">
+    <div className="grid grid-cols-1 gap-6">
     <ul className="mt-3 text-[15px] text-gray-600">
  <li className="hover:bg-[#FFFFE3]">English</li>
  <li className="hover:bg-[#FFFFE3]">Telugu</li>
