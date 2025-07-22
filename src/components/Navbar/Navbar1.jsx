@@ -4,6 +4,7 @@ import logo from "../../assets/images/CSIR-logo.png";
 import logo1 from "../../assets/images/ngri-logo.png"; 
 import { FaBars} from 'react-icons/fa';
 import {RiCloseFill} from 'react-icons/ri';
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import {MdOutlineKeyboardArrowDown}  from "react-icons/md";
 import Language from '../../assets/images/Navbar/Language.png';
@@ -28,8 +29,8 @@ const Navbar1 = () => {
 <img src={logo} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
 <img src={logo1} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
   <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">
-       <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600">CSIR-NGRI</span><br/>
-        <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600 ">National Geophysical Research Institute</span>
+      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600">CSIR-NGRI</span><br/>
+      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600 ">National Geophysical Research Institute</span>
   </h1>
 </Link>
 
@@ -51,11 +52,11 @@ const Navbar1 = () => {
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
 
-<li className="hover:text-blue-600 "><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
-  <li  className="hover:text-blue-600"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
-  <li  className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
-  <li  className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
     </ul>
     </div>
     </div>
@@ -74,23 +75,23 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-2 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/electrical-and-heliborne-geophysics.php">Earth and Heliborne Geophysics</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/geo-chemistry.php">Geochemistry</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/geo-chronology.php">Geochronology</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/geological-planetary-sciences.php"></a>Geological and Planetary Sciences</li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li>
-   <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</a></li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/paleo-seismology.php"></a>Paleo-Seismology</li>
-  <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/research/seismology.php"></a>Seismology</li>
-  <li><a href="https://www.ngri.res.in/research/shallowseismics.php">Shallow Seismics</a></li>
-  <li><a href="https://www.ngri.res.in/research/tectonic-geodesy.php">Tectonic Geodesy</a></li>
-  <li><a href="https://www.ngri.res.in/research/thermalgeophysics-rockmechanics-paleomagnetism.php">Thermal Geophysics,Rock Mechanics and Paleomagnetism</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/electrical-and-heliborne-geophysics.php">Earth and Heliborne Geophysics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geo-chemistry.php">Geochemistry</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geo-chronology.php">Geochronology</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geological-planetary-sciences.php">Geological and Planetary Sciences</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li>
+   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/paleo-seismology.php">Paleo-Seismology</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/seismology.php">Seismology</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/shallowseismics.php">Shallow Seismics</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/tectonic-geodesy.php">Tectonic Geodesy</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/thermalgeophysics-rockmechanics-paleomagnetism.php">Thermal Geophysics,Rock Mechanics and Paleomagnetism</a></li>
 </ul>
     </div>
     </div>
@@ -108,10 +109,10 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
-<li className="hover:text-blue-600"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
-<li className="hover:text-blue-600"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
-<li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
-<li className="hover:text-blue-600"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
 </ul>
     </div>
     </div>
@@ -129,10 +130,10 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
- <li className="hover:text-blue-600"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
 </ul>
 </div>
 </div>
@@ -152,22 +153,37 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
- <ul>Careers
- <li><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
- <li><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
+ <ul className="relative" onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
+ <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3]">Careers<MdOutlineKeyboardArrowRight className="inline-flex"/></li>
+ {isMenuOpen && (
+   <div className="absolute top-0 right-0 bg-white shadow-lg rounded-lg p-4">
+     <ul>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
+     </ul>
+   </div>
+ )}
  </ul>
- <ul>HRDG
- <li><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
- <li className="hover:text-blue-600"> <a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php"></a>On Campus Regulations(temporary project/research staff)</li>
- </ul>
- <li className="hover:text-blue-600" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
- <li className="hover:text-blue-600"><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
+ <ul className="relative" onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
+ <li className="cursor-pointer font-semibold px-4 py-2">HRDG<MdOutlineKeyboardArrowRight className="inline-flex"/></li>
+ {isMenuOpen && (
+  <div className="absolute top-0 right-0 bg-white shadow-lg rounded-lg p-4">
+    <ul>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"> <a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php">On Campus Regulations(temporary project/research staff)</a></li>
+    </ul>
+  </div>
+ )}
+</ul>
+ 
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
  </ul>
  </div>
  </div>
@@ -191,10 +207,9 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
- <li>English</li>
- <li>Telugu</li>
- <li>Hindi</li>
-
+ <li className="hover:bg-[#FFFFE3]">English</li>
+ <li className="hover:bg-[#FFFFE3]">Telugu</li>
+ <li className="hover:bg-[#FFFFE3]">Hindi</li>
     </ul>
 </div>
 </div>
@@ -215,10 +230,8 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600">
- <li className="hover:text-blue-600"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
- 
-
-    </ul>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
+</ul>
 </div>
 </div>
 </div>

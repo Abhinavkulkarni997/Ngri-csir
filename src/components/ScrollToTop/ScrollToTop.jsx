@@ -29,24 +29,23 @@ const ScrollToTop = () => {
 
 
         const radius = 24;
-  const stroke = 4;
-  const normalizedRadius = radius - stroke * 2;
+  const stroke = 5;
+  const normalizedRadius = radius - stroke/2 ;
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - (scrollProgress / 100) * circumference;
   return (
-    <div className='fixed bottom-5 right-10 z-50 '>
+    <div className='fixed bottom-0 right-0 z-50 '>
     {isVisible &&(
-        <button onClick={ScrollToTop} className='relative w-16 h-16'>
-        <svg height={radius * 2} width={radius * 2} className='absolute top-0 left-0 transform -rotate-90' >
+        <button onClick={ScrollToTop} className='relative w-[72px] h-[72px]'>
+        <svg height={radius * 2} width={radius * 2} className='absolute top-0 left-0  rotate-[-90deg] ' >
         <circle
-        stroke="#e0e0e0"
+        stroke="#FFFFE3"
         fill="transparent"
         r={normalizedRadius}
         cx={radius}
         cy={radius}
-        strokeWidth={stroke}
-          strokeDasharray={circumference}
-          strokeDashoffset= {strokeDashoffset}
+       
+        
         />
         <circle 
         stroke="#f59e0b"
@@ -63,7 +62,7 @@ const ScrollToTop = () => {
 
         </svg>
          {/* <FcGlobe className='cursor-pointer bg-white p-2 rounded-lg'size={48}/> */}
-         <FaArrowCircleUp className='text-amber-600 inset-0 m-auto w-10 h-10 bg-white rounded-full shadow-md cursor-pointer p-2  absolute bottom-2 right-2' size={48} />
+         <FaArrowCircleUp className='text-amber-600 -inset-4 m-auto w-10 h-10 bg-white rounded-full shadow-md cursor-pointer p-2  absolute bottom-2 right-2'  />
         </button>
        
     )}
