@@ -143,7 +143,7 @@ const Hero = () => {
       </div>
 
       {/* Play & Mute Buttons */}
-      <div className="absolute bottom-4 sm:bottom-[30px] right-2 sm:right-4 flex gap-4 z-20">
+      {/* <div className="absolute bottom-4 sm:bottom-[30px] right-2 sm:right-4 flex gap-4 z-20">
         <button className="bg-sky-500 text-white p-3 rounded-md hover:bg-sky-600 transition-colors">
           <FaPlay size={16} />
         </button>
@@ -153,7 +153,7 @@ const Hero = () => {
         >
           {isMuted ? <FaVolumeMute size={16} /> : <FaVolumeUp size={16} />}
         </button>
-      </div>
+      </div> */}
 
       {/* Scroll Down Arrow */}
       <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
