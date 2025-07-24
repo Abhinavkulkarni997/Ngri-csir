@@ -99,9 +99,9 @@ const ResearchDevelopment = () => {
   const activeResearch = ResearchData.find((research) => (research.id === activeId));
   const contentRef=useRef(null);
 
-  useEffect(()=>{
-    contentRef.current?.scrollIntoView({behavior:'smooth',block:'start'})
-  },[activeId])
+  // useEffect(()=>{
+  //   contentRef.current?.scrollIntoView({behavior:'smooth',block:'start'})
+  // },[activeId])
 
   return (
     // <section className="text-white bg-blue-600 py-12 px-4 sm:px-8">
@@ -156,7 +156,7 @@ const ResearchDevelopment = () => {
 
 
 
-        <div ref={contentRef} className="w-full lg:w-2/3 space-y-6  rounded-xl shadow-xl  border border-sky-500 p-2 relative">
+        <div  className="w-full lg:w-2/3 space-y-6  rounded-xl shadow-xl  border border-sky-500 p-2 relative">
           <motion.h3
            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

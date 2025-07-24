@@ -11,7 +11,8 @@ import "./meteors.css";
 const Footer = () => {
   return (
     // <footer className=" bg-gradient-to-br from-purple-900 via-blue-600 to-sky-900 backdrop-blur-md border-t border-white/20 shadow-md  ">
-     <footer className=" bg-[#550000] border-t border-white/20 shadow-md  ">
+    //  <footer className=" bg-[#550000] border-t border-white/20 shadow-md  ">
+      <footer className=" bg-[#550000] border-t border-white/20 shadow-md  ">
       <div className="meteors-container">
         {/* {Array.from({ length: 25 }).map((_, i) => (
     <div

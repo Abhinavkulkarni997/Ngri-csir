@@ -12,8 +12,10 @@ import diff_abled from '../../assets/images/Navbar/diff_abled.png';
 
 
 const Navbar1 = () => {
-  const[isMenuOpen,setIsMenuOpen]=useState(false);
+  const [isMenuOpen,setIsMenuOpen]=useState(false);
   const [hoverOpen,setHoverOpen]=useState(false);
+  const [carrersMenuOpen,setIsCarrersMenuOpen]=useState(false);
+  const [hrdgMenuOpen,setIsHrdgMenuOpen]=useState(false);
 
   const toggleMenuOpen=()=>{
     setIsMenuOpen(!isMenuOpen);
@@ -275,46 +277,46 @@ const Navbar1 = () => {
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
 <a className="font-bold text-white hover:border-b-4 border-b-white py-12 ">Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] transform text-nowrap">
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[240px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
-    <div className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2">
- <ul className="relative" onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3] inline-flex justify-end gap-6">Careers<MdOutlineKeyboardArrowRight  size={24}/></li>
- {isMenuOpen && (
-   <div className="absolute top-0 left-[96px] bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold">
+    <div className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2 text-start">
+ <ul className="relative" onMouseEnter={()=>setIsCarrersMenuOpen(true)} onMouseLeave={()=>setIsCarrersMenuOpen(false)}>
+ <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3] flex items-center justify-between gap-2 text-start">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
+ {carrersMenuOpen && (
+   <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
      <ul >
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-1 rounded"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-3 py-1 rounded"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
      </ul>
    </div>
  )}
  </ul>
  
 
- <ul className="relative"  onMouseEnter={()=>setIsMenuOpen(true)} onMouseLeave={()=>setIsMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2 font-poppins inline-flex justify-end gap-6">HRDG<MdOutlineKeyboardArrowRight  size={24}/></li>
- {isMenuOpen && (
-  <div className="absolute top-0 left-[96px] bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 ">
+ <ul className="relative"  onMouseEnter={()=>setIsHrdgMenuOpen(true)} onMouseLeave={()=>setIsHrdgMenuOpen(false)}>
+ <li className="cursor-pointer font-semibold px-4 py-2 font-poppins flex items-center justify-between gap-2 text-start">HRDG<MdOutlineKeyboardArrowRight  size={20}/></li>
+ {hrdgMenuOpen && (
+  <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
     <ul>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"> <a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php">On Campus Regulations(temporary project/research staff)</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php">On Campus Regulations(temporary project/research staff)</a></li>
     </ul>
   </div>
  )}
 </ul>
  
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
  </div>
  </div>
  </div>
@@ -382,7 +384,6 @@ const Navbar1 = () => {
 {/* Mobile Menu Button */}
 <button onClick={toggleMenuOpen} className="lg:hidden text-white text-xl p-2 rounded-lg hover:bg-sky-500/50 transition-colors" aria-label="Toggle menu">
 {isMenuOpen?<RiCloseFill size={20}/>:<FaBars size={20} />}
-
 </button>
 </div>
 {/*Mobile view of Navigation Menu*/}

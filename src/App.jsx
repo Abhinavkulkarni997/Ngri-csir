@@ -16,6 +16,7 @@ import Brochures from './components/Brochures/Brochures.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
 
+
 function App() {
   return (
     <>
@@ -29,7 +30,14 @@ function App() {
 
       <Hero/>
       
-         <LatestNotifications/>
+
+        
+     <ImageGallery/>
+      <ResearchroundUp/>
+      <ResearchDevelopment/>
+
+     <ProfileCard/>
+      <LatestNotifications/>
 
 
       <div className='flex space-x-4 justify-center mx-auto '>
@@ -38,14 +46,10 @@ function App() {
      
           <EnewsLetter/>
       </div>
-     <ImageGallery/>
-      <ResearchroundUp/>
-      <ResearchDevelopment/>
-
-     <ProfileCard/>
       <SocialMedia/>
        
       <Brochures/>
+
       </main>
          
       <Footer/>
