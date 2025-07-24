@@ -29,12 +29,12 @@ const Footer = () => {
       </div>
       {/* Footer content */}
       {/* <div className="grid grid-cols-1 justify-center max-w-[1240px] gap-6  mx-auto py-16 px-4 gap-x-1 md:grid-cols-4 sm:grid-cols-5 lg:grid-cols-5"> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2  max-w-[1240px] gap-6  py-16 px-4 md:grid-cols-3  lg:grid-cols-5">
+            <div className="grid grid-cols-1  sm:grid-cols-2  max-w-[1240px] gap-6  py-16 px-4 md:grid-cols-3  lg:grid-cols-6">
         <a href="#" className="flex mx-auto max-w-[1240px]">
           <img
             src={logo1}
             alt="logo"
-            style={{ height: 150, width: 150 }}
+            // style={{ height: 150, width: 150 }}
             className="h-24 w-24 md:h-24 md:w-24"
           />
         </a>

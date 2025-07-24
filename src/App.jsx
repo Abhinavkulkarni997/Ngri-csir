@@ -37,15 +37,16 @@ function App() {
       <ResearchDevelopment/>
 
      <ProfileCard/>
-      <LatestNotifications/>
+     
 
 
-      <div className='flex space-x-4 justify-center mx-auto '>
+      <div className='flex space-x-4 justify-center mx-auto bg-[#550000] '>
         
           <ResearchNewsCard/>
      
           <EnewsLetter/>
       </div>
+       <LatestNotifications/>
       <SocialMedia/>
        
       <Brochures/>

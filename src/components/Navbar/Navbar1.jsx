@@ -105,7 +105,7 @@ const Navbar1 = () => {
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins text-start space-y-2">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-2">
+    <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-semibold font-poppins">
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
@@ -209,10 +209,10 @@ const Navbar1 = () => {
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins space-y-2 hover:cursor-pointer">
     <ul className="mt-3 text-[15px] text-gray-600 font-semibold font-poppins space-y-2 text-start">
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] "><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
 </ul>
 </div>
 </div>

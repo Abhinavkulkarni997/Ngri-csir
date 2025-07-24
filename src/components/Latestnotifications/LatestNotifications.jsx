@@ -66,10 +66,10 @@ const LatestNotifications = () => {
 
   return (
     <section className="bg-white py-8 sm:py-12 sm:px-6 lg:py-16  px-3 lg:px-8 max-w-3xl mx-auto">
-      <div className="max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto ">
+      <div className="max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto  ">
         {/* <div className="border border-blue-500 bg-white  rounded-lg shadow-lg  mx-auto overflow-hidden"> */}
           {/* <div className="flex items-center   px-3 sm:px-4 lg:px-6 py-3 sm:py-4 justify-between bg-blue-500 "> */}
-            <div className="border border-[#550000] bg-white  rounded-lg shadow-lg  mx-auto overflow-hidden"> 
+            <div className="border border-[#550000] bg-white  rounded-lg shadow-lg  mx-auto overflow-hidden "> 
            <div className="flex items-center   px-3 sm:px-4 lg:px-6 py-3 sm:py-4 justify-between bg-[#550000] ">
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
               <AiOutlineNotification

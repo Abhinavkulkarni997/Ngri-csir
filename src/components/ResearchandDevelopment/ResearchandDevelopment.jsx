@@ -97,7 +97,7 @@ const ResearchData = [
 const ResearchDevelopment = () => {
   const [activeId, setActiveId] = useState(0);
   const activeResearch = ResearchData.find((research) => (research.id === activeId));
-  const contentRef=useRef(null);
+  // const contentRef=useRef(null);
 
   // useEffect(()=>{
   //   contentRef.current?.scrollIntoView({behavior:'smooth',block:'start'})
