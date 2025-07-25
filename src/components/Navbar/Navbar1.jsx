@@ -23,7 +23,8 @@ const Navbar1 = () => {
 
   return (
   // <nav className=" fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-clip shadow-md z-50">
-  <nav className=" fixed top-0 left-0 bg-[#550000] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50">
+//  <nav className=" fixed top-0 left-0 bg-[#550000] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50"></nav>
+ <nav className=" fixed top-0 left-0 bg-[#4682B4] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50">
   <div className="flex items-center justify-between ">
 {/* Logo and Title Section */}
 <div className="flex items-center space-x-2 md:space-x-4 flex-shrink-0">
