@@ -12,7 +12,7 @@ const socialmedia = [
   {
     id: 1,
     title: "Twitter",
-    //  URL:'https://twitframe.com/show?url=https://twitter.com/csirngri',
+      URL:'https://x.com/csirngri',
     icon: FaXTwitter,
   },
   {
@@ -41,7 +41,12 @@ const SocialMedia = () => {
                 <span>{mediaItem.title}</span>
               </div>
               <div className="w-full h-full overflow-y-auto border  border-gray-100 rounded-md">
-                {mediaItem.URL && (
+              <div>
+              {mediaItem.title === "Twitter" &&(
+                <a href={mediaItem.URL} className="text-black underline hover:underline "> Tweets by CSIR-NGRI</a>
+              )}
+              </div>
+                {mediaItem.URL !=='https://x.com/csirngri' && (
                   <iframe
                     title={mediaItem.title}
                     className="w-full h-full"

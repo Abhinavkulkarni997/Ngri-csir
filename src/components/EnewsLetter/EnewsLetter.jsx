@@ -10,8 +10,6 @@ const EnewsLetter = () => {
       transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.02 }}
     
-    
-    
     className="bg-white max-w-sm  w-full h-full border border-bg-gray-200 rounded-md shadow-lg py-16 px-4 sm:px-8 mt-16    ">
       
       <Link to="https://www.ngri.res.in/ngri-news/archive-enewsletter.php">
