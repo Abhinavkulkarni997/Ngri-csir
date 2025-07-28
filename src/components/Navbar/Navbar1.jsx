@@ -888,7 +888,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
       {/* Resources */}
  <li>
   <button className="flex justify-between items-center w-full" onClick={()=>setResourcesOpen(!resourcesOpen)}>
-    Resources<MdOutlineKeyboardArrowDown className={`transition-transform${resourcesOpen?"rotate-180":""}`} size={24}/>
+    Resources<MdOutlineKeyboardArrowDown className={`transition-transform ${resourcesOpen?"rotate-180":""}`} size={24}/>
     </button>
     {resourcesOpen&&(
     <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
@@ -902,12 +902,12 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     {/* Join Us */}
  <li>
    <button className="flex justify-between items-center w-full" onClick={()=>setJoinUsOpen(!joinUsOpen)}>Join Us
-    <MdOutlineKeyboardArrowDown className={`transition-transform${joinUsOpen?"rotate-180":""}`} size={24}/>
+    <MdOutlineKeyboardArrowDown className={`transition-transform ${joinUsOpen?"rotate-180":""}`} size={24}/>
    </button>
    {joinUsOpen &&(
     <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4" >
       <li><button className="flex justify-between items-center w-full" onClick={()=>setCarrersOpen(!carrersOpen)}>
-        Careers<MdOutlineKeyboardArrowDown className={`transition-transform${carrersOpen?"rotate-180":""}`} size={24}/>
+        Careers<MdOutlineKeyboardArrowDown className={`transition-transform ${carrersOpen?"rotate-180":""}`} size={24}/>
         </button>
         {carrersOpen &&(
         <ul className="space-y-2 pl-4 font-normal text-white mt-4 mb-4">
@@ -919,7 +919,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
             <li>
         <button onClick={()=>setHrdgOpen(!hrdgOpen)} className="flex items-center justify-between w-full">
-          HRDG<MdOutlineKeyboardArrowDown  className={`transition-transform${hrdgOpen?"rotate-180":""}`} size={24}/></button>
+          HRDG<MdOutlineKeyboardArrowDown  className={`transition-transform ${hrdgOpen?"rotate-180":""}`} size={24}/></button>
         {hrdgOpen &&(
         <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
           <li><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
@@ -932,11 +932,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
         )}  
           </li>
 
-     
-     
     </ul>
-
-
    )}
    </li>
 
@@ -948,7 +944,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  <li>
     <button  className="flex justify-between items-center w-full" onClick={()=>setLanguageOpen(!languageOpen)}>
    <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/>
- <MdOutlineKeyboardArrowDown/></button></li>
+ <MdOutlineKeyboardArrowDown  className={`transition-transform ${languageOpen?"rotate-180":""}`} size={24}/></button></li>
     {languageOpen &&(
     <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
       <li></li>
