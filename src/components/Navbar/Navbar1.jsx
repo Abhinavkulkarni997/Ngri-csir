@@ -947,25 +947,26 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  <MdOutlineKeyboardArrowDown  className={`transition-transform ${languageOpen?"rotate-180":""}`} size={24}/></button></li>
     {languageOpen &&(
     <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
-      <li></li>
+      <li>English</li>
+      <li>Telugu</li>
+      <li>Hindi</li>
     </ul>
     )}
     {/* Screen Reader Access */}
  <li>
  <button className="flex justify-between items-center w-full" onClick={()=>setScreenReaderOpen(!screenReaderOpen)}>
  <img src={diff_abled} alt={diff_abled} className="h-8 w-8 rounded-full"/> 
- Screenreaderaccess<MdOutlineKeyboardArrowDown className={`transition-transform ${screenReaderOpen?"rotate-180":""}`} size={24}/>
+ <MdOutlineKeyboardArrowDown className={`transition-transform ${screenReaderOpen?"rotate-180":""}`} size={24}/>
  </button>
  {screenReaderOpen &&(
   <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
     <li><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
   </ul>
  )}
- 
-  
  </li>
  {/* <div className="flex flex-col space-y-2 p-4"> */}
- <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-sky-500 rounded-xl px-4 py-2">Staff Corner</a></li>
+ <li><button className="text-white hover:text-gray-600 font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3] rounded-xl px-4 py-2">
+ Staff Corner</button></li>
  {/* </div> */}
  </ul>
 </div>
