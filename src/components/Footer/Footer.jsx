@@ -415,24 +415,36 @@ const renderColumn = (columnData) =>
             src={logo1}
             alt="logo"
             // style={{ height: 150, width: 150 }}
-            className="h-36 w-36 md:h-36 md:w-36"
+            className="h-36 w-36 md:h-36 md:w-36 -mt-2"
           />
         </div>
-        <div className="sm:col-span-1 md:col-span-2 lg:col-span-4  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm">
-        
+        {/* <div className="sm:col-span-1 md:col-span-2 lg:col-span-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 text-sm whitespace-nowrap"> */}
+
+        <div className="sm:col-span-1 md:col-span-2 lg:col-span-4  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-sm whitespace-nowrap">
+         
+ {/* <ul className="space-y-2 min-w-0 w-full" role="list">{renderColumn(column1)}</ul>
+          <ul className="space-y-2 min-w-0 w-full" role="list">{renderColumn(column2)}</ul>
+          <ul className="space-y-2 min-w-0 w-full" role="list">{renderColumn(column3)}</ul>
+          <ul className="space-y-2 min-w-0 w-full" role="list">{renderColumn(column4)}</ul>
+          <ul className="space-y-2 min-w-0 w-full" role="list">{renderColumn(column5)}</ul> */}
+
+
           <ul className="space-y-2 " role="list">{renderColumn(column1)}</ul>
-            <ul className="space-y-2 " role="list">{renderColumn(column2)}</ul>
-              <ul className="space-y-2 " role="list">{renderColumn(column3)}</ul>
-                <ul className="space-y-2 " role="list">{renderColumn(column4)}</ul>
-                  <ul className="space-y-2 " role="list">{renderColumn(column5)}</ul>
+          <ul className="space-y-2 " role="list">{renderColumn(column2)}</ul>
+          <ul className="space-y-2 " role="list">{renderColumn(column3)}</ul>
+          <ul className="space-y-2 " role="list">{renderColumn(column4)}</ul>
+          <ul className="space-y-2 " role="list">{renderColumn(column5)}</ul>
+
+
 
         </div>
           
 
           {/* Social Media section */}
           {/* <div className="flex flex-col space-y-4 "> */}
-           <div className="  flex flex-col items-center  lg:items-end mt-8 lg:mt-0 space-y-4 ">
-            <p className="text-xl md:text-2xl font-bold  text-center lg:text-right">
+          {/* <div className="col-span-full mt-8 xl:col-span-1 xl:mt-0 flex flex-col items-center xl:items-end space-y-4" */}
+           <div className="  flex flex-col items-center  lg:items-end mt-8 lg:mt-0 space-y-4   ">
+            <p className="text-xl md:text-2xl  font-bold  text-center lg:text-right whitespace-nowrap -mt-2">
               Find Us Online
             </p>
             <div className="flex space-x-4 ">
@@ -441,7 +453,7 @@ const renderColumn = (columnData) =>
                 href="https://facebook.com/csirngrihyd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md "
+                className="relative group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md "
               >
                 <span className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full "></span>
                 <FaSquareFacebook
@@ -455,12 +467,12 @@ const renderColumn = (columnData) =>
                 href="https://x.com/csirngri"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md "
+                className="relative group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md "
               >
                 <span className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full "></span>
                 <FaSquareXTwitter
                   size={30}
-                  className="text-white z-10 hover:animate-bounce  group-hover:scale-125 transition-transform duration-300"
+                  className="relative text-white z-10 hover:animate-bounce  group-hover:scale-125 transition-transform duration-300"
                 />
               </a>
 
@@ -469,12 +481,12 @@ const renderColumn = (columnData) =>
                 href="https://youtube.com/@csir-ngri"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md"
+                className="relative group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-transparent transition duration-500 shadow-md"
               >
                 <span className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
                 <FaYoutubeSquare
                   size={30}
-                  className="text-white z-10 hover:animate-bounce group-hover:scale-125 transition-transform duration-300"
+                  className="relative text-white z-10 hover:animate-bounce group-hover:scale-125 transition-transform duration-300"
                 />
               </a>
             </div>
@@ -488,17 +500,11 @@ const renderColumn = (columnData) =>
 
       {/* Bottom section: All rights reserved*/}
       <div className="border-t border-white/20 text-center  text-white py-6 px-4 text-sm  ">
-   
           © 2025 Crafted and maintained by CSIR-NGRI's IT Division, Hyderabad.
           All rights reserved.
-    
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-
-
-
