@@ -485,11 +485,11 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-poppins font-semibold text-start">
 
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
+  <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
+  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] "><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
     </ul>
     </div>
     </div>
@@ -590,7 +590,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
 <a className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">
-Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[240px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -617,7 +617,7 @@ Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transit
  {hrdgMenuOpen && (
   <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
     <ul>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
+      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]  block px-2 py-2"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
@@ -641,11 +641,12 @@ Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transit
  </li>
 
 
+{/* Language dropdown */}
  <li className="relative group">
- <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/>
- <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-12">
+ <img src={Language} alt={"Language"} className="h-8 w-8 lg:w-8 rounded-full"/>
+ <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12">
  
- 
+
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/> */}
  <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
@@ -691,7 +692,7 @@ Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transit
  </a></li>
 
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-4 py-4 ">Staff Corner</a></li>
+ <li><a href="#staffCorner" className=" text-white flex-nowrap font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 </div>

@@ -66,6 +66,7 @@ const ResearchroundUp = () => {
                style={{ transformStyle: "preserve-3d" }}
       
       >
+      
  <Link to={researchItem.pageURL} target="_blank" rel="noopener noreferrer"
  className='block bg-white shadow-2xl rounded-2xl hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ' >
     <div className=" relative overflow-hidden">
@@ -80,28 +81,42 @@ const ResearchroundUp = () => {
          ></motion.div>
       </div>
       {/*Description  */}
-            <motion.div className='p-6 border-t border-gray-200 mx-auto '
+            <motion.div className='p-6 border-t border-gray-200 mx-auto overflow-hidden z-10 group '
             initial={{opacity:0,y:20}}
             whileInView={{opacity:1,y:0}}
             transition={{delay:0.2,duration:0.6}}
             > 
-        <h2 className='text-lg font-semibold  text-gray-900  line-clamp-3 loading-relaxed group-hover:text-blue-600 transition-colors duration-200'>
+ <div className="absolute bottom-0 right-0 w-10 h-10 bg-[#2f6281] rounded-tl-lg transition-all duration-300 group-hover:w-full group-hover:h-[170px] z-0" />
+
+           <div className='relative z-10'>
+        <h2 className='text-lg font-semibold  text-gray-900  line-clamp-3 loading-relaxed  transition-colors duration-200 group-hover:text-white'>
           {researchItem.description}</h2>
+          
       {/* Read More */}
-          <motion.div className='mt-4 flex items-center text-blue-600 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 '
+      
+          <motion.div className='mt-4 flex items-center text-blue-600 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:text-white cursor-pointer'
           whileHover={{x:4}}
           transition={{duration:0.3}}
           >Read More
+          
         <svg className='w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:translate-x-1' fill= 'none' stroke='currentColor' viewBox='0 0 24 24'>
           <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
         </svg>
+        
       </motion.div>      
+            </div>
+
+
+
       </motion.div>
       </Link> 
+
     </motion.div>
+    
   
     ))}
     </div>
+    
     </div>
     </section>
     )
