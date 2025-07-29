@@ -17,7 +17,7 @@ const handleScroll = () => {
 }, []);
 
   return (
-     <div className="fixed top-[95px] left-0 w-full h-1  z-50">
+     <div className="fixed top-[110px] left-0 w-full h-1  z-50">
       <div
         className="h-full bg-[#FFFFE3] transition-all duration-75 ease-out"
         style={{ width: `${scrollProgress}%` }}

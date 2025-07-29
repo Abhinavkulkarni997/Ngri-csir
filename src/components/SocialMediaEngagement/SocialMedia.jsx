@@ -24,8 +24,8 @@ const socialmedia = [
 ];
 const SocialMedia = () => {
   return (
-    // <section className="bg-indigo-600 py-16 px-4 sm:px-8">
-     <section className="bg-[#550000] py-16 px-4 sm:px-8">
+    // <section className=" bg-[#550000] bg-indigo-600 py-16 px-4 sm:px-8">
+     <section className="bg-[#2F6281] py-16 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-3xl font-bold text-white mb-10 ">
           Social Engagements
@@ -43,7 +43,7 @@ const SocialMedia = () => {
               <div className="w-full h-full overflow-y-auto border  border-gray-100 rounded-md">
               <div>
               {mediaItem.title === "Twitter" &&(
-                <a href={mediaItem.URL} className="text-black underline hover:underline "> Tweets by CSIR-NGRI</a>
+                <a href={mediaItem.URL} className="text-black underline hover:underline "> Tweets by NGRI</a>
               )}
               </div>
                 {mediaItem.URL !=='https://x.com/csirngri' && (

@@ -40,7 +40,7 @@ function App() {
      
 
 
-      <div className='flex space-x-4 justify-center mx-auto bg-[#550000] '>
+      <div className='flex space-x-4 justify-center mx-auto bg-[#2F6281]  '>
         
           <ResearchNewsCard/>
      

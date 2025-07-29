@@ -450,28 +450,32 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   // <nav className=" fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-clip shadow-md z-50">
 //  <nav className=" fixed top-0 left-0 bg-[#550000] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50"></nav>
  <nav className=" fixed top-0 left-0 bg-[#4682B4] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50">
-  <div className="flex items-center justify-between ">
+  <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-2">
 {/*--------------------------------------------------------------------------- Logo and Title Section------------------------------------------------------------------------ */}
-<div className="flex items-center space-x-2 md:space-x-4 flex-shrink-0">
+<div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 flex-shrink-0">
 <Link to="/" className="flex items-center space-x-1 md:space-x-2">
-<img src={logo} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
-<img src={logo1} alt="logo" className="h-24 w-24 md:h-24 md:w-24"/>
-  <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">
-      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600">CSIR-NGRI</span><br/>
-      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600 ">National Geophysical Research Institute</span>
+<img src={logo} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"/>
+<img src={logo1} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"/>
+<div className="min-w-0 flex-1">
+  <h1 className="text-[0.6rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-tight">
+      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600 ">CSIR-NGRI</span><br/>
+      <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600  text-[0.5rem]  xs:text-[0.6rem] sm:text-xs md:text-sm lg:text-base">National Geophysical Research Institute</span>
   </h1>
+  </div>
 </Link>
 </div>
 
 
 {/*-----------------------------------------------------------------------------Desktop view of Navigation------------------------------------------------------------------- */}
-<div className="flex lg:flex space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 2xl:space-x-12 ">
-<ul className=" hidden  flex-wrap  sm:flex-wrap md:flex-wrap xl:flex-wrap 2xl:flex-wrap lg:flex justify-center space-x-4 xl:space-x-6">
-  <li><a href="#home" className="font-bold  hover:border-b-2 border-b-white py-12  text-white  ">Home</a></li>
+<div className="hidden xl:flex  lg:flex space-x-2 lg:space-x-4 xl:space-x-6  2xl:space-x-8   ">
+<ul className=" flex justify-center space-x-2 lg:space-x-4 xl:space-x-6 ">
+  {/* Home */}
+  <li><a href="#home" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-12  text-sm lg:text-base  text-white">Home</a></li>
  
+ {/* About dropdown */}
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-12">About
-   <MdOutlineKeyboardArrowDown  size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+  <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">About
+   <MdOutlineKeyboardArrowDown  size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
    <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform ">
   <div className="relative top-6 p-6 bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
@@ -495,10 +499,10 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   </li>
 
 
-
+{/* R & D Groups DropDown */}
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-12">R & D Groups
-  <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-12 text-sm lg:text-base">R & D Groups
+  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
        <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -532,9 +536,9 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   </a>
   </li>
 
-
+{/* People DropDown */}
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-12">People<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">People<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
    <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -556,9 +560,10 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   </li>
 
 
-
-  <li className="relative group"><a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-12" >Resources
- <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
+{/* Resources Dropdown */}
+  <li className="relative group">
+    <a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base" >Resources
+ <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
    <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
@@ -580,7 +585,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   </li>
  
 
-
+{/* Join Us dropdown */}
 
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
 <a className="font-bold text-white hover:border-b-4 border-b-white py-12 ">Join Us<MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>

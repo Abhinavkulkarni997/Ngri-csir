@@ -98,15 +98,22 @@ const ProfileCard = () => {
 
   return (
     // <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
-      <section className="bg-[#FFFFE3] py-10 px-4 sm:px-6 md:px-10 lg:px-20">
-      <h1 className="text-[#550000] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase md:uppercase">Our Leadership</h1>
-      <div className="flex flex-wrap justify-center gap-8">
+    <section className="bg-[#FFFFE3] py-10 px-4 sm:px-6 md:px-10 lg:px-20">
+      <h1 className="text-[#550000] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase">Our Leadership</h1>
+      
+      {/* Universal responsive grid that adapts to any screen size */}
+      <div className="grid gap-6 sm:gap-8 justify-items-center max-w-7xl mx-auto
+                      grid-cols-1 
+                      min-[640px]:grid-cols-2 
+                      min-[1024px]:grid-cols-2 
+                      min-[1200px]:grid-cols-4
+                      xl:grid-cols-4">
         {profiles.map((profile) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             key={profile.id}
-            className="relative p-[2px] rounded-xl w-72
+            className="relative p-[2px] rounded-xl w-full max-w-[280px]
               bg-[length:200%_200%]
               bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400
               animate-border-animate shadow-xl"
