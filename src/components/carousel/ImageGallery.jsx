@@ -273,7 +273,8 @@ const ImageGallery = () => {
   
 
   return (
-    <section className="bg-[#FFFFE3] py-8 px-4 sm:px-8">
+    // <section className="bg-[#FFFFE3] py-8 px-4 sm:px-8"></section>
+    <section className="bg-[#CAE9FB] py-8 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
         {/* <h1 className="text-red-500 font-bold text-center text-3xl lg:text-4xl mb-12">Image Gallery</h1> */}
         <div className="relative w-full h-[420px] sm:h-[440px] md:h-[460px] lg:h-[480px] xl:h-[500px] overflow-hidden mb-10">

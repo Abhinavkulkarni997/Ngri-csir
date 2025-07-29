@@ -388,10 +388,10 @@ const renderColumn = (columnData) =>
       
   return (
     // <footer className=" bg-gradient-to-br from-purple-900 via-blue-600 to-sky-900 backdrop-blur-md border-t border-white/20 shadow-md  ">
-     <footer className=" bg-[#2F6281] border-t border-white/20 shadow-md text-white ">
+     <footer className=" relative bg-[#2F6281] border-t border-white/20 shadow-md text-white ">
     
         {/* <footer className=" bg-[#4682B4] border-t border-white/20 shadow-md  "> */}
-      {/* <div className="meteors-container">
+      <div className="meteors-container">
         {Array.from({ length: 25 }).map((_, i) => (
     <div
       key={i}
@@ -404,7 +404,7 @@ const renderColumn = (columnData) =>
       }}
     />
   ))}
-      </div> */}
+      </div>
 
       
       {/* Footer content */}

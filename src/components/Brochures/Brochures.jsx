@@ -24,7 +24,7 @@ const brochuresData = [
 
 const Brochures = () => {
   return (
-    <div className='bg-[#FFFFE3] px-6 py-12 sm:px-8'>
+    <div className='bg-[#CAE9FB] px-6 py-12 sm:px-8'>
     <div className='max-w-8xl mx-auto'>
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-6 '>
       {brochuresData.map(brochure => (

@@ -485,11 +485,11 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-poppins font-semibold text-start">
 
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] px-1 py-1"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
-  <li  className="hover:text-blue-600 hover:bg-[#FFFFE3] "><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
+<li className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
+  <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
+  <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
+  <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1 text-nowrap  hover:text-center"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
     </ul>
     </div>
     </div>
@@ -511,23 +511,23 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins text-start space-y-2">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-semibold font-poppins">
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/electrical-and-heliborne-geophysics.php">Earth and Heliborne Geophysics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geo-chemistry.php">Geochemistry</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geo-chronology.php">Geochronology</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geological-planetary-sciences.php">Geological and Planetary Sciences</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li>
-   <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/paleo-seismology.php">Paleo-Seismology</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/seismology.php">Seismology</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/shallowseismics.php">Shallow Seismics</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/tectonic-geodesy.php">Tectonic Geodesy</a></li>
-  <li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/research/thermalgeophysics-rockmechanics-paleomagnetism.php">Thermal Geophysics,Rock Mechanics and Paleomagnetism</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/electrical-and-heliborne-geophysics.php">Earth and Heliborne Geophysics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geo-chemistry.php">Geochemistry</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geo-chronology.php">Geochronology</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geological-planetary-sciences.php">Geological and Planetary Sciences</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li>
+   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/paleo-seismology.php">Paleo-Seismology</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/seismology.php">Seismology</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/shallowseismics.php">Shallow Seismics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/tectonic-geodesy.php">Tectonic Geodesy</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/thermalgeophysics-rockmechanics-paleomagnetism.php">Thermal Geophysics,Rock Mechanics and Paleomagnetism</a></li>
 </ul>
     </div>
     </div>
@@ -548,10 +548,10 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-semibold font-poppins text-start">
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3]"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
+<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
 </ul>
     </div>
     </div>
@@ -573,10 +573,12 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins space-y-2 hover:cursor-pointer">
     <ul className="mt-3 text-[15px] text-gray-600 font-semibold font-poppins space-y-2 text-start">
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a>
+ 
+ </li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
+ <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
 </ul>
 </div>
 </div>
@@ -589,7 +591,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 {/* Join Us dropdown */}
 
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
-<a className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">
+<a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">
 Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[240px] transform text-nowrap">
@@ -600,12 +602,12 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
     <div className="grid grid-cols-1 gap-6 ">
     <div className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2 text-start">
  <ul className="relative" onMouseEnter={()=>setIsCarrersMenuOpen(true)} onMouseLeave={()=>setIsCarrersMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3] flex items-center justify-between gap-2 text-start">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
+ <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3] flex items-center justify-between gap-2 text-start hover:scale-105 hover:text-center ">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
  {carrersMenuOpen && (
    <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
      <ul >
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-1 rounded"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-3 py-1 rounded"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
+       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-3 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
      </ul>
    </div>
  )}
@@ -643,7 +645,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
 
 {/* Language dropdown */}
  <li className="relative group">
- <img src={Language} alt={"Language"} className="h-8 w-8 lg:w-8 rounded-full"/>
+ <img src={Language} alt={"Language"} className="h-6 w-6 lg:h-8 lg:w-8 rounded-full"/>
  <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12">
  
 
@@ -670,8 +672,8 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
 
 
 
- <img src={diff_abled} alt={diff_abled} className="h-8 w-8 rounded-full"/>
- <a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-12">
+ <img src={diff_abled} alt={diff_abled} className="h-6 w-6 lg:h-8 lg:w-8 rounded-full"/>
+ <a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12">
  
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 hover:rotate-180"/> */}
  
@@ -692,7 +694,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  </a></li>
 
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white flex-nowrap font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
+ <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 </div>

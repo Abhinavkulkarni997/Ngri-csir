@@ -9,12 +9,12 @@ const socialmedia = [
     URL: "https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/csirngrihyd&tabs=timeline&width=320&height=900&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true",
     icon: SlSocialFacebook,
   },
-  {
-    id: 1,
-    title: "Twitter",
-      URL:'https://x.com/csirngri',
-    icon: FaXTwitter,
-  },
+  // {
+  //   id: 1,
+  //   title: "Twitter",
+  //     URL:'https://x.com/csirngri',
+  //   icon: FaXTwitter,
+  // },
   {
     id: 2,
     title: "Youtube",
@@ -42,9 +42,9 @@ const SocialMedia = () => {
               </div>
               <div className="w-full h-full overflow-y-auto border  border-gray-100 rounded-md">
               <div>
-              {mediaItem.title === "Twitter" &&(
+              {/* {mediaItem.title === "Twitter" &&(
                 <a href={mediaItem.URL} className="text-black underline hover:underline "> Tweets by NGRI</a>
-              )}
+              )} */}
               </div>
                 {mediaItem.URL !=='https://x.com/csirngri' && (
                   <iframe
