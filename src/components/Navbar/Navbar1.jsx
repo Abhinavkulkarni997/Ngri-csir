@@ -685,7 +685,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 font-bold font-poppins space-y-2">
- <li className="hover:text-white hover:bg-[#2F6281] text-start"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
+ <li className="hover:text-white hover:bg-[#2F6281] text-start px-1 py-1 hover:scale:105 hover:text-center"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
 </ul>
 </div>
 </div>
