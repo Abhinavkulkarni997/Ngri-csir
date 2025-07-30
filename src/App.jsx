@@ -42,7 +42,7 @@ function App() {
      
 
 
-      <div className='flex flex-row items-center justify-center gap-4 px-4 sm:px-6 md:px-10 lg:px-20 -mt-10'>
+      <div className='flex flex-row items-center justify-center gap-4 px-4 sm:px-6 md:px-10 lg:px-20 mt-10'>
          <LatestNotifications/>
           <ResearchNewsCard/>
      

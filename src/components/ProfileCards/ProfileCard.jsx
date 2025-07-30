@@ -98,7 +98,7 @@ const ProfileCard = () => {
 
   return (
     // <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
-    <section className="bg-[#FFFFFF] py-10 px-4 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-[#e2eff7] py-10 px-4 sm:px-6 md:px-10 lg:px-20">
       <h1 className="text-[#550000] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase">Our Leadership</h1>
       
 
