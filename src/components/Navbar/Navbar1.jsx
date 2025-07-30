@@ -477,7 +477,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">About
    <MdOutlineKeyboardArrowDown  size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
    <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform ">
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] transform ">
   <div className="relative top-6 p-6 bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
@@ -489,7 +489,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <li className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
   <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/previous_dir.php">Previous Directors</a></li>
   <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/research-council.php">Research Council</a></li>
-  <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1 text-nowrap  hover:text-center"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
+  <li  className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/management-council.php" >Management Council</a></li>
     </ul>
     </div>
     </div>
@@ -548,10 +548,10 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-semibold font-poppins text-start">
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
-<li className="hover:text-blue-600 hover:bg-[#FFFFE3] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
+<li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
+<li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
+<li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
+<li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technicians.php">Technicians</a></li>
 </ul>
     </div>
     </div>
@@ -573,12 +573,12 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins space-y-2 hover:cursor-pointer">
     <ul className="mt-3 text-[15px] text-gray-600 font-semibold font-poppins space-y-2 text-start">
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a>
- 
+ <li className="hover:text-white hover:bg-[#2F6281] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a>
+
  </li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block hover:scale-105 px-1 py-1 hover:text-center"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
+ <li className="hover:text-white hover:bg-[#2F6281] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/library.php">Library</a></li>
+ <li className="hover:text-white hover:bg-[#2F6281] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/gallery.php">Gallery</a></li>
+ <li className="hover:text-white hover:bg-[#2F6281] block hover:scale-105 px-1 py-1 hover:text-center"><a href ="https://www.ngri.res.in/cms/brochures.php">Brochures</a></li>
 </ul>
 </div>
 </div>
@@ -594,7 +594,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 <a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">
 Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
     <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[240px] transform text-nowrap">
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[250px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
@@ -602,12 +602,12 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
     <div className="grid grid-cols-1 gap-6 ">
     <div className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2 text-start">
  <ul className="relative" onMouseEnter={()=>setIsCarrersMenuOpen(true)} onMouseLeave={()=>setIsCarrersMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#FFFFE3] flex items-center justify-between gap-2 text-start hover:scale-105 hover:text-center ">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
+ <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#2F6281] flex items-center justify-between gap-2 text-start hover:scale-105 hover:text-center hover:text-white">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
  {carrersMenuOpen && (
    <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
      <ul >
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
-       <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-3 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
+       <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
+       <li className="hover:text-white hover:bg-[#2F6281] block px-3 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
      </ul>
    </div>
  )}
@@ -615,25 +615,25 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  
 
  <ul className="relative"  onMouseEnter={()=>setIsHrdgMenuOpen(true)} onMouseLeave={()=>setIsHrdgMenuOpen(false)}>
- <li className="cursor-pointer font-semibold px-4 py-2 font-poppins flex items-center justify-between gap-2 text-start">HRDG<MdOutlineKeyboardArrowRight  size={20}/></li>
+ <li className="cursor-pointer font-semibold px-4 py-2 font-poppins flex items-center justify-between gap-2 text-start hover:bg-[#2F6281] hover:text-white hover:scale-105 hover:text-center">HRDG<MdOutlineKeyboardArrowRight  size={20}/></li>
  {hrdgMenuOpen && (
   <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
     <ul>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3]  block px-2 py-2"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
-      <li className="hover:text-blue-600 hover:bg-[#FFFFE3] block px-2 py-2"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php">On Campus Regulations(temporary project/research staff)</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281]  block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/international-fellowships.php">International Fellowships</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/postdoctoral.php">Post Doctoral Fellows</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/doctoralfellows.php">Doctoral Fellows and Project Staff</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/skill-development.php">Skills Development</a></li>
+      <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/on-campus-accommodation.php">On Campus Regulations(temporary project/research staff)</a></li>
     </ul>
   </div>
  )}
 </ul>
  
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] px-4 py-2 rounded" ><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
+ <li className="hover:text-white hover:bg-[#2F6281] px-4 py-2 hover:scale-105 hover:text-center" ><a href="https://www.ngri.res.in/cms/AcSIR.php"></a>AcSIR</li>
+ <li className="hover:text-white hover:bg-[#2F6281] px-4 py-2 hover:scale-105 hover:text-center" ><a href="https://www.ngri.res.in/cms/sac.php"></a>Student Affairs Committee</li>
+ <li className="hover:text-white hover:bg-[#2F6281] px-4 py-2 hover:scale-105 hover:text-center" ><a href="https://rectt.ngri.res.in/jigyasa/"></a>Jigyasa</li>
  </div>
  </div>
  </div>
@@ -658,9 +658,9 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
     <div className="relative z-10">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2 text-start">
- <li className="hover:bg-[#FFFFE3]">English</li>
- <li className="hover:bg-[#FFFFE3]">Telugu</li>
- <li className="hover:bg-[#FFFFE3]">Hindi</li>
+ <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">English</li>
+ <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">Telugu</li>
+ <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">Hindi</li>
     </ul>
 </div>
 </div>
@@ -685,7 +685,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 font-bold font-poppins space-y-2">
- <li className="hover:text-blue-600 hover:bg-[#FFFFE3] text-start"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
+ <li className="hover:text-white hover:bg-[#2F6281] text-start"><a href="https://www.ngri.res.in/cms/sra.php">Screenreaderaccess</a></li>
 </ul>
 </div>
 </div>

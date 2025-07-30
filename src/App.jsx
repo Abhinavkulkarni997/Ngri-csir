@@ -15,6 +15,7 @@ import ImageGallery from './components/carousel/ImageGallery.jsx';
 import Brochures from './components/Brochures/Brochures.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
+import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       {/* <Navbar/> */}
       <Navbar1/>
     <ScrollProgressBar/>
+      <SocialIconsFixed/>
 
       <main className='flex-grow'>
 
@@ -40,13 +42,13 @@ function App() {
      
 
 
-      <div className='flex space-x-4 justify-center mx-auto bg-[#2F6281]  '>
-        
+      <div className='flex flex-row items-center justify-center gap-4 px-4 sm:px-6 md:px-10 lg:px-20 -mt-10'>
+         <LatestNotifications/>
           <ResearchNewsCard/>
      
           <EnewsLetter/>
       </div>
-       <LatestNotifications/>
+      
       <SocialMedia/>
        
       <Brochures/>
@@ -55,6 +57,7 @@ function App() {
          
       <Footer/>
       <ScrollToTop/>
+    
       {/* <Footer1/> */}
       </div>
       
