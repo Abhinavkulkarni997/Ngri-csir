@@ -16,7 +16,7 @@ import Brochures from './components/Brochures/Brochures.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
 import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
-
+import Globe from './components/Hero/Globe.jsx';
 
 function App() {
   return (
@@ -30,7 +30,8 @@ function App() {
 
       <main className='flex-grow'>
 
-      <Hero/>
+      {/* <Hero/> */}
+      <Globe/>
       
 
         

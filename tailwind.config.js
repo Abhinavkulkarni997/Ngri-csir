@@ -9,6 +9,9 @@ export default {
       animation: {
         text: 'text 5s ease infinite',
       },
+      height: {
+      screen: "100vh",
+    },
       colors:{
         'primary': '#550000',
         'secondary': '#f3f4f6',
