@@ -138,25 +138,179 @@
 // }
 
 
+// rotating earth
+
+// import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+// import { OrbitControls, Stars } from "@react-three/drei";
+// import * as THREE from "three";
+// import { useRef} from "react";
+// import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+// import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
+// import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
+// import earthClouds from "../../assets/textures/earth_clouds.png";
+// import {Text} from '@react-three/drei';
+// import { Billboard } from "@react-three/drei";
+
+// function handleScrollDown(){
+//     window.scrollBy({
+//         top: window.innerHeight,
+//         behavior: 'smooth',
+//     });
+// }
+
+// function getSunPosition() {
+//   const now = new Date();
+//   const msPerDay = 1000 * 60 * 60 * 24;
+//   const daysSinceJ2000 = (now - new Date(Date.UTC(2000, 0, 1, 12))) / msPerDay;
+
+//   const L = (280.460 + 0.9856474 * daysSinceJ2000) % 360;
+//   const g = (357.528 + 0.9856003 * daysSinceJ2000) % 360;
+//   const lambda = L + 1.915 * Math.sin((g * Math.PI) / 180) +
+//     0.020 * Math.sin((2 * g * Math.PI) / 180);
+
+//   const x = Math.cos((lambda * Math.PI) / 180);
+//   const z = Math.sin((lambda * Math.PI) / 180);
+//   return [x * 10, 0, z * 10];
+// }
+
+// const EarthRealistic = () => {
+//   const earthRef = useRef();
+//   const cloudRef = useRef();
+//   const sunRef = useRef();
+
+//   const dayMap = useLoader(THREE.TextureLoader, earthDay);
+//   const nightMap=useLoader(THREE.TextureLoader,earthNight);
+//   const cloudMap = useLoader(THREE.TextureLoader, earthClouds);
+
+
+// useFrame(({ clock }) => {
+//   const elapsed = clock.getElapsedTime(); // Smooth rotation time
+
+//   const rotationSpeed = 0.03; // Adjust speed here
+//   const indiaOffset = 240 * Math.PI /180; // To initially center India
+
+//   if (earthRef.current) {
+//     earthRef.current.rotation.y = elapsed * rotationSpeed + indiaOffset;
+//   }
+
+//   if (cloudRef.current) {
+//     cloudRef.current.rotation.y = elapsed * rotationSpeed + indiaOffset * 1.01;
+//   }
+
+//   if (sunRef.current) {
+//     const sunDir = getSunPosition(); 
+//     sunRef.current.position.set(...sunDir);
+//   }
+// });
+
+
+
+
+//   return (
+//     <>
+//       {/* Earth Sphere */}
+//       <mesh ref={earthRef} castShadow receiveShadow>
+//         <sphereGeometry args={[1, 24, 24]} />
+//         <meshStandardMaterial map={dayMap} 
+//         emissiveMap={nightMap}
+//         emissive={new THREE.Color(0xffffff)}
+//         emissiveIntensity={1.2}
+//         shininess={5}
+//         />
+//       </mesh>
+
+//       {/* Cloud Layer */}
+//       <mesh ref={cloudRef} castShadow receiveShadow>
+//         <sphereGeometry args={[1.01, 24, 24]} />
+//         <meshStandardMaterial
+//           map={cloudMap}
+//           transparent
+//           opacity={0.4}
+//           depthWrite={false}
+//         />
+//       </mesh>
+
+//       {/* Subtle Atmosphere */}
+//       <mesh>
+//         <sphereGeometry args={[1.01, 24, 24]} />
+//         <meshBasicMaterial color="#3a9bdc" transparent opacity={0.06} />
+//       </mesh>
+
+//       {/* Real-Time Sunlight */}
+//       <directionalLight
+//         ref={sunRef}
+//         intensity={10}
+//         color="#ffffff"
+//         castShadow
+//       />    
+//     </>
+//   );
+// };
+
+// export default function GlobeRealistic() {
+//   function latLongToVector3(lat,lon,radius=1.01){
+//   const phi=(90-lat)*(Math.PI/180);
+//   const theta=(lon+180)*(Math.PI/180);
+  
+//   const x=-radius*Math.sin(phi)*Math.cos(theta);
+//   const y=radius*Math.cos(phi);
+//   const z=radius*Math.sin(phi)*Math.sin(theta);
+//   return [x,y,z];
+
+// }
+//   const indiaCoords=latLongToVector3(20,-35);
+//   return (
+//     <div className="w-full h-screen bg-black relative">
+//       <Canvas camera={{ position: [3, 1, 2], fov: 45 }} shadows>
+//         <ambientLight intensity={0.05} />
+//         <Stars radius={100} depth={60} count={1500} fade />
+//         {/* <OrbitControls  enableZoom enablePan enableRotate /> */}
+//         <Billboard position={latLongToVector3(-8,-80,1.01)}>
+//         <Text
+//         position={indiaCoords}
+//         fontSize={0.07}
+//         color="white"
+//         anchorX="center"
+//         anchorY="middle"
+//         maxWidth={1.5}
+//         lineHeight={1.2}
+//         enableRotate={true}>{"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान \n National GeoPhysical Research Institute"} </Text>
+//         </Billboard>
+//         <OrbitControls enableZoom={true} enablePan={false} enableRotate={false}/>
+//         <EarthRealistic />
+//       </Canvas>
+
+//       <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
+//               <button
+//                 onClick={handleScrollDown}
+//                 className="text-white p-4 rounded-full  hover:bg-white hover:text-black transition-colors"
+//               >
+//                 <MdOutlineKeyboardDoubleArrowDown size={32} />
+//               </button>
+//             </div>
+//     </div>
+//   );
+// }
+
 
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
+import { OrbitControls, Stars, Text, Billboard } from "@react-three/drei";
 import * as THREE from "three";
-import { useRef} from "react";
+import { useRef } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+
 import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
 import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
-import {Text} from '@react-three/drei';
-import { Billboard } from "@react-three/drei";
 
-function handleScrollDown(){
-    window.scrollBy({
-        top: window.innerHeight,
-        behavior: 'smooth',
-    });
+function handleScrollDown() {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: 'smooth',
+  });
 }
 
+// Sun position calculation
 function getSunPosition() {
   const now = new Date();
   const msPerDay = 1000 * 60 * 60 * 24;
@@ -172,55 +326,50 @@ function getSunPosition() {
   return [x * 10, 0, z * 10];
 }
 
+// Convert lat/lon to 3D position on sphere
+function latLongToVector3(lat, lon, radius = 1.01) {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lon + 180) * (Math.PI / 180);
+  const x = -radius * Math.sin(phi) * Math.cos(theta);
+  const y = radius * Math.cos(phi);
+  const z = radius * Math.sin(phi) * Math.sin(theta);
+  return [x, y, z];
+}
+
+
 const EarthRealistic = () => {
   const earthRef = useRef();
   const cloudRef = useRef();
   const sunRef = useRef();
 
   const dayMap = useLoader(THREE.TextureLoader, earthDay);
-  const nightMap=useLoader(THREE.TextureLoader,earthNight);
+  const nightMap = useLoader(THREE.TextureLoader, earthNight);
   const cloudMap = useLoader(THREE.TextureLoader, earthClouds);
 
-
-useFrame(({ clock }) => {
-  const elapsed = clock.getElapsedTime(); // Smooth rotation time
-
-  const rotationSpeed = 0.03; // Adjust speed here
-  const indiaOffset = 240 * Math.PI /180; // To initially center India
-
-  if (earthRef.current) {
-    earthRef.current.rotation.y = elapsed * rotationSpeed + indiaOffset;
-  }
-
-  if (cloudRef.current) {
-    cloudRef.current.rotation.y = elapsed * rotationSpeed + indiaOffset * 1.01;
-  }
-
-  if (sunRef.current) {
-    const sunDir = getSunPosition(); // Real-world UTC-based sunlight
-    sunRef.current.position.set(...sunDir);
-  }
-});
-
-
-
+  useFrame(() => {
+    // Update sunlight direction only
+    if (sunRef.current) {
+      const sunDir = getSunPosition();
+      sunRef.current.position.set(...sunDir);
+    }
+  });
 
   return (
     <>
       {/* Earth Sphere */}
       <mesh ref={earthRef} castShadow receiveShadow>
-        <sphereGeometry args={[1, 24, 24]} />
-        <meshStandardMaterial map={dayMap} 
-        emissiveMap={nightMap}
-        emissive={new THREE.Color(0xffffff)}
-        emissiveIntensity={1.2}
-        shininess={5}
+        <sphereGeometry args={[1, 64, 64]} />
+        <meshStandardMaterial
+          map={dayMap}
+          emissiveMap={nightMap}
+          emissive={new THREE.Color(0xffffff)}
+          emissiveIntensity={1.2}
         />
       </mesh>
 
       {/* Cloud Layer */}
-      <mesh ref={cloudRef} castShadow receiveShadow>
-        <sphereGeometry args={[1.01, 24, 24]} />
+      <mesh ref={cloudRef}>
+        <sphereGeometry args={[1.01, 64, 64]} />
         <meshStandardMaterial
           map={cloudMap}
           transparent
@@ -229,64 +378,74 @@ useFrame(({ clock }) => {
         />
       </mesh>
 
-      {/* Subtle Atmosphere */}
+      {/* Atmosphere Glow */}
       <mesh>
-        <sphereGeometry args={[1.01, 24, 24]} />
+        <sphereGeometry args={[1.02, 64, 64]} />
         <meshBasicMaterial color="#3a9bdc" transparent opacity={0.06} />
       </mesh>
 
-      {/* Real-Time Sunlight */}
+      {/* Directional Light as Sun */}
       <directionalLight
         ref={sunRef}
         intensity={10}
         color="#ffffff"
         castShadow
-      />    
+      />
+
+      {/* Optional glowing sun mesh */}
+      <mesh position={getSunPosition()}>
+        <sphereGeometry args={[0.1, 16, 16]} />
+        <meshBasicMaterial emissive={"yellow"} />
+      </mesh>
     </>
   );
 };
 
 export default function GlobeRealistic() {
-  function latLongToVector3(lat,lon,radius=1.01){
-  const phi=(90-lat)*(Math.PI/180);
-  const theta=(lon+180)*(Math.PI/180);
-  
-  const x=-radius*Math.sin(phi)*Math.cos(theta);
-  const y=radius*Math.cos(phi);
-  const z=radius*Math.sin(phi)*Math.sin(theta);
-  return [x,y,z];
+  const hyderabadCoords = latLongToVector3(17.4163, 78.5510);
 
-}
-  const indiaCoords=latLongToVector3(20,-35);
   return (
     <div className="w-full h-screen bg-black relative">
-      <Canvas camera={{ position: [3, 1, 2], fov: 45 }} shadows>
+    
+ 
+
+
+      <Canvas camera={{ position: [2.5, 0.5, 2.5], fov: 45 }} shadows  onCreated={({ camera }) => {
+    const indiaPos = latLongToVector3(17.4163, 78.5510, 1.01);
+    camera.lookAt(...indiaPos); 
+  }}>
         <ambientLight intensity={0.05} />
         <Stars radius={100} depth={60} count={1500} fade />
-        {/* <OrbitControls  enableZoom enablePan enableRotate /> */}
-        <Billboard position={latLongToVector3(-8,-80,1.01)}>
-        <Text
-        position={indiaCoords}
-        fontSize={0.07}
-        color="white"
-        anchorX="center"
-        anchorY="middle"
-        maxWidth={1.5}
-        lineHeight={1.2}
-        enableRotate={true}>{"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान \n National GeoPhysical Research Institute"} </Text>
+
+        {/* Label at Hyderabad */}
+        <Billboard position={hyderabadCoords}>
+          <Text
+            fontSize={0.07}
+            color="white"
+            anchorX="center"
+            anchorY="middle"
+            maxWidth={1.5}
+            lineHeight={1.2}
+          >
+            {"राष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational GeoPhysical Research Institute"}
+          </Text>
         </Billboard>
-        <OrbitControls enableZoom={true} enablePan={false} enableRotate={true}/>
+
+        {/* OrbitControls only for zoom (optional) */}
+        <OrbitControls enableZoom={true} enablePan={false} enableRotate={false} />
+
         <EarthRealistic />
       </Canvas>
 
+      {/* Scroll down arrow */}
       <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
-              <button
-                onClick={handleScrollDown}
-                className="text-white p-4 rounded-full  hover:bg-white hover:text-black transition-colors"
-              >
-                <MdOutlineKeyboardDoubleArrowDown size={32} />
-              </button>
-            </div>
+        <button
+          onClick={handleScrollDown}
+          className="text-white p-4 rounded-full hover:bg-white hover:text-black transition-colors"
+        >
+          <MdOutlineKeyboardDoubleArrowDown size={32} />
+        </button>
+      </div>
     </div>
   );
 }
