@@ -144,10 +144,11 @@ import { OrbitControls, Stars } from "@react-three/drei";
 import * as THREE from "three";
 import { useRef} from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
-import earthDay from "../../assets/textures/earth_day.jpg";
-import earthNight from "../../assets/textures/earth_night.jpg";
+import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
+import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
-
+import {Text} from '@react-three/drei';
+import { Billboard } from "@react-three/drei";
 
 function handleScrollDown(){
     window.scrollBy({
@@ -180,33 +181,12 @@ const EarthRealistic = () => {
   const nightMap=useLoader(THREE.TextureLoader,earthNight);
   const cloudMap = useLoader(THREE.TextureLoader, earthClouds);
 
-//   useFrame(() => {
-//     const now = new Date();
-//     const utcHours = now.getUTCHours();
-//     const rotation = (utcHours / 24) * Math.PI * 2;
 
-//     // Offset so India (approx 82°E or UTC+5.5) is centered
-//     const indiaOffset = (5.5 / 24) * Math.PI * 2;
-
-//     if (earthRef.current) {
-//       earthRef.current.rotation.y = rotation + indiaOffset;
-//     }
-
-//     if (cloudRef.current) {
-//       cloudRef.current.rotation.y = rotation + indiaOffset;
-//     }
-
-//     if (sunRef.current) {
-//       const sunDir = getSunPosition();
-//       sunRef.current.position.set(...sunDir);
-//     }
-//   });
-  
 useFrame(({ clock }) => {
   const elapsed = clock.getElapsedTime(); // Smooth rotation time
 
   const rotationSpeed = 0.03; // Adjust speed here
-  const indiaOffset = (5.5 / 24) * Math.PI * 2; // To initially center India
+  const indiaOffset = 240 * Math.PI /180; // To initially center India
 
   if (earthRef.current) {
     earthRef.current.rotation.y = elapsed * rotationSpeed + indiaOffset;
@@ -221,6 +201,7 @@ useFrame(({ clock }) => {
     sunRef.current.position.set(...sunDir);
   }
 });
+
 
 
 
@@ -250,35 +231,52 @@ useFrame(({ clock }) => {
 
       {/* Subtle Atmosphere */}
       <mesh>
-        <sphereGeometry args={[1.08, 24, 24]} />
+        <sphereGeometry args={[1.01, 24, 24]} />
         <meshBasicMaterial color="#3a9bdc" transparent opacity={0.06} />
       </mesh>
 
       {/* Real-Time Sunlight */}
       <directionalLight
         ref={sunRef}
-        intensity={5}
-        // position={[10, 0, 0]}
+        intensity={10}
         color="#ffffff"
         castShadow
-      />
-       
-       
-          
+      />    
     </>
   );
 };
 
 export default function GlobeRealistic() {
+  function latLongToVector3(lat,lon,radius=1.01){
+  const phi=(90-lat)*(Math.PI/180);
+  const theta=(lon+180)*(Math.PI/180);
+  
+  const x=-radius*Math.sin(phi)*Math.cos(theta);
+  const y=radius*Math.cos(phi);
+  const z=radius*Math.sin(phi)*Math.sin(theta);
+  return [x,y,z];
+
+}
+  const indiaCoords=latLongToVector3(20,-35);
   return (
     <div className="w-full h-screen bg-black relative">
       <Canvas camera={{ position: [3, 1, 2], fov: 45 }} shadows>
         <ambientLight intensity={0.05} />
         <Stars radius={100} depth={60} count={1500} fade />
         {/* <OrbitControls  enableZoom enablePan enableRotate /> */}
-        <OrbitControls enableZoom={true} enablePan={false} enableRotate={true} />
+        <Billboard position={latLongToVector3(-8,-80,1.01)}>
+        <Text
+        position={indiaCoords}
+        fontSize={0.07}
+        color="white"
+        anchorX="center"
+        anchorY="middle"
+        maxWidth={1.5}
+        lineHeight={1.2}
+        enableRotate={true}>{"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान \n National GeoPhysical Research Institute"} </Text>
+        </Billboard>
+        <OrbitControls enableZoom={true} enablePan={false} enableRotate={true}/>
         <EarthRealistic />
-        
       </Canvas>
 
       <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
