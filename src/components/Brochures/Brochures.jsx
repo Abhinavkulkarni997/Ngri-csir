@@ -26,7 +26,7 @@ const Brochures = () => {
   return (
     <div className='bg-[#CAE9FB] px-6 py-12 sm:px-8'>
     <div className='max-w-8xl mx-auto'>
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-6 '>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-6  '>
       {brochuresData.map(brochure => (
         <motion.div key={brochure.id} 
         initial={{ opacity: 0, y: 50 }}

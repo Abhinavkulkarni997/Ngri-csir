@@ -1,64 +1,78 @@
 import React,{useState} from 'react';
-import Sachhata1 from '../../assets/NgriGallery/Swachhata-Pakhwada-2025-1.png';
-import Sachhata2 from '../../assets/NgriGallery/Swachhata-Pakhwada-2025-2.jpg';
-import WomensDay1 from '../../assets/NgriGallery/WomensDay-2025-1.jpg';
-import WomensDay8 from '../../assets/NgriGallery/WomensDay-2025-8.jpg';
-import Republicday76 from '../../assets/NgriGallery/76th-Republic-Day-of-India-2025-8.jpg';
-import Jigyasa from '../../assets/NgriGallery/Jigyasa-Programme-July2025.png';
-import DSC005 from '../../assets/NgriGallery/DSC_0005.jpg'
-import DSC0083 from '../../assets/NgriGallery/DSC_0083.jpg';
-import DSC9713 from '../../assets/NgriGallery/DSC_9713.jpg';
+import Sachhata1 from '../../assets/images/NgriGallery/Swachhata-Pakhwada-2025-1.png';
+import Sachhata2 from '../../assets/images/NgriGallery/Swachhata-Pakhwada-2025-2.jpg';
+// import WomensDay1 from '../../assets/images/NgriGallery/WomensDay-2025-1.jpg';
+import WomensDay8 from '../../assets/images/NgriGallery/WomensDay-2025-8.jpg';
+import Republicday76 from '../../assets/images/NgriGallery/76th-Republic-Day-of-India-2025-8.jpg';
+import DSC005 from '../../assets/images/NgriGallery/DSC_0005.jpg';
+import DSC0083 from '../../assets/images/NgriGallery/DSC_0083.jpg';
+import DSC9713 from '../../assets/images/NgriGallery/DSC_9713.jpg';
 
+import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
+// import { MdArrowOutward } from 'react-icons/md';
 
 
 
 const Images=[{
     id:0,
-    image:Sachhata1,
-    description:'',
-},{
-    id:1,
     image:Sachhata2,
     description:'',
 },{
-    id:2,
-    image:WomensDay1,
+    id:1,
+    image:Sachhata1,
     description:'',
 },{
-    id:3,
+    id:2,
     image:WomensDay8,
     description:'',
 },{
-    id:4,
-    image:Jigyasa,
-    description:'',
-},{
-    id:5,
+    id:3,
     image:DSC005,
     description:'',
 },{
-    id:6,
+    id:4,
     image:DSC0083,
     description:'',
 
 },{
-    id:7,
+    id:5,
     image:DSC9713,
+    description:'',
+},{
+    id:6,
+    image:Republicday76,
     description:'',
 }]
 
 
 
 const NgriGallery = () => {
-const [active,setIsActive]=useState(0);
+const [activeTab,setActiveTab]=useState(0);
 
   return (
-<section className='bg-white py-8 px-4 sm:px-4'>
-<div className='max-w-7xl mx-auto'>
-<h1 className='text-center text-2xl text-[#550000] font-bold '>NGRI GALLERY</h1>
-<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+<section className='bg-[#E4F0FF] py-8 px-4 sm:px-4'>
+   <h1 className='text-center text-xl text-[#550000] font-bold font-sans mb-4'>NGRI GALLERY</h1>
+<div className='max-w-7xl mx-auto  '>
+    <div className='bg-white p-6 rounded-lg shadow-md '>
+        <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold '>
+    <li className='  p-2 bg-blue-800 rounded-lg text-white'><Link to="">Photo Gallery</Link></li>
+   <li className='ml-1 p-2  border-l mx-4 '><Link to="" >Video Gallery</Link></li> 
+      <li className=' pb-2 ml-auto  '><Link to="" className='p-4 rounded-full  bg-blue-800 text-white '>View More </Link></li> 
+      <hr className=''></hr>
+        </ul>
+        {/* <hr className='w-full pt-4 border-gray-100'></hr> */}
+        <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
+        <li className='bg-blue-500 rounded-lg shadow-md px-4 font-sans text-white'>All</li>
+<li>2025</li>
+<li>2024</li>
+        </ul>
+
+
+    <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Images.map((img)=>(
-    <div key={img.id} className='max-w-xl'>
+    <div key={img.id} className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
+  
     <img src=
     {img.image} alt={img.description}/>
         
@@ -66,6 +80,11 @@ const [active,setIsActive]=useState(0);
 ))}
 
 </div>
+       
+    </div>
+   
+
+
 </div>    
     
     
@@ -74,4 +93,3 @@ const [active,setIsActive]=useState(0);
 }
 
 export default NgriGallery;
-

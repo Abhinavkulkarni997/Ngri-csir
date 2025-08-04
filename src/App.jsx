@@ -18,6 +18,7 @@ import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.
 import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
 import Globe from './components/Hero/Globe.jsx';
 import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
+
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
 
       {/* <Hero/> */}
       <Globe/>
+
       
 
         
