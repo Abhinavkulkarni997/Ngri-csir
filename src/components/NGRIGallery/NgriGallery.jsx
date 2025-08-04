@@ -45,16 +45,43 @@ const Images=[{
     description:'',
 }]
 
+const Videos=[{
+    id:0,
+    URL:'https://www.youtube.com/embed/mp02ZQZbbU8?si=hOKVsh9MPh53Bg1e',
+    description:'CSIR-NGRI Air Rock Museum'
+},{
+    id:1,
+    URL:'https://www.youtube.com/embed/xnFvaP06TaA?si=-Ox50y8fS_OxW3RH',
+    description:'Closing ceremony of Diamond Jubilee Year Celebrations'
+},{
+    id:2,
+    URL:'https://www.youtube.com/embed/JRfv51J5N3M?si=gsXSpp3kKzvAXWmC',
+    description:'Address by DG--CSIR',
+},{
+    id:3,
+    URL:'https://www.youtube.com/embed/UzmBq2zbxeA?si=c5qbOiZ27lKJL7Wk',
+    description:'CSIR NGRI Diamond Jubilee 2nd Lecture'
+}]
+
+ 
+
+
+
 
 
 const NgriGallery = () => {
-const [activeTab,setActiveTab]=useState(0);
+const [activeTab,setActiveTab]=useState('tab1');
+
+
+
+
+
 
   return (
 <section className='bg-[#E4F0FF] py-8 px-4 sm:px-4'>
-   <h1 className='text-center text-xl text-[#550000] font-bold font-sans mb-4'>NGRI GALLERY</h1>
+   <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto  '>
-    <div className='bg-white p-6 rounded-lg shadow-md '>
+    <div className='bg-white p-6  rounded-lg shadow-md '>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold '>
     <li className='  p-2 bg-blue-800 rounded-lg text-white'><Link to="">Photo Gallery</Link></li>
    <li className='ml-1 p-2  border-l mx-4 '><Link to="" >Video Gallery</Link></li> 
@@ -75,6 +102,27 @@ const [activeTab,setActiveTab]=useState(0);
   
     <img src=
     {img.image} alt={img.description}/>
+
+
+        
+    </div>
+))}
+
+</div>
+
+
+
+ <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
+{Videos.map((video)=>(
+    <div key={video.id} className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
+  
+    <iframe src=
+    {video.URL}
+     alt={video.description}
+    allowFullScreen
+    allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
+    />
+
         
     </div>
 ))}
