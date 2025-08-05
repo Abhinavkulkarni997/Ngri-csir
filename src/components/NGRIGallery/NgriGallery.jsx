@@ -16,55 +16,52 @@ import { MdOutlineVideoLibrary } from "react-icons/md";
  
 
 
-
-
-
 const Images=[{
     id:0,
     image:Sachhata2,
     description:'Swachhata Pakhwada 2025',
-    span:'col-span-2 row-span-2'
+  
 },{
     id:1,
     image:Sachhata1,
     description:'Swachhata Pakhwada 2025',
-    span:'cols-span-1 row-span-1'
+   
 },{
   id:2,
   image:Sachhata7,
   description:'Swachhata Pakhwada 2025',  
-  span:'col-span-1 row-span-2'
+ 
 },{
     id:3,
     image:WomensDay8,
     description:'Womens Day 2025',
-    span:'col-span-2 row-span-1'
+    
 },{
     id:4,
     image:Library,
     description:'HARI NARAIN KNOWLEDGE RESOURCE CENTRE AND MAPS & DRAWING',
-    span:'col-span-1 row-span-1'
+    
 },{
     id:5,
     image:DSC005,
     description:'Artificial Intelligence & Machine Learning for Geophysical Data Analysis',
-    span:'col-span-2 row-span-1'
+   
 },{
     id:6,
     image:DSC0083,
     description:'Artificial Intelligence & Machine Learning for Geophysical Data Analysis',
-    span:'col-span-1 row-span-2'
+    
 
 },{
     id:7,
     image:DSC9713,
     description:'Artificial Intelligence & Machine Learning for Geophysical Data Analysis',
-    span:'col-span-1 row-span-1'
+    
 },{
     id:8,
     image:Republicday76,
     description:'76th Republic Day of India - 2025',
-    span:'col-span-2 row-span-2'
+    
 }]
 
 const Videos=[{
@@ -85,6 +82,14 @@ const Videos=[{
     description:'CSIR NGRI Diamond Jubilee 2nd Lecture'
 }]
 
+const spansPattern=[
+"col-span-2 row-span-2",
+"col-spans-1 row-span-1",
+"col-span-1 row-span-1",
+"col-span-2 row-span-2",
+"col-span-2 row-span-2",
+"col-span-2 row-span-2",
+]
  
 
 
@@ -103,7 +108,7 @@ const [activeTab,setActiveTab]=useState(0);
 <section className='bg-[#E4F0FF] py-8 px-4 sm:px-4'>
    <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto'>
-    <div className='bg-white p-6  rounded-lg shadow-md'>
+    <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
         
     <li className='  p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4'><FaRegImage size={20} ></FaRegImage>Photo Gallery</li>
@@ -118,24 +123,25 @@ const [activeTab,setActiveTab]=useState(0);
         </ul>
 
 
-    <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4'>
-{Images.map((img)=>(
-    <button onClick={()=>setActiveTab(img.id)}>
-    <div key={img.id} className= {`${img.span} relative cursor-pointer max-w-sm overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105`}>
+    <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
+{Images.map((img)=>{
+   const span=spansPattern[img.id%spansPattern.length];
+   return(
+    <div key={img.id} 
+    className= {`${span} relative cursor-pointer w-full h-full  overflow-hidden rounded-xl group`}>
   
     <img src=
     {img.image} alt={`Image ${img.description} `}
-    className='w-full h-full object-cover'
+    className='w-full h-full transition-transform duration-300 object-cover group-hover:scale-105'
     />
     {/* Overlay Effect */}
-    <div className='absolute inset-0 hover:bg-black hover:bg-opacity-40 group-hover:opacity-60 transition-transform duration-300'>
-    <div className='absolute inset-0  text-lg flex items-center justify-center'>
-    <h1 className='text-white hover:text-lg font-semibold text-center px-2'> {img.description}</h1>
+    <div className='absolute inset-0  text-lg flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+    <h1 className='text-[#FFFFFF] text-base md:text-lg hover:text-lg font-bold text-center px-2'> {img.description}</h1>
     </div>
     </div>
-    </div>
-    </button>
-))}
+    
+ 
+)})}
 
 
 </div>
@@ -144,13 +150,15 @@ const [activeTab,setActiveTab]=useState(0);
 
  <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Videos.map((video)=>(
-    <div key={video.id} className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
+    <div key={video.id} 
+    className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
   
     <iframe src=
     {video.URL}
      alt={video.description}
     allowFullScreen
     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
+    
     />
 
         
