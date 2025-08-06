@@ -97,9 +97,16 @@ const spansPattern=[
 
 
 const NgriGallery = () => {
-const [activeTab,setActiveTab]=useState(0);
+const [imageActiveTab,setImageActiveTab]=useState(false);
+const [videoActiveTab,setVideoActiveTab]=useState(false);
 
+const toggleImage=()=>{
+    setImageActiveTab(!imageActiveTab)
+}
 
+const toggleVideo=()=>{
+    setVideoActiveTab(!videoActiveTab)
+}
 
 
 
@@ -111,8 +118,8 @@ const [activeTab,setActiveTab]=useState(0);
     <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
         
-    <li className='  p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4'><FaRegImage size={20} ></FaRegImage>Photo Gallery</li>
-   <li className='ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4'><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> 
+   <button onClick={toggleImage} ><li className='  p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4'><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
+   <button onClick={toggleVideo}> <li className='ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4'><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
       <li className='pt-2 ml-auto  '><Link to="" className='p-4 rounded-full  bg-blue-800 text-white '>View More </Link></li> 
         </ul>
         {/* <hr className='w-full pt-4 border-gray-100'></hr> */}
@@ -123,17 +130,16 @@ const [activeTab,setActiveTab]=useState(0);
         </ul>
 
 
-    <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
+{
+    imageActiveTab && (
+        <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
    
-{Images.map((img,index)=>{
-    const span=spansPattern[img.id%spansPattern.length];
-    <button onClick={()=>setActiveTab(index)}>
+{Images.map((img)=>{
     
-    
-   
+   const span=spansPattern[img.id%spansPattern.length];
  
    return(
-    <div key={img.index} 
+    <div key={img.id} 
     className= {`${span} relative cursor-pointer w-full h-full  overflow-hidden rounded-xl group`}>
   
     <img src=
@@ -141,47 +147,41 @@ const [activeTab,setActiveTab]=useState(0);
     className='w-full h-full transition-transform duration-300 object-cover group-hover:scale-105'
     />
     {/* Overlay Effect */}
-    <div className='absolute inset-0  text-lg flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-    <h1 className='text-[#FFFFFF]  md:text-sm hover:text-sm font-bold text-center px-2 '> {img.description}</h1>
+    <div className='absolute inset-0  flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+    <h1 className='text-[#FFFFFF]  md:hover:text-sm hover:text-sm lg:hover:text-sm font-bold text-center px-2 '> {img.description}</h1>
     </div>
     
     </div>
    
     
  
-)</button>})}
+)})}
 
 
 </div>
-
-
-
+    )
+}
+    
+{
+    videoActiveTab && (
  <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Videos.map((video)=>(
     <div key={video.id} 
     className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
-  
     <iframe src=
     {video.URL}
      alt={video.description}
     allowFullScreen
     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
-    
-    />
-
-        
+    />     
     </div>
 ))}
+</div>
+    )
+}
 
 </div>
-       
-    </div>
-   
-
-
-</div>    
-    
-    
+</div>        
 </section>
   )
 }
