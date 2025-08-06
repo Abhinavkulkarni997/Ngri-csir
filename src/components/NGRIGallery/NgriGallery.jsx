@@ -97,16 +97,16 @@ const spansPattern=[
 
 
 const NgriGallery = () => {
-const [imageActiveTab,setImageActiveTab]=useState(false);
-const [videoActiveTab,setVideoActiveTab]=useState(false);
+const [imageActiveTab,setImageActiveTab]=useState('image');
+// const [videoActiveTab,setVideoActiveTab]=useState('video');
 
-const toggleImage=()=>{
-    setImageActiveTab(!imageActiveTab)
-}
+// const toggleImage=()=>{
+//     setImageActiveTab(!imageActiveTab)
+// }
 
-const toggleVideo=()=>{
-    setVideoActiveTab(!videoActiveTab)
-}
+// const toggleVideo=()=>{
+//     setVideoActiveTab(!videoActiveTab)
+// }
 
 
 
@@ -118,9 +118,15 @@ const toggleVideo=()=>{
     <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
         
-   <button onClick={toggleImage} ><li className='  p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4'><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
-   <button onClick={toggleVideo}> <li className='ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4'><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
-      <li className='pt-2 ml-auto  '><Link to="" className='p-4 rounded-full  bg-blue-800 text-white '>View More </Link></li> 
+   <button onClick={()=>setImageActiveTab('image')} ><li className={ `${imageActiveTab==='image'? 'p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4':'inline-flex gap-4 p-2'}`}><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
+   <button onClick={()=>setImageActiveTab('video')}> <li className={`${imageActiveTab==='video'? 'bg-blue-800 text-white ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4':'inline-flex p-2 gap-4'}`}><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
+      {
+        imageActiveTab==='image' && (
+            <li className='pt-2 ml-auto  '><Link to="https://www.ngri.res.in/gallery.php" className='p-4 rounded-full  bg-blue-800 text-white '>View More </Link></li> 
+        )
+      }
+      
+      
         </ul>
         {/* <hr className='w-full pt-4 border-gray-100'></hr> */}
         <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
@@ -131,7 +137,7 @@ const toggleVideo=()=>{
 
 
 {
-    imageActiveTab && (
+    imageActiveTab==='image' && (
         <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
    
 {Images.map((img)=>{
@@ -163,7 +169,7 @@ const toggleVideo=()=>{
 }
     
 {
-    videoActiveTab && (
+    imageActiveTab==='video' && (
  <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Videos.map((video)=>(
     <div key={video.id} 
