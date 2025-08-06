@@ -105,7 +105,7 @@ const [activeTab,setActiveTab]=useState(0);
 
 
   return (
-<section className='bg-[#E4F0FF] py-8 px-4 sm:px-4'>
+<section className='bg-[#E5F5FD] py-8 px-4 sm:px-4'>
    <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto'>
     <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
@@ -124,10 +124,16 @@ const [activeTab,setActiveTab]=useState(0);
 
 
     <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
-{Images.map((img)=>{
-   const span=spansPattern[img.id%spansPattern.length];
+   
+{Images.map((img,index)=>{
+    const span=spansPattern[img.id%spansPattern.length];
+    <button onClick={()=>setActiveTab(index)}>
+    
+    
+   
+ 
    return(
-    <div key={img.id} 
+    <div key={img.index} 
     className= {`${span} relative cursor-pointer w-full h-full  overflow-hidden rounded-xl group`}>
   
     <img src=
@@ -136,12 +142,14 @@ const [activeTab,setActiveTab]=useState(0);
     />
     {/* Overlay Effect */}
     <div className='absolute inset-0  text-lg flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-    <h1 className='text-[#FFFFFF] text-base md:text-lg hover:text-lg font-bold text-center px-2'> {img.description}</h1>
-    </div>
+    <h1 className='text-[#FFFFFF]  md:text-sm hover:text-sm font-bold text-center px-2 '> {img.description}</h1>
     </div>
     
+    </div>
+   
+    
  
-)})}
+)</button>})}
 
 
 </div>

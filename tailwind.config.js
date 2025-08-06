@@ -25,6 +25,8 @@ export default {
         'success': '#16a34a',
         'warning': '#f59e0b',
         'info': '#2563eb',
+       
+
       },
       keyframes: {
         text: {
@@ -38,6 +40,9 @@ export default {
           },
         },
       },
+    },
+    colors:{
+ 'custom-blue': 'rgb(102, 136, 238)',
     },
      screens: {
       xs: '375px', 
