@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Sachhata1 from '../../assets/images/NgriGallery/Swachhata-Pakhwada-2025-1.png';
 import Sachhata2 from '../../assets/images/NgriGallery/Swachhata-Pakhwada-2025-2.jpg';
 import Sachhata7 from '../../assets/images/NgriGallery/Swachhata-Pakhwada-2025-7.jpg';
@@ -92,8 +92,15 @@ const spansPattern=[
 ]
  
 
-
-
+//Fisher-yates shuffle algorithm
+const shuffledImages=(imageArray)=>{
+const shuffled=[...imageArray];
+for (let imageIndex=shuffled.length-1;imageIndex>0;imageIndex--){
+    const randomImages=Math.floor(Math.random()*(imageIndex+1));
+    [shuffled[imageIndex],shuffled[randomImages]]=[shuffled[randomImages],shuffled[imageIndex]]
+}
+return shuffled;
+}
 
 
 const NgriGallery = () => {
@@ -107,8 +114,15 @@ const [activeTab,setActiveTab]=useState('image');
 // const toggleVideo=()=>{
 //     setVideoActiveTab(!videoActiveTab)
 // }
+const [shuffledImage,setShuffledImage]=useState(Images);
 
 
+useEffect(()=>{
+    const interval=setInterval(()=>{
+        setShuffledImage(shuffledImages(Images))
+    },15000)
+    return ()=>clearInterval(interval);
+},[])
 
 
   return (
@@ -146,9 +160,9 @@ const [activeTab,setActiveTab]=useState('image');
     activeTab==='image' && (
         <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
    
-{Images.map((img)=>{
+{shuffledImage.map((img,index)=>{
     
-   const span=spansPattern[img.id%spansPattern.length];
+   const span=spansPattern[index%spansPattern.length];
  
    return(
     <div key={img.id} 
