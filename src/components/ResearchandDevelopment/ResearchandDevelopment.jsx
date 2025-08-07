@@ -106,7 +106,7 @@ const ResearchDevelopment = () => {
   return (
     // <section className="text-white bg-blue-600 py-12 px-4 sm:px-8">
         // <section className="text-white bg-[#550000] py-12 px-4 sm:px-8">
-         <section className="text-white bg-[#4682B4] py-12 px-4 sm:px-8">
+         <section className="text-white bg-[#4682B4] rounded-full py-12 px-4 sm:px-8">
 
       <h2 className=" text-5xl font-sans font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
         Research and Development

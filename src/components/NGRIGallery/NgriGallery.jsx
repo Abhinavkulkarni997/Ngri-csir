@@ -13,7 +13,7 @@ import {motion} from 'framer-motion';
 // import { MdArrowOutward } from 'react-icons/md';
 import { FaRegImage } from "react-icons/fa6";
 import { MdOutlineVideoLibrary } from "react-icons/md";
- 
+ import { FiArrowUpRight } from "react-icons/fi";
 
 
 const Images=[{
@@ -97,7 +97,7 @@ const spansPattern=[
 
 
 const NgriGallery = () => {
-const [imageActiveTab,setImageActiveTab]=useState('image');
+const [activeTab,setActiveTab]=useState('image');
 // const [videoActiveTab,setVideoActiveTab]=useState('video');
 
 // const toggleImage=()=>{
@@ -118,11 +118,17 @@ const [imageActiveTab,setImageActiveTab]=useState('image');
     <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
         
-   <button onClick={()=>setImageActiveTab('image')} ><li className={ `${imageActiveTab==='image'? 'p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4':'inline-flex gap-4 p-2'}`}><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
-   <button onClick={()=>setImageActiveTab('video')}> <li className={`${imageActiveTab==='video'? 'bg-blue-800 text-white ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4':'inline-flex p-2 gap-4'}`}><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
+   <button onClick={()=>setActiveTab('image')} ><li className={ `${activeTab==='image'? 'p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4 ':'inline-flex gap-4 p-2 rounded-lg border-2 border-blue-800 text-blue-800 hover:bg-blue-800  hover:text-white'}`}><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
+   <button onClick={()=>setActiveTab('video')}> <li className={`${activeTab==='video'? 'bg-blue-800 text-white ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4':'inline-flex p-2 gap-4 border-2 rounded-lg text-blue-800 hover:text-white hover:bg-blue-800 border-blue-800'}`}><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
       {
-        imageActiveTab==='image' && (
-            <li className='pt-2 ml-auto  '><Link to="https://www.ngri.res.in/gallery.php" className='p-4 rounded-full  bg-blue-800 text-white '>View More </Link></li> 
+        activeTab==='image' && (
+            <li className='pt-2 ml-auto  '><Link to="https://www.ngri.res.in/gallery.php" className='p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex '>View More <FiArrowUpRight size={20}/></Link></li> 
+        )
+      }
+      
+      {
+        activeTab==='video' && (
+            <li className='pt-2 ml-auto  '><Link to="https://www.youtube.com/@csir-ngri" className='p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex'>View More <FiArrowUpRight size={20}/></Link></li> 
         )
       }
       
@@ -137,7 +143,7 @@ const [imageActiveTab,setImageActiveTab]=useState('image');
 
 
 {
-    imageActiveTab==='image' && (
+    activeTab==='image' && (
         <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
    
 {Images.map((img)=>{
@@ -150,7 +156,7 @@ const [imageActiveTab,setImageActiveTab]=useState('image');
   
     <img src=
     {img.image} alt={`Image ${img.description} `}
-    className='w-full h-full transition-transform duration-300 object-cover group-hover:scale-105'
+    className='w-full h-full transition-transform duration-300 object-cover group-hover:scale-105 '
     />
     {/* Overlay Effect */}
     <div className='absolute inset-0  flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -169,7 +175,7 @@ const [imageActiveTab,setImageActiveTab]=useState('image');
 }
     
 {
-    imageActiveTab==='video' && (
+    activeTab==='video' && (
  <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Videos.map((video)=>(
     <div key={video.id} 
@@ -179,6 +185,7 @@ const [imageActiveTab,setImageActiveTab]=useState('image');
      alt={video.description}
     allowFullScreen
     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
+    className='border-8 border-sky-800 p-2 '
     />     
     </div>
 ))}
