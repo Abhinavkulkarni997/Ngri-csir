@@ -41,9 +41,7 @@ export default {
         },
       },
     },
-    colors:{
- 'custom-blue': 'rgb(102, 136, 238)',
-    },
+   
      screens: {
       xs: '375px', 
       sm: '640px',
