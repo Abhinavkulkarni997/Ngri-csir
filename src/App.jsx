@@ -18,6 +18,7 @@ import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.
 import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
 import Globe from './components/Hero/Globe.jsx';
 import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
+import ResearchandDevelopmentv1 from './components/ResearchandDevelopment/ResearchandDevelopmentv1.jsx';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
      <ImageGallery/>
       <ResearchroundUp/>
       <ResearchDevelopment/>
+      <ResearchandDevelopmentv1/>
 
      <ProfileCard/>
      
