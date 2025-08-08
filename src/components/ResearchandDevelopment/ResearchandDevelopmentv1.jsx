@@ -92,11 +92,11 @@ const ResearchandDevelopmentv1 = () => {
     <section className='bg-white py-8 px-4 sm:px-4'>
     <h1 className='uppercase font-serif'>Research And Development</h1>
       <div className='max-w-7xl mx-auto'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 '>
         {ResearchData.map((researchitem,index)=>(
-          <div key={researchitem.index}>
-          <img src={researchitem.image} className='w-20 h-20' size={20}/>
-          <h1 className='font-serif text-2xl '> {researchitem.title}</h1>
+          <div className='border-8 border-sky-500 rounded-lg' key={researchitem.index}>
+          <img src={researchitem.image} className='w-30 h-30' />
+          <h1 className='font-serif text-xl '> {researchitem.title}</h1>
          {/* <p className='font-serif'> {researchitem.description}</p> */}
           </div>
         ))}
