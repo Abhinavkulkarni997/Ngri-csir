@@ -120,7 +120,7 @@ const [shuffledImage,setShuffledImage]=useState(Images);
 useEffect(()=>{
     const interval=setInterval(()=>{
         setShuffledImage(shuffledImages(Images))
-    },15000)
+    },5000)
     return ()=>clearInterval(interval);
 },[])
 
@@ -148,7 +148,7 @@ useEffect(()=>{
       
       
         </ul>
-        {/* <hr className='w-full pt-4 border-gray-100'></hr> */}
+        <hr className='w-full  pt-4 border-1 border-gray-400'></hr>
         <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
         <li className='bg-blue-500 rounded-lg shadow-md px-4 font-sans text-white'>All</li>
 <li>2025</li>
@@ -193,14 +193,15 @@ useEffect(()=>{
  <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
 {Videos.map((video)=>(
     <div key={video.id} 
-    className='relative cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
+    className='relative border-8 border-blue-200 cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
     <iframe src=
     {video.URL}
      alt={video.description}
     allowFullScreen
     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
-    className='border-8 border-sky-800 p-2 '
+    className='border-0 w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover'
     />     
+    <h1 className='p-4 text-sm  text-gray-600 font-bold   h-full'>{video.description}</h1>
     </div>
 ))}
 </div>
