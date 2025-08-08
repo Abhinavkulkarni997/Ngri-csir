@@ -10,6 +10,7 @@ import c4 from "../../assets/images/ResearchandDevelopment/c4.jpg";
 import c7 from "../../assets/images/ResearchandDevelopment/c7.jpg";
 import c6 from "../../assets/images/ResearchandDevelopment/c6.jpg";
 import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
+import '../../App.css';
 const ResearchData = [
   {
     id: 0,
@@ -90,14 +91,14 @@ const ResearchData = [
 const ResearchandDevelopmentv1 = () => {
   return (
     <section className='bg-white py-8 px-4 sm:px-4'>
-    <h1 className='uppercase font-serif'>Research And Development</h1>
+    <h1 className='uppercase font-serif mb-12'>Research And Development</h1>
       <div className='max-w-7xl mx-auto'>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 '>
         {ResearchData.map((researchitem,index)=>(
-          <div className='border-8 border-sky-500 rounded-lg' key={researchitem.index}>
+          <div className='relative  border-solid border-8 border-l-gray-400 border-x-gray-400 border-y-gray-400  hexagon bg-sky-300 mt-30  w-80 h-80 flex items-center justify-center aspect-[1.1547]  text-white font-bold ' key={researchitem.index}>
           <img src={researchitem.image} className='w-30 h-30' />
           <h1 className='font-serif text-xl '> {researchitem.title}</h1>
-         {/* <p className='font-serif'> {researchitem.description}</p> */}
+         <p className='font-serif'> {researchitem.description}</p>
           </div>
         ))}
       </div>

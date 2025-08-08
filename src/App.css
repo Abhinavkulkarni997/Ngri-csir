@@ -12,6 +12,19 @@
     line-height: 1.2 !important;
   }
 }
+
+
+.hexagon {
+  clip-path: polygon(
+    25% 0%, 
+    75% 0%, 
+    100% 50%, 
+    75% 100%, 
+    25% 100%, 
+    0% 50%
+  );
+}
+
 /* .logo {
   height: 6em;
   padding: 1.5em;

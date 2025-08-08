@@ -9,10 +9,10 @@ const ResearchNewsCard = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.02 }}
-    className="bg-white max-w-sm w-full h-full border border-gray-200 rounded-md shadow-lg py-16 px-4 sm:px-8 mt-16 ml-4 ">
+    className="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl min-h-fit h-auto border border-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16 mx-auto sm:ml-4 md:ml-6 lg:ml-8">
       <Link to="https://www.ngri.res.in/cms/rnews.php" target="_blank" rel="noopener noreferrer">
           <img src={renews} alt="ResearchNews" className="w-28 h-28 mx-auto object-contain rounded-md" />
-          <a href="#" className="text-xl text-blue-500 hover:text-blue-700 font-semibold mt-4">Research News</a>
+          <a href="#" className="block text-center text-lg sm:text-xl md:text-2xl  text-blue-500 hover:text-blue-700 font-semibold mt-4">Research News</a>
           </Link>
           <p className="text-sm leading-relaxed text-center text-gray-700 font-serif mt-4 ">Explore Monthly Research Papers for the Latest Insights</p>
       </motion.div>
