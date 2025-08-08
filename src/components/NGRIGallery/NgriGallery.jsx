@@ -129,7 +129,7 @@ useEffect(()=>{
 <section className='bg-[#E5F5FD] py-8 px-4 sm:px-4'>
    <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto'>
-    <div className='bg-white p-6  rounded-lg shadow-md cursor-pointer'>
+    <div className='bg-white p-6  rounded-2xl shadow-md cursor-pointer'>
         <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
         
    <button onClick={()=>setActiveTab('image')} ><li className={ `${activeTab==='image'? 'p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4 ':'inline-flex gap-4 p-2 rounded-lg border-2 border-blue-800 text-blue-800 hover:bg-blue-800  hover:text-white'}`}><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
@@ -149,12 +149,15 @@ useEffect(()=>{
       
         </ul>
         <hr className='w-full  pt-4 border-1 border-gray-400'></hr>
-        <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
+        {activeTab==='image' && (
+  <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
         <li className='bg-blue-500 rounded-lg shadow-md px-4 font-sans text-white'>All</li>
 <li>2025</li>
 <li>2024</li>
         </ul>
 
+        )}
+      
 
 {
     activeTab==='image' && (
