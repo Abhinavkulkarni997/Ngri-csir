@@ -14,6 +14,12 @@ import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
 import '../../App.css';
 const ResearchData = [
   {
+    id:0,
+    title:"RESEARCH AND DEVELOPMENT",
+    image:'',
+    
+  },
+  {
     id: 0,
     title: "Geodynamics and Geo-Hazard of Active Plate Margin",
     image: c1,
@@ -91,16 +97,17 @@ const ResearchData = [
 ];
 const ResearchandDevelopmentv1 = () => {
   return (
-    <section className='bg-red-500 bg-opacity-10 py-8 px-4 sm:px-4 '>
-    <h1 className='uppercase font-serif mb-12 text-primary font-bold text-2xl'>Research And Development</h1>
+    <section className='bg-white  py-8 px-4 sm:px-4 '>
+    {/* <h1 className='uppercase font-serif mb-12 text-primary font-bold text-2xl'>Research And Development</h1> */}
       <div className='max-w-7xl mx-auto '>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4  '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  '>
         {ResearchData.map((researchitem,index)=>(
-          <div className='relative inset-0 w-80 h-80 border-solid border-4 border-red-500 hexagon' key={researchitem.index}>
-             <div className='inset-[4px] w-80 h-80 flex flex-wrap items-center justify-center bg-sky-500 text-white font-serif font-bold hexagon' >
-          <img src={researchitem.image} className='w-24 h-24 rounded-full ' />
-          <h1 className='font-serif text-sm  '> {researchitem.title}</h1>
-         <p className='font-serif text-sm '> {researchitem.description}</p>
+          <div className='relative w-80 h-80' key={index}>
+          <div className='absolute -inset-4 hexagon  bg-[#A9A9A9]'></div>
+             <div className='absolute inset-2 hexagon bg-orange-500/80 rounded-full  flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
+          <img src={researchitem.image} className='w-24 h-24 rounded-full mb-2 ' />
+          <h1 className='font-serif text-sm text-white mb-1 '> {researchitem.title}</h1>
+         <p className='font-serif text-xs text-white overflow-hidden '> {researchitem.description}</p>
           </div>
           </div>
          
