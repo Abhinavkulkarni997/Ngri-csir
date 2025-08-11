@@ -108,7 +108,7 @@ const ResearchDevelopment = () => {
         // <section className="text-white bg-[#550000] py-12 px-4 sm:px-8">
          <section className="text-white bg-[#4682B4] rounded-lg py-12 px-4 sm:px-8">
 
-      <h2 className=" text-5xl font-sans font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
+      <h2 className=" text-5xl font-serif font-bold text-center mb-14  uppercase md:uppercase animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-500 ">
         Research and Development
       </h2>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
@@ -157,7 +157,8 @@ const ResearchDevelopment = () => {
 
 
 
-        <div  className="w-full lg:w-2/3 space-y-6  rounded-xl shadow-xl  border border-sky-500 p-2 relative">
+        {/* <div  className="w-full lg:w-2/3 space-y-6  rounded-xl shadow-xl  border border-sky-500 p-2 relative"> */}
+          <div  className="w-full lg:w-2/3 space-y-6  p-2 relative">
           <motion.h3
            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

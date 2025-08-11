@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from "react-router-dom";
 import c1 from "../../assets/images/ResearchandDevelopment/c1.jpg";
@@ -90,16 +91,19 @@ const ResearchData = [
 ];
 const ResearchandDevelopmentv1 = () => {
   return (
-    <section className='bg-white py-8 px-4 sm:px-4'>
-    <h1 className='uppercase font-serif mb-12'>Research And Development</h1>
-      <div className='max-w-7xl mx-auto'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 '>
+    <section className='bg-red-500 bg-opacity-10 py-8 px-4 sm:px-4 '>
+    <h1 className='uppercase font-serif mb-12 text-primary font-bold text-2xl'>Research And Development</h1>
+      <div className='max-w-7xl mx-auto '>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4  '>
         {ResearchData.map((researchitem,index)=>(
-          <div className='relative  border-solid border-8 border-l-gray-400 border-x-gray-400 border-y-gray-400  hexagon bg-sky-300 mt-30  w-80 h-80 flex items-center justify-center aspect-[1.1547]  text-white font-bold ' key={researchitem.index}>
-          <img src={researchitem.image} className='w-30 h-30' />
-          <h1 className='font-serif text-xl '> {researchitem.title}</h1>
-         <p className='font-serif'> {researchitem.description}</p>
+          <div className='relative inset-0 w-80 h-80 border-solid border-4 border-red-500 hexagon' key={researchitem.index}>
+             <div className='inset-[4px] w-80 h-80 flex flex-wrap items-center justify-center bg-sky-500 text-white font-serif font-bold hexagon' >
+          <img src={researchitem.image} className='w-24 h-24 rounded-full ' />
+          <h1 className='font-serif text-sm  '> {researchitem.title}</h1>
+         <p className='font-serif text-sm '> {researchitem.description}</p>
           </div>
+          </div>
+         
         ))}
       </div>
 

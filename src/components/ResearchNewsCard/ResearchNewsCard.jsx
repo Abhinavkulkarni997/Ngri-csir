@@ -14,7 +14,7 @@ const ResearchNewsCard = () => {
           <img src={renews} alt="ResearchNews" className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28 lg:h-32 mx-auto object-contain rounded-md" />
           <a href="#" className="block text-center text-lg sm:text-xl md:text-2xl  text-blue-500 hover:text-blue-700 font-semibold mt-3 sm:mt-4 md:mt-6 transition-colors">Research News</a>
           </Link>
-          <p className="text-sm leading-relaxed text-center text-gray-700 font-serif mt-4 ">Explore Monthly Research Papers for the Latest Insights</p>
+          <p className="text-xs sm:text-sm md:text-base  leading-relaxed text-center text-gray-700 font-serif mt-3 sm:mt-4 md:mt-6 ">Explore Monthly Research Papers for the Latest Insights</p>
       </motion.div>
   
   );

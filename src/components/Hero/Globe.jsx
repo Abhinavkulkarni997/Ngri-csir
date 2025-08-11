@@ -457,8 +457,8 @@ import * as THREE from "three";
 import { useRef, useEffect, useMemo, useState } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
-import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
-import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
+import earthDay from "../../assets/textures/8k_earth_daymap.jpg";
+import earthNight from "../../assets/textures/8k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
 
 function handleScrollDown() {
@@ -696,16 +696,16 @@ export default function GlobeRealistic() {
   };
 
   return (
-    <div className="w-full h-screen bg-black relative">
+    <div className="w-full h-screen p-14 bg-black relative">
       {/* Time Display */}
-      {currentTime && (
+      {/* {currentTime && (
         <div className="absolute top-4 left-4 z-20 text-white bg-black bg-opacity-50 p-3 rounded">
           <div className="text-lg font-bold">{formatTime(parseFloat(currentTime.timeIST))}</div>
           <div className="text-sm">Sun Angle: {currentTime.sunAngleDegrees}°</div>
         </div>
       )}
-      
-      {/* Speed Control */}
+       */}
+      {/* Speed Control
       <div className="absolute top-4 right-4 z-20 text-white bg-black bg-opacity-50 p-3 rounded">
         <div className="text-sm mb-2">Time Speed:</div>
         <div className="flex gap-2">
@@ -728,7 +728,7 @@ export default function GlobeRealistic() {
             Fast
           </button>
         </div>
-      </div>
+      </div> */}
 
       <Canvas 
         camera={{ 

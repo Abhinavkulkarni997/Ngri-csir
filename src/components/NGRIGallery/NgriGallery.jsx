@@ -126,7 +126,7 @@ useEffect(()=>{
 
 
   return (
-<section className='bg-[#E5F5FD] py-8 px-4 sm:px-4'>
+<section className='bg-[#E5F5FD]  py-8 px-4 sm:px-4'>
    <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto'>
     <div className='bg-white p-6  rounded-2xl shadow-md cursor-pointer'>

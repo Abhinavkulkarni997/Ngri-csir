@@ -1,3 +1,4 @@
+
 import './App.css'
 import Footer from './components/Footer/Footer.jsx';
 import Hero from './components/Hero/Hero.jsx';
@@ -47,7 +48,7 @@ function App() {
      
 
 
-      <div className='flex flex-row items-center justify-center gap-4 px-4 sm:px-6 md:px-10 lg:px-20 mt-10'>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-6 sm:py-8 md:py-10 lg:py-12'>
          <LatestNotifications/>
           <ResearchNewsCard/>
      
