@@ -696,7 +696,7 @@ export default function GlobeRealistic() {
   };
 
   return (
-    <div className="w-full h-screen p-14 bg-black relative">
+    <div className="w-full h-screen bg-black relative">
       {/* Time Display */}
       {/* {currentTime && (
         <div className="absolute top-4 left-4 z-20 text-white bg-black bg-opacity-50 p-3 rounded">
