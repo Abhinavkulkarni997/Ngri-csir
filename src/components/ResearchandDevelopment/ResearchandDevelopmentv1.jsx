@@ -81,14 +81,14 @@ const ResearchData = [
     description:'Geothermal energy is a clean and renewable resource that can be economically extracted from the heat sources beneath the Earth. This form of energy has a wide range of applications, from generating electricity to providing space heating. As we delve deeper into the Earth, temperatures rise significantly. However, for geothermal energy exploration, we focus on accessible temperatures at shallower depths, indicated by surface manifestation, like hot springs or geysers, and a higher geothermal gradient. Exploring geothermal reservoirs is crucial for efficient electricity production.'
   },
   {
-    id: 8,
+    id: 9,
     title: "Planetary Sciences",
     image: c6,
     researchPageURL: "https://www.ngri.res.in/cms/planetary-sciences.php",
     description:'Planetary Sciences Division carries out advanced research on geology & geophysics of terrestrial planets (Mercury, Venus, Earth and Mars) and the Moon for understanding the origin and evolution of the inner Solar System planets and the Moon. Our research includes understanding of impact cratering, tectonics, volcanism, sedimentary and geodynamic processes that shaped the terrestrial planets and the Moon. Geophysical research involving state-of-the-art seismology, gravity, and magnetic studies are performed for understanding the interior structure of the Moon and Mars. Our ongoing and future research covers two major areas: (1) the study of planetary geological records, deciphering geologic history, and geodynamic processes; (2) the study of planetary interiors – composition, geophysical properties and the nature of internal layers using geophysical methods, including theoretical simulations. We undertake study of terrestrial analog sites on Earth that have important implications for planetary exploration. We aim at establishing a geophysical laboratory on the Moon in the future.'
   },
   {
-    id: 9,
+    id: 10,
     title: "Geophysical Mapping Ladakh",
     image: c10,
     researchPageURL:"https://www.ngri.res.in/cms/geophysical-mapping-ladakh.php",
@@ -123,29 +123,42 @@ const ResearchData = [
 
 const ResearchandDevelopmentv1 = () => {
   return (
-    <section className='bg-white py-8 px-4 sm:px-4 '>
+    <section className='bg-white py-12 px-4 sm:px-4 '>
       <div className='max-w-7xl mx-auto '>
       <div className='relative min-h-[1000px] flex  items-center justify-center'>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 z-20'>
        <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
-             <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif  hexagon p-4 ' >
-    <h1 className='uppercase font-serif  text-white font-bold text-xl'>{ResearchData[0].title}</h1>
+      <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif  hexagon p-4 ' >
+      <h1 className='uppercase font-serif  text-white font-bold text-xl'>{ResearchData[0].title}</h1>
       </div>
-             </div>
+      </div>
       <div className='relative w-full h-full  '>
         {ResearchData.slice(1).map((researchitem,index)=>{
-          const angle=((index*45)+45)*(Math.PI/180)
-          const radius=300;
-          const left=`${50+Math.cos(angle)*30}%`;
-          const top=`${50+Math.sin(angle)*30}%`;
+          let angle,radius;
+          if(index<6){
+            angle=(index*60)*(Math.PI/180)
+            radius=220;
+          }else{
+            angle=((index-6)*(360/(ResearchData.length-7)))*(Math.PI/180)
+            radius=400;
+          }
+          
+         
+          const left=Math.cos(angle)*radius;
+          const top=Math.sin(angle)*radius;
 
           return(
-          <div className='absolute w-80 h-80 transform -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:left,top:top}}>
+          <div className='absolute w-80 h-80 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}}>
           <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
-          <img src={researchitem.image} className='w-24 h-24 rounded-full mb-2 ' />
-          <h1 className='font-serif text-sm text-white mb-1 '> {researchitem.title}</h1>
-         {/* <p className='font-serif text-xs text-white overflow-hidden '> {researchitem.description}</p> */}
+          
+          {researchitem.image && (
+
+          <img src={researchitem.image} className='w-24 h-24 rounded-full mb-2 'alt={researchitem.title}/>
+          )}
+          <h1 className='font-serif text-sm text-white mb-1 '> {researchitem.title}
+          </h1>
+         <p className='font-serif text-xs text-white overflow-hidden text-pretty '> {researchitem.description}</p>
           </div>
           </div>
           );
