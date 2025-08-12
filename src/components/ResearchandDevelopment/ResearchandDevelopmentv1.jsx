@@ -137,10 +137,10 @@ const ResearchandDevelopmentv1 = () => {
           let angle,radius;
           if(index<6){
             angle=(index*60)*(Math.PI/180)
-            radius=220;
+            radius=180;
           }else{
             angle=((index-6)*(360/(ResearchData.length-7)))*(Math.PI/180)
-            radius=400;
+            radius=380;
           }
           
          
