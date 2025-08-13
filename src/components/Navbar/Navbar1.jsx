@@ -604,7 +604,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  <ul className="relative" onMouseEnter={()=>setIsCarrersMenuOpen(true)} onMouseLeave={()=>setIsCarrersMenuOpen(false)}>
  <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#2F6281] flex items-center justify-between gap-2 text-start hover:scale-105 hover:text-center hover:text-white">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
  {carrersMenuOpen && (
-   <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
+   <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
      <ul >
        <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
        <li className="hover:text-white hover:bg-[#2F6281] block px-3 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
@@ -617,7 +617,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  <ul className="relative"  onMouseEnter={()=>setIsHrdgMenuOpen(true)} onMouseLeave={()=>setIsHrdgMenuOpen(false)}>
  <li className="cursor-pointer font-semibold px-4 py-2 font-poppins flex items-center justify-between gap-2 text-start hover:bg-[#2F6281] hover:text-white hover:scale-105 hover:text-center">HRDG<MdOutlineKeyboardArrowRight  size={20}/></li>
  {hrdgMenuOpen && (
-  <div className="absolute top-0 left-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
+  <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
     <ul>
       <li className="hover:text-white hover:bg-[#2F6281]  block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
       <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
@@ -694,7 +694,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  </a></li>
 
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
+ <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out  hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 </div>

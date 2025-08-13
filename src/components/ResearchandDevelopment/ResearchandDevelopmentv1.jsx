@@ -159,7 +159,7 @@ const ResearchandDevelopmentv1 = () => {
           )}
           <h1 className='font-serif text-sm text-white mb-1 '> {researchitem.title}
           </h1>
-         <p className='font-serif text-xs text-white overflow-hidden text-pretty '> {researchitem.description}</p>
+         <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p>
           </div>
           </div>
           );
