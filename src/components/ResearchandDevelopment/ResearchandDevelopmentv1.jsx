@@ -123,8 +123,8 @@ const ResearchData = [
 
 const ResearchandDevelopmentv1 = () => {
   return (
-    <section className='bg-white py-12 px-4 sm:px-4 '>
-      <div className='max-w-7xl mx-auto '>
+    <section className='bg-white py-5 px-4 sm:px-4 '>
+      <div className='max-w-7xl mx-auto'>
       <div className='relative min-h-[1000px] flex  items-center justify-center'>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 z-20'>
        <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
@@ -132,15 +132,16 @@ const ResearchandDevelopmentv1 = () => {
       <h1 className='uppercase font-serif  text-white font-bold text-xl'>{ResearchData[0].title}</h1>
       </div>
       </div>
-      <div className='relative w-full h-full  '>
+      <div className='relative w-full h-full'>
         {ResearchData.slice(1).map((researchitem,index)=>{
           let angle,radius;
+          const newIndex=index-1
           if(index<6){
-            angle=(index*60)*(Math.PI/180)
-            radius=180;
+            angle=(newIndex*60-90)*(Math.PI/180)
+            radius=280;
           }else{
-            angle=((index-6)*(360/(ResearchData.length-7)))*(Math.PI/180)
-            radius=380;
+            angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
+            radius=485;
           }
           
          
@@ -148,7 +149,7 @@ const ResearchandDevelopmentv1 = () => {
           const top=Math.sin(angle)*radius;
 
           return(
-          <div className='absolute w-80 h-80 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}}>
+          <div className='absolute w-80 h-80 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
           <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
           
