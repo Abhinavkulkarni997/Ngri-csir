@@ -123,7 +123,7 @@ const ResearchData = [
 
 const ResearchandDevelopmentv1 = () => {
   return (
-    <section className='bg-white py-5 px-4 sm:px-4 '>
+    <section className='bg-white py-5 px-4 sm:px-4 mb-48 mt-48 '>
       <div className='max-w-7xl mx-auto'>
       <div className='relative min-h-[1000px] flex  items-center justify-center'>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 z-20'>
@@ -141,7 +141,7 @@ const ResearchandDevelopmentv1 = () => {
             radius=280;
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
-            radius=485;
+            radius=560;
           }
           
          
