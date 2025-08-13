@@ -141,7 +141,7 @@ const ResearchandDevelopmentv1 = () => {
             radius=280;
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
-            radius=560;
+            radius=485;
           }
           
          
