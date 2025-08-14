@@ -168,7 +168,7 @@ const ResearchandDevelopmentv1 = () => {
           
           {researchitem.image && (
 
-          <img src={researchitem.image} className='w-24 h-24 rounded-full mb-2 'alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-16 h-16 rounded-full  mb-2 'alt={researchitem.title}/>
           )}
           <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1>
