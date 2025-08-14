@@ -20,7 +20,7 @@ import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
 import Globe from './components/Hero/Globe.jsx';
 import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
 import ResearchandDevelopmentv1 from './components/ResearchandDevelopment/ResearchandDevelopmentv1.jsx';
-
+import ResearchandDevelopmentv2 from './components/ResearchandDevelopment/ResearchandDevelopmentv2.jsx';
 function App() {
   return (
     <>
@@ -43,6 +43,7 @@ function App() {
       <ResearchroundUp/>
       <ResearchDevelopment/>
       <ResearchandDevelopmentv1/>
+      <ResearchandDevelopmentv2/>
 
      <ProfileCard/>
      
