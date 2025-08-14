@@ -126,10 +126,10 @@ const ResearchandDevelopmentv2 = () => {
     const [currentPosition,setCurrentPosition]=useState(0);
 
     const changeHexagonRight=()=>{
-        setCurrentPosition(currentPosition+1);
+        setCurrentPosition((prev)=>(prev+1)%10);
     }
     const changeHexagonLeft=()=>{
-        setCurrentPosition(currentPosition-1);
+        setCurrentPosition((prev)=>(prev-1)%10);
     }
   return (
     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 w-1/2'>
@@ -148,7 +148,7 @@ const ResearchandDevelopmentv2 = () => {
       </div>
       <div className='relative w-full h-full'>
         {ResearchData.slice(1).map((researchitem,index)=>{
-          const angle=(index*36-90)*(Math.PI/180)
+          const angle=((index+currentPosition)*36-90)*(Math.PI/180)
         const   radius=230;
           
          
