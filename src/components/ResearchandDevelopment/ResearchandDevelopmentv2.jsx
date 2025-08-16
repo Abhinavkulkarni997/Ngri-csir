@@ -13,6 +13,7 @@ import c6 from "../../assets/images/ResearchandDevelopment/c6.jpg";
 import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
 import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+ import { FiArrowUpRight } from "react-icons/fi";
 const ResearchData = [
   {
     id:0,
@@ -129,12 +130,16 @@ const ResearchandDevelopmentv2 = () => {
         setCurrentPosition((prev)=>(prev+1)%10);
     }
     const changeHexagonLeft=()=>{
-        setCurrentPosition((prev)=>(prev-1)%10);
+        setCurrentPosition((prev)=>(prev-1+10)%10);
     }
+    const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
   return (
     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 w-1/2'>
+   
       <div className='max-w-7xl mx-auto'>
+       
       <div className='relative min-h-[1000px] flex  items-center justify-center'>
+      
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
       <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif  hexagon p-4 ' >
@@ -173,8 +178,25 @@ const ResearchandDevelopmentv2 = () => {
           );
         })}
       </div>
+          <div className='absolute right-[-768px] top-1/2 transform -translate-y-1/2 w-[100%] flex flex-col items-center justify-center px-8'>
+        <h1 className='font-bold font-serif mb-8 text-2xl'>{currentResearch.title}</h1>
+        {currentResearch.image &&(
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-6 mt-4 border-gray-300  rounded-lg border-8 w-96 h-96 object-contain'/>
+
+        )}
+        
+        {currentResearch.description && (
+        <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem]'>{currentResearch.description}</p>
+
+        )}
+        
+        <button className='mt-8 rounded-full transition-all duration-700 hover:shadow-blue-600 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 border-2 text-blue-600 border-blue-600 '><Link to={currentResearch.researchPageURL}>Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
       </div>
       </div>
+
+ 
+      </div>
+       
     </section>
   )
 }
