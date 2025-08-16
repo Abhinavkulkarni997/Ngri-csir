@@ -180,10 +180,10 @@ const ResearchandDevelopmentv2 = () => {
       </div>
           <div className='absolute right-[-768px] top-1/2 transform -translate-y-1/2 w-[100%] flex flex-col items-center justify-center px-8'>
         <h1 className='font-bold font-serif mb-8 text-2xl'>{currentResearch.title}</h1>
-        {/* {currentResearch.image &&(
+        {currentResearch.image &&(
         <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 w-80 h-80 object-contain'/>
 
-        )} */}
+        )}
         
         {currentResearch.description && (
           <>
