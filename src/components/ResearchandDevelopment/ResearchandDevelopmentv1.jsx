@@ -119,6 +119,69 @@ const ResearchData = [
 //   )
 // }
 
+// const ResearchandDevelopmentv1 = () => {
+//   return (
+//     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 '>
+//       <div className='max-w-7xl mx-auto'>
+//       <div className='relative min-h-[1000px] flex  items-center justify-center'>
+//       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 z-20'>
+//        <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
+//       <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif  hexagon p-4 ' >
+//       <h1 className='uppercase font-serif  text-white font-semibold text-sm'>{ResearchData[0].title}</h1>
+//       </div>
+//       </div>
+//       <div className='relative w-full h-full'>
+//         {ResearchData.slice(1).map((researchitem,index)=>{
+//           let angle,radius;
+//           const newIndex=index-1;
+//           const isTop=newIndex===6;
+//           const isBottom=newIndex===8;
+//           if(index<6){
+//             angle=(newIndex*60-90)*(Math.PI/180)
+//             radius=175;
+//           }else{
+//             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
+//             radius=305;
+//           }
+//           if(isTop){
+//             angle=-180*(Math.PI/180);
+//             radius=-505
+//           }
+          
+//          {/* if(isTop){
+//           angle=750*(Math.PI/105)
+//           radius=-200;
+//          } */}
+//          if(isBottom){
+//           angle=180*(Math.PI/180)
+//           radius=505;
+//          }
+//           const left=Math.cos(angle)*radius;
+//           const top=Math.sin(angle)*radius;
+
+//           return(
+//           <div className='absolute w-48 h-48 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
+//           <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
+//              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
+//           <Link to={researchitem.researchPageURL} className='flex flex-col items-center justify-center'>
+//           {researchitem.image && (
+            
+//           <img src={researchitem.image} className='w-16 h-16 rounded-full  mb-2 'alt={researchitem.title}/>
+//           )}
+//           <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
+//           </h1>
+//          {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
+//           </Link>
+//           </div>
+//           </div>
+//           );
+//         })}
+//       </div>
+//       </div>
+//       </div>
+//     </section>
+//   )
+// }
 
 
 const ResearchandDevelopmentv1 = () => {
