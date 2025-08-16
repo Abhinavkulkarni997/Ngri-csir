@@ -165,14 +165,15 @@ const ResearchandDevelopmentv1 = () => {
           <div className='absolute w-60 h-60 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
           <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
-          
+          <Link to={researchitem.researchPageURL} className='flex flex-col items-center justify-center'>
           {researchitem.image && (
-
+            
           <img src={researchitem.image} className='w-16 h-16 rounded-full  mb-2 'alt={researchitem.title}/>
           )}
           <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1>
          {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
+          </Link>
           </div>
           </div>
           );

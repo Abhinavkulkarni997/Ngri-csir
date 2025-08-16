@@ -180,17 +180,21 @@ const ResearchandDevelopmentv2 = () => {
       </div>
           <div className='absolute right-[-768px] top-1/2 transform -translate-y-1/2 w-[100%] flex flex-col items-center justify-center px-8'>
         <h1 className='font-bold font-serif mb-8 text-2xl'>{currentResearch.title}</h1>
-        {currentResearch.image &&(
-        <img src={currentResearch.image} alt={currentResearch.title} className='mb-6 mt-4 border-gray-300  rounded-lg border-8 w-96 h-96 object-contain'/>
+        {/* {currentResearch.image &&(
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 w-80 h-80 object-contain'/>
 
-        )}
+        )} */}
         
         {currentResearch.description && (
-        <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem]'>{currentResearch.description}</p>
+          <>
+          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem]'>{currentResearch.description}</p>
+         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-blue-600 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-2 border-2 text-blue-600 border-blue-600 '><Link to={currentResearch.researchPageURL}>Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
+          </>
+        
 
         )}
         
-        <button className='mt-8 rounded-full transition-all duration-700 hover:shadow-blue-600 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 border-2 text-blue-600 border-blue-600 '><Link to={currentResearch.researchPageURL}>Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
+       
       </div>
       </div>
 
