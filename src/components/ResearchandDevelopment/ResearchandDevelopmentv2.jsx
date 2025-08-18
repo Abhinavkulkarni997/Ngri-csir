@@ -134,8 +134,9 @@ const ResearchandDevelopmentv2 = () => {
         setCurrentPosition((prev)=>(prev-1+10)%10);
     }
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
+
   return (
-    <section className='bg-gradient-to-br from-blue-200 via-purple-100  py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
+    <section className='bg-gradient-to-br  from-[#E5F5FD] via-white to-[#E5F5FD] py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
    
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
@@ -166,12 +167,12 @@ const ResearchandDevelopmentv2 = () => {
           return(
           <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 ${isSelected ?"   z-20  ":""  }`}
            key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:isSelected?20:10}} >
-          <div className={`absolute inset-0 hexagon ${isSelected? "bg-emerald-400":"bg-[#a9a9a9]"}`}></div>
+          <div className={`absolute inset-0 hexagon ${isSelected? "bg-amber-400":"bg-[#a9a9a9]"}`}></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
           
           {researchitem.image && (
 
-          <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 'alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
