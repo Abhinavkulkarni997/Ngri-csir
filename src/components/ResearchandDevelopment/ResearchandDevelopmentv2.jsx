@@ -14,6 +14,7 @@ import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
 import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
  import { FiArrowUpRight } from "react-icons/fi";
+ import './ResearchDevelopment.css';
 const ResearchData = [
   {
     id:0,
@@ -134,7 +135,7 @@ const ResearchandDevelopmentv2 = () => {
     }
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
   return (
-    <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full'>
+    <section className='bg-gradient-to-br from-blue-200 via-purple-100  py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
    
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
@@ -165,7 +166,7 @@ const ResearchandDevelopmentv2 = () => {
           return(
           <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 ${isSelected ?"   z-20  ":""  }`}
            key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:isSelected?20:10}} >
-          <div className={`absolute inset-0 hexagon ${isSelected? "bg-yellow-600":"bg-[#a9a9a9]"}`}></div>
+          <div className={`absolute inset-0 hexagon ${isSelected? "bg-emerald-400":"bg-[#a9a9a9]"}`}></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
           
           {researchitem.image && (
