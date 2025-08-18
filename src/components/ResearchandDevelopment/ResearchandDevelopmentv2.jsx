@@ -153,17 +153,19 @@ const ResearchandDevelopmentv2 = () => {
       </div>
       <div className='relative w-full h-full'>
         {ResearchData.slice(1).map((researchitem,index)=>{
-          const angle=((index+currentPosition)*36-90)*(Math.PI/180)
-        const   radius=230;
-          
-         
-     
-          const left=Math.cos(angle)*radius;
+          {/* const angle=((index+currentPosition)*36-90)*(Math.PI/180) */}
+          const selectedIndex=currentPosition;
+          let displayIndex=(index-selectedIndex+10)%10;
+          const angle=(displayIndex*36)*(Math.PI/180);
+        const   radius=240;
+         const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
 
+          const isSelected=index===selectedIndex;
           return(
-          <div className='absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
-          <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
+          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 ${isSelected ?"   z-20  ":""  }`}
+           key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:isSelected?20:10}} >
+          <div className={`absolute inset-0 hexagon ${isSelected? "bg-yellow-600":"bg-[#a9a9a9]"}`}></div>
              <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
           
           {researchitem.image && (
