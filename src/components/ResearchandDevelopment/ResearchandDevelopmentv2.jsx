@@ -15,6 +15,7 @@ import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
  import { FiArrowUpRight } from "react-icons/fi";
  import './ResearchDevelopment.css';
+ import earthDay from '../../assets/textures/earth_night.jpg'
 const ResearchData = [
   {
     id:0,
@@ -136,7 +137,7 @@ const ResearchandDevelopmentv2 = () => {
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
 
   return (
-    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
+    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthDay})`,backgroundSize:'cover',backgroundPosition:'center'}}>
    
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
@@ -171,8 +172,8 @@ const ResearchandDevelopmentv2 = () => {
            zIndex:isSelected?20:10}} >
           {
             isSelected ? (
-              <div className="moving-border-hexagon  w-full h-full flex items-center justify-center relative animate-pulse">
-               <div className="absolute inset-0 hexagon bg-white"></div>
+              <div className="moving-border-hexagon  w-full h-full flex items-center justify-center relative ">
+               {/* <div className="absolute inset-0 hexagon bg-white"></div> */}
              <div className="absolute inset-2 hexagon bg-blue-800/80 flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 z-10" > 
           {researchitem.image && (
           <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
@@ -203,15 +204,17 @@ const ResearchandDevelopmentv2 = () => {
 
 
       <div className=' flex flex-col items-center justify-center px-8 w-full md:w-1/2'>
-        <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse'>{currentResearch.title}</h1>
+        <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse text-white'>{currentResearch.title}</h1>
         {currentResearch.image &&(
-        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 w-80 h-80 object-contain'/>
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 moving-border w-80 h-80 object-cover '/>
         )}
         {currentResearch.description && (
           <>
-          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem] text-left '>{currentResearch.description}</p>
+          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem] text-left text-white'>{currentResearch.description}</p>
           {currentResearch.researchPageURL && (
-         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-blue-600 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 border-2 text-blue-600 border-blue-600 '><Link to={currentResearch.researchPageURL}>Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
+         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-blue-800 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 moving-border border-1 text-white border-blue-600 '>
+         <Link to={currentResearch.researchPageURL}>
+         Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
          )}
           </>
         )}
