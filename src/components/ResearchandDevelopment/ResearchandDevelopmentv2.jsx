@@ -15,7 +15,7 @@ import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
  import { FiArrowUpRight } from "react-icons/fi";
  import './ResearchDevelopment.css';
- import earthDay from '../../assets/textures/earth_night.jpg'
+ import earthNight from '../../assets/textures/earth_night.jpg'
 const ResearchData = [
   {
     id:0,
@@ -137,7 +137,7 @@ const ResearchandDevelopmentv2 = () => {
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
 
   return (
-    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthDay})`,backgroundSize:'cover',backgroundPosition:'center'}}>
+    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center'}}>
    
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
