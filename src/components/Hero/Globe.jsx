@@ -457,8 +457,8 @@ import * as THREE from "three";
 import { useRef, useEffect, useMemo, useState } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
-import earthDay from "../../assets/textures/earth_day.jpg";
-import earthNight from "../../assets/textures/earth_night.jpg";
+import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
+import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
 
 function handleScrollDown() {
