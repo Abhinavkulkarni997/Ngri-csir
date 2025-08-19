@@ -136,7 +136,7 @@ const ResearchandDevelopmentv2 = () => {
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
 
   return (
-    <section className='bg-gradient-to-br  from-[#E5F5FD] via-white to-[#E5F5FD] py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
+    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in'>
    
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
@@ -165,13 +165,16 @@ const ResearchandDevelopmentv2 = () => {
 
           const isSelected=index===selectedIndex;
           return(
-          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 ${isSelected ?"   z-20  ":""  }`}
-           key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:isSelected?20:10}} >
-          <div className={`absolute inset-0 hexagon ${isSelected? "bg-amber-400":"bg-[#a9a9a9]"}`}></div>
-             <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
-          
+          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2`}
+           key={researchitem.id} 
+           style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, 
+           zIndex:isSelected?20:10}} >
+          {
+            isSelected ? (
+              <div className="moving-border-hexagon  w-full h-full flex items-center justify-center relative animate-pulse">
+               <div className="absolute inset-0 hexagon bg-white"></div>
+             <div className="absolute inset-2 hexagon bg-blue-800/80 flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 z-10" > 
           {researchitem.image && (
-
           <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
@@ -179,19 +182,34 @@ const ResearchandDevelopmentv2 = () => {
          {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
           </div>
           </div>
+            ):(
+              <>
+              <div className="absolute inset-0 hexagon bg-[#a9a9a9]"></div>
+             <div className='absolute inset-2 hexagon bg-blue-800/80  flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
+          {researchitem.image && (
+          <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
+          )}
+          {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
+          </h1> */}
+         {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
+          </div>
+          </>
+            )}
+          </div>
           );
         })}
       </div>
-          
       </div>
+
+
       <div className=' flex flex-col items-center justify-center px-8 w-full md:w-1/2'>
-        <h1 className='font-bold font-serif mb-8 text-2xl '>{currentResearch.title}</h1>
+        <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse'>{currentResearch.title}</h1>
         {currentResearch.image &&(
         <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 w-80 h-80 object-contain'/>
         )}
         {currentResearch.description && (
           <>
-          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem]'>{currentResearch.description}</p>
+          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem] text-left '>{currentResearch.description}</p>
           {currentResearch.researchPageURL && (
          <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-blue-600 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 border-2 text-blue-600 border-blue-600 '><Link to={currentResearch.researchPageURL}>Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
          )}

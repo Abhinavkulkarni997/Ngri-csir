@@ -190,7 +190,7 @@ const ResearchDevelopment = () => {
             initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
-          className=" text-gray-100 leading-relaxed p-12 font-serif text-base">
+          className=" text-gray-100 leading-relaxed p-12 font-serif text-base text-left">
             {activeResearch.description}
             
           </motion.p>)}
