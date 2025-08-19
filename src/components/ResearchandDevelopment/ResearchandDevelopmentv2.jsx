@@ -137,8 +137,9 @@ const ResearchandDevelopmentv2 = () => {
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
 
   return (
-    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 mb-8 mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center'}}>
-   
+    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'}}>
+       {/* <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in'> */}
+
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
       <div className='relative min-h-[1000px] flex  items-center justify-center w-full md:w-1/2'>
