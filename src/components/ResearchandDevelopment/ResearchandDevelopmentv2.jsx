@@ -1,16 +1,16 @@
 
 import React,{useState} from 'react';
 import { Link } from "react-router-dom";
-import c1 from "../../assets/images/ResearchandDevelopment/c1.jpg";
-import c3 from "../../assets/images/ResearchandDevelopment/c3.jpg";
-import c2 from "../../assets/images/ResearchandDevelopment/c2.jpg";
-import c8 from "../../assets/images/ResearchandDevelopment/c8.jpg";
-import c9 from "../../assets/images/ResearchandDevelopment/c9.jpg";
-import c5 from "../../assets/images/ResearchandDevelopment/c5.jpg";
-import c4 from "../../assets/images/ResearchandDevelopment/c4.jpg";
-import c7 from "../../assets/images/ResearchandDevelopment/c7.jpg";
-import c6 from "../../assets/images/ResearchandDevelopment/c6.jpg";
-import c10 from "../../assets/images/ResearchandDevelopment/c10.jpg";
+import c1 from "../../assets/images/ResearchandDevelopment/C1.png";
+import c3 from "../../assets/images/ResearchandDevelopment/C3.png";
+import c2 from "../../assets/images/ResearchandDevelopment/C2.png";
+import c8 from "../../assets/images/ResearchandDevelopment/C8.png";
+import c9 from "../../assets/images/ResearchandDevelopment/C9.png";
+import c5 from "../../assets/images/ResearchandDevelopment/C5.png";
+import c4 from "../../assets/images/ResearchandDevelopment/C4.png";
+import c7 from "../../assets/images/ResearchandDevelopment/C7.png";
+import c6 from "../../assets/images/ResearchandDevelopment/C6.png";
+import c10 from "../../assets/images/ResearchandDevelopment/C10.png";
 import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
  import { FiArrowUpRight } from "react-icons/fi";
@@ -207,7 +207,7 @@ const ResearchandDevelopmentv2 = () => {
       <div className=' flex flex-col items-center justify-center px-8 w-full md:w-1/2'>
         <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse text-white'>{currentResearch.title}</h1>
         {currentResearch.image &&(
-        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 moving-border w-80 h-80 object-cover '/>
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 moving-border w-80 h-80  '/>
         )}
         {currentResearch.description && (
           <>

@@ -450,14 +450,14 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   // <nav className=" fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-clip shadow-md z-50">
 //  <nav className=" fixed top-0 left-0 bg-[#550000] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50"></nav>
  <nav className=" fixed top-0 left-0 bg-[#4682B4] border-b border-white/20 w-full max-w-full  overflow-x-clip shadow-md z-50">
-  <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-2">
+  <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-4 2xl:px-8 py-2">
 {/*--------------------------------------------------------------------------- Logo and Title Section------------------------------------------------------------------------ */}
-<div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 flex-shrink-0">
-<Link to="/" className="flex items-center space-x-1 md:space-x-2">
-<img src={logo} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"/>
-<img src={logo1} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"/>
+<div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 xl:space-x-2 2xl:space-x-4 flex-shrink-0">
+<Link to="/" className="flex items-center space-x-1 md:space-x-2 xl:space-x-1 2xl:space-x-2">
+<img src={logo} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-20 lg:w-20 xl:h-24 xl:w-24 2xl:h-24 2xl:w-24 object-contain"/>
+<img src={logo1} alt="logo" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-20 lg:w-20 xl:h-24 xl:w-24 2xl:h-24 2xl:w-24 object-contain"/>
 <div className="min-w-0 flex-1">
-  <h1 className="text-[0.6rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-tight">
+  <h1 className="text-[0.6rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-medium 2xl:text-xl font-bold leading-tight">
       <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600 ">CSIR-NGRI</span><br/>
       <span className=" animate-text bg-clip-text text-transparent bg-gradient-to-br from-orange-400 via-white to-green-600  text-[0.5rem]  xs:text-[0.6rem] sm:text-xs md:text-sm lg:text-base">National Geophysical Research Institute</span>
   </h1>
@@ -467,10 +467,10 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 
 {/*-----------------------------------------------------------------------------Desktop view of Navigation------------------------------------------------------------------- */}
-<div className="hidden xl:flex  lg:flex space-x-2 lg:space-x-4 xl:space-x-6  2xl:space-x-8   ">
-<ul className=" flex justify-center space-x-2 lg:space-x-4 xl:space-x-6 ">
+<div className="hidden xl:flex  lg:flex space-x-1 lg:space-x-2 xl:space-x-3  2xl:space-x-8   ">
+<ul className=" flex items-center justify-center space-x-1 lg:space-x-2 xl:space-x-3 2xl:space-x-6 ">
   {/* Home */}
-  <li><a href="#home" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-12  text-sm lg:text-base  text-white">Home</a></li>
+  <li><a href="/" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-base  text-white">Home</a></li>
  
  {/* About dropdown */}
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
@@ -511,7 +511,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 font-semibold font-poppins text-start space-y-2">
     <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-semibold font-poppins">
-  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</a></li>
+  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-airborne-engineering-geophysics.php">Instrumentation, Airborne and Engineering Geophysics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</a></li>
@@ -521,7 +521,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geological-planetary-sciences.php">Geological and Planetary Sciences</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</a></li>
-  <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li>
+  {/* <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</a></li> */}
    <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/paleo-seismology.php">Paleo-Seismology</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/seismology.php">Seismology</a></li>
