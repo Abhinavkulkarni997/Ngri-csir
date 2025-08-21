@@ -468,22 +468,22 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/*-----------------------------------------------------------------------------Desktop view of Navigation------------------------------------------------------------------- */}
 <div className="hidden xl:flex  lg:flex space-x-1 lg:space-x-2 xl:space-x-3  2xl:space-x-8   ">
-<ul className=" flex items-center justify-center space-x-1 lg:space-x-2 xl:space-x-3 2xl:space-x-6 ">
+<ul className=" flex  justify-center space-x-1 lg:space-x-2 xl:space-x-3 2xl:space-x-6 ">
   {/* Home */}
-  <li><a href="/" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-base  text-white">Home</a></li>
+  <li><a href="/" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-base xl:text-xs 2xl:text-base text-white px-1 xl:px-2 2xl:px-3 font-poppins">Home</a></li>
  
  {/* About dropdown */}
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">About
-   <MdOutlineKeyboardArrowDown  size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
-   <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] transform ">
-  <div className="relative top-6 p-6 bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
-    <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
+  <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins">About
+   <MdOutlineKeyboardArrowDown  size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
+   <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] xl:min-w-[220px] 2xl:min-w-[220px] transform ">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
+    <div className="w-5 h-5 xl:w-4 xl:h-4 2xl:w-6 2xl:h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-poppins font-semibold text-start">
+    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 ">
+    <ul className="mt-2 xl:mt-1 2xl:mt-3 text-sm xl:text-xs 2xl:text-[15px] text-gray-600 space-y-3 xl:space-y-2 2xl:space-y-4 font-poppins font-semibold text-start">
 
 <li className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/our-director.php">Our Director</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281]  hover:scale-105 px-1 py-1  hover:text-center"><a href="https://www.ngri.res.in/cms/introduction-ngri.php">Introduction</a></li>
@@ -501,16 +501,16 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* R & D Groups DropDown */}
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-12 text-sm lg:text-base">R & D Groups
-  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
-       <div className="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3">R & D Groups
+  <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
+       <div className="absolute top-0 -left-32 xl:-left-32 2xl:-left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[400px] xl:min-w-[560px] 2xl:min-w-[560px] transform">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
+    <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[10rem] xl:group-hover:translate-x-[8rem] 2xl:group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 font-semibold font-poppins text-start space-y-2">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-2 font-semibold font-poppins">
+    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 font-semibold font-serif text-start space-y-1 xl:space-y-0 2xl:space-y-2 font-poppins">
+    <ul className="mt-2 xl:mt-1 2xl:mt-3 text-sm xl:text-xs 2xl:text-[15px] text-gray-600 space-y-1 xl:space-y-1 2xl:space-y-2 font-semibold font-poppins">
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-airborne-engineering-geophysics.php">Instrumentation, Airborne and Engineering Geophysics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</a></li>
@@ -538,16 +538,16 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* People DropDown */}
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">People
-<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
-   <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
+<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 ">People
+<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
+   <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[200px] 2xl:min-w-[200px] transform">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white rounded-xl shadow-xl w-full">
+    <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 ">
-    <ul className="mt-3 text-[15px] text-gray-600 space-y-4 font-semibold font-poppins text-start">
+    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 ">
+    <ul className="mt-2 xl:mt-1 2xl:mt-3 text-sm xl:text-xs 2xl:text-[15px] text-gray-600 space-y-3 xl:space-y-2 2xl:space-y-4 font-semibold font-poppins text-start">
 <li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/researcher.php">Researcher</a></li>
 <li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/technical-staff.php">Technical</a></li>
 <li className="hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/cms/administration.php">Administration</a></li>
@@ -563,16 +563,16 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* Resources Dropdown */}
   <li className="relative group">
-    <a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base" >Resources
- <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
-    <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
-   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
+    <a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3" >Resources
+ <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
+    <div className="absolute top-0 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[160px] 2xl:min-w-[200px] transform">
+   <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
+    <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-6 font-semibold font-poppins space-y-2 hover:cursor-pointer">
-    <ul className="mt-3 text-[15px] text-gray-600 font-semibold font-poppins space-y-2 text-start">
+    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 font-semibold font-poppins space-y-1 xl:space-y-0 2xl:space-y-2 hover:cursor-pointer">
+    <ul className="mt-2 xl:mt-1 2xl:mt-3 text-sm xl:text-xs 2xl:text-[15px] text-gray-600 font-semibold font-poppins space-y-1 xl:space-y-1 2xl:space-y-2 text-start">
  <li className="hover:text-white hover:bg-[#2F6281] block hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/annual-report.php">Annual Report</a>
 
  </li>
@@ -591,9 +591,9 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 {/* Join Us dropdown */}
 
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
-<a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 text-sm lg:text-base">
-Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/>
-    <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+<a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10  xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3">
+Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
+    <div className="absolute top-0 -left-20 xl:-left-24 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[250px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
@@ -645,8 +645,8 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
 
 {/* Language dropdown */}
  <li className="relative group">
- <img src={Language} alt={"Language"} className="h-6 w-6 lg:h-8 lg:w-8 rounded-full"/>
- <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12">
+ <img src={Language} alt={"Language"} className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-8 2xl:w-8 lg:w-6 lg:h-6 rounded-full"/>
+ <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12">
  
 
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/> */}
@@ -667,13 +667,11 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
 </div>
 </div>
  </a></li>
+
+ {/* Screenreader access dropdown */}
  <li className="relative group">
-
-
-
-
- <img src={diff_abled} alt={diff_abled} className="h-6 w-6 lg:h-8 lg:w-8 rounded-full"/>
- <a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12">
+ <img src={diff_abled} alt={diff_abled} className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-8 2xl:w-8 lg:h-6 lg:w-6 rounded-full"/>
+ <a href="#screenreaderaccess" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8  2xl:py-12">
  
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 hover:rotate-180"/> */}
  
@@ -694,7 +692,7 @@ Join Us<MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transit
  </a></li>
 
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out  hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-3 lg:px-4 py-3 lg:py-4 text-sm lg:text-base ">Staff Corner</a></li>
+ <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out  hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-2 xl:px-3 2xl:px-4 xl:py-3 2xl:py-4 text-xs lg:px-4 py-2 lg:py-4 lg:text-sm xl:text-xs 2xl:text-base ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 </div>
