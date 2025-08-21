@@ -737,7 +737,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
   {rndOpen &&(
 
   <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
-  <li><Link to="https://www.ngri.res.in/research/airborne-geophysics.php">Airborne Geophysics</Link></li>
+  <li><Link to="https://www.ngri.res.in/research/instrumentation-airborne-engineering-geophysics.php">Instrumentation,Airborne and Engineering Geophysics</Link></li>
   <li><Link to="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</Link></li>
   <li><Link to="https://www.ngri.res.in/research/consource-seismics-and-gashydrates.php">Controlled Source Seismics and Gas Hydrates</Link></li>
   <li><Link to="https://www.ngri.res.in/research/earthprocess-modelling.php">Earth Process Modelling</Link></li>
@@ -747,7 +747,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
   <li><Link to="https://www.ngri.res.in/research/geological-planetary-sciences.php">Geological and Planetary Sciences</Link></li>
   <li><Link to="https://www.ngri.res.in/research/geomagnetism.php">Geomagnetism</Link></li>
   <li><Link to="https://www.ngri.res.in/research/gravitymagnetics.php">Gravity and Magnetics</Link></li>
-  <li><Link to="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</Link></li>
+  {/* <li><Link to="https://www.ngri.res.in/research/instrumentation-and-engineering-geophysics.php">Instrumentation and Engineering Geophysics</Link></li> */}
   <li><Link to="https://www.ngri.res.in/research/magneto-tellurics.php">Magnetotellurics</Link></li>
   <li><Link to="https://www.ngri.res.in/research/paleo-seismology.php">Paleo-Seismology</Link></li>
   <li><Link to="https://www.ngri.res.in/research/seismology.php">Seismology</Link></li>
