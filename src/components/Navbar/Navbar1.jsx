@@ -509,7 +509,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[10rem] xl:group-hover:translate-x-[8rem] 2xl:group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
-    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 font-semibold font-serif text-start space-y-1 xl:space-y-0 2xl:space-y-2 font-poppins">
+    <div className="grid grid-cols-1 gap-4 xl:gap-3 2xl:gap-6 font-semibold  text-start space-y-1 xl:space-y-0 2xl:space-y-2 font-poppins">
     <ul className="mt-2 xl:mt-1 2xl:mt-3 text-sm xl:text-xs 2xl:text-[15px] text-gray-600 space-y-1 xl:space-y-1 2xl:space-y-2 font-semibold font-poppins">
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/instrumentation-airborne-engineering-geophysics.php">Instrumentation, Airborne and Engineering Geophysics</a></li>
   <li className="w-full hover:text-white hover:bg-[#2F6281] hover:scale-105 px-1 py-1 hover:text-center"><a href="https://www.ngri.res.in/research/computational-electro-magnetics.php">Computational Electromagnetics</a></li>
@@ -658,7 +658,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
     <div className="relative z-10">
     <div className="grid grid-cols-1 gap-6 ">
     <ul className="mt-3 text-[15px] text-gray-600 font-poppins font-semibold space-y-2 text-start">
- <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">English</li>
+ <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center ">English</li>
  <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">Telugu</li>
  <li className="hover:bg-[#2F6281] hover:text-white px-4 py-2 hover:scale-105 hover:text-center">Hindi</li>
     </ul>
@@ -692,7 +692,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  </a></li>
 
  {/* <div className="flex items-center"> */}
- <li><a href="#staffCorner" className=" text-white  font-bold transition-all duration-150 ease-in-out  hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-2 xl:px-3 2xl:px-4 xl:py-3 2xl:py-4 text-xs lg:px-4 py-2 lg:py-4 lg:text-sm xl:text-xs 2xl:text-base ">Staff Corner</a></li>
+ <li><a href="https://www.ngri.res.in/staff_corner.php" className=" text-white  font-bold transition-all duration-150 ease-in-out  hover:bg-[#FFFFE3]  hover:text-gray-600 rounded-xl px-2 xl:px-3 2xl:px-4 xl:py-3 2xl:py-4 text-xs lg:px-4 py-2 lg:py-4 lg:text-sm xl:text-xs 2xl:text-base ">Staff Corner</a></li>
  {/* </div> */}
 </ul>
 </div>
@@ -859,8 +859,8 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  )}
  </li>
  {/* <div className="flex flex-col space-y-2 p-4"> */}
- <li><button className="text-white hover:text-gray-600 font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3] rounded-xl px-4 py-2">
- Staff Corner</button></li>
+ <li><Link to="https://www.ngri.res.in/staff_corner.php"><button className="text-white hover:text-gray-600 font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3] rounded-xl px-4 py-2">
+ Staff Corner</button></Link></li>
  {/* </div> */}
  </ul>
 </div>
