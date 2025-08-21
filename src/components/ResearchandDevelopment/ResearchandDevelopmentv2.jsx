@@ -135,6 +135,7 @@ const ResearchandDevelopmentv2 = () => {
         setCurrentPosition((prev)=>(prev-1+10)%10);
     }
     const currentResearch=ResearchData.slice(1)[(currentPosition)%(ResearchData.length-1)]
+    
 
   return (
     <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'}}>
