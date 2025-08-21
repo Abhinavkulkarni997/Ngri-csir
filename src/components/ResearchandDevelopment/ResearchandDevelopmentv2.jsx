@@ -162,8 +162,8 @@ const ResearchandDevelopmentv2 = () => {
           const selectedIndex=currentPosition;
           let displayIndex=(index-selectedIndex+10)%10;
           const angle=(displayIndex*36)*(Math.PI/180);
-        const   radius=240;
-         const left=Math.cos(angle)*radius;
+          const   radius=240;
+          const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
 
           const isSelected=index===selectedIndex;
@@ -171,7 +171,8 @@ const ResearchandDevelopmentv2 = () => {
           <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2`}
            key={researchitem.id} 
            style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, 
-           zIndex:isSelected?20:10}} >
+           zIndex:isSelected?20:10}} 
+           onClick={() => setCurrentPosition(index)}>
           {
             isSelected ? (
               <div className="moving-border-hexagon  w-full h-full flex items-center justify-center relative ">
