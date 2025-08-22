@@ -18,6 +18,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
 import SocialIconsFixed from './components/SocialIcons/SocialIconsFixed.jsx';
 import Globe from './components/Hero/Globe.jsx';
+import Globev2 from './components/Hero/Globev2.jsx';
 import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
 import ResearchandDevelopmentv1 from './components/ResearchandDevelopment/ResearchandDevelopmentv1.jsx';
 import ResearchandDevelopmentv2 from './components/ResearchandDevelopment/ResearchandDevelopmentv2.jsx';
@@ -34,12 +35,10 @@ function App() {
       <main className='flex-grow'>
 
       {/* <Hero/> */}
-      <Globe/>
+      {/* <Globe/> */}
+      <Globev2/>
 
-      
-
-        
-     <ImageGallery/>
+      <ImageGallery/>
       <ResearchroundUp/>
       {/* <ResearchDevelopment/> */}
       <ResearchandDevelopmentv1/>
