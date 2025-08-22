@@ -696,7 +696,7 @@ export default function GlobeRealistic() {
   };
 
   return (
-    <div className="w-full h-screen bg-black relative " style={{ backgroundImage: `url(${HeroBanner})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="w-full h-screen bg-black relative  " >
       {/* Time Display */}
       {/* {currentTime && (
         <div className="absolute top-4 left-4 z-20 text-white bg-black bg-opacity-50 p-3 rounded">
@@ -730,8 +730,9 @@ export default function GlobeRealistic() {
         </div>
       </div> */}
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
-
+     <img src={HeroBanner} alt="Hero Banner" className="w-full h-full object-cover absolute  opacity-50 z-10  " />
       <Canvas 
+      className="absolute inset-0 z-0"
         camera={{ 
           position: cameraPosition.toArray(), 
           fov: 45, 
@@ -753,7 +754,7 @@ export default function GlobeRealistic() {
         <ambientLight intensity={0.2} />
 
         <Billboard position={hyderabadCoords}>
-          <Text
+          {/* <Text
             fontSize={0.07}
             color="white"
             anchorX="center"
@@ -765,7 +766,7 @@ export default function GlobeRealistic() {
             outlineOpacity={1}
           >
             {"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute"}
-          </Text>
+          </Text> */}
         </Billboard>
 
         <OrbitControls 
