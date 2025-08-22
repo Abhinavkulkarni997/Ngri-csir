@@ -22,6 +22,7 @@ import Globev2 from './components/Hero/Globev2.jsx';
 import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
 import ResearchandDevelopmentv1 from './components/ResearchandDevelopment/ResearchandDevelopmentv1.jsx';
 import ResearchandDevelopmentv2 from './components/ResearchandDevelopment/ResearchandDevelopmentv2.jsx';
+import ResearchandDevelopmentv3 from './components/ResearchandDevelopment/ResearchandDevelopmentv3.jsx';
 function App() {
   return (
     <>
@@ -42,7 +43,8 @@ function App() {
       <ResearchroundUp/>
       {/* <ResearchDevelopment/> */}
       <ResearchandDevelopmentv1/>
-      <ResearchandDevelopmentv2/>
+      {/* <ResearchandDevelopmentv2/> */}
+      <ResearchandDevelopmentv3/>
 
      <ProfileCard/>
      
