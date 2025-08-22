@@ -41,7 +41,7 @@ function App() {
         
      <ImageGallery/>
       <ResearchroundUp/>
-      <ResearchDevelopment/>
+      {/* <ResearchDevelopment/> */}
       <ResearchandDevelopmentv1/>
       <ResearchandDevelopmentv2/>
 

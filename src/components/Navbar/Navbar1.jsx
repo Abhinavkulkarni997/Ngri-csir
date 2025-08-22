@@ -474,7 +474,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  
  {/* About dropdown */}
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#about" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins">About
+  <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins">About
    <MdOutlineKeyboardArrowDown  size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] xl:min-w-[220px] 2xl:min-w-[220px] transform ">
@@ -501,7 +501,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* R & D Groups DropDown */}
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a href="#R&DGroups" className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3">R & D Groups
+  <a  className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 cursor-pointer">R & D Groups
   <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
        <div className="absolute top-0 -left-32 xl:-left-32 2xl:-left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[400px] xl:min-w-[560px] 2xl:min-w-[560px] transform">
@@ -538,7 +538,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* People DropDown */}
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-<a href="#People" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 ">People
+<a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 ">People
 <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[200px] 2xl:min-w-[200px] transform">
@@ -563,7 +563,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* Resources Dropdown */}
   <li className="relative group">
-    <a href="#Resources" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3" >Resources
+    <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3" >Resources
  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
     <div className="absolute top-0 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[160px] 2xl:min-w-[200px] transform">
