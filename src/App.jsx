@@ -23,6 +23,7 @@ import NgriGallery from './components/NGRIGallery/NgriGallery.jsx';
 import ResearchandDevelopmentv1 from './components/ResearchandDevelopment/ResearchandDevelopmentv1.jsx';
 import ResearchandDevelopmentv2 from './components/ResearchandDevelopment/ResearchandDevelopmentv2.jsx';
 import ResearchandDevelopmentv3 from './components/ResearchandDevelopment/ResearchandDevelopmentv3.jsx';
+import ResearchandDevelopmentv4 from './components/ResearchandDevelopment/ResearchandDevelopmentv4.jsx';
 function App() {
   return (
     <>
@@ -42,9 +43,11 @@ function App() {
       <ImageGallery/>
       <ResearchroundUp/>
       {/* <ResearchDevelopment/> */}
-      <ResearchandDevelopmentv1/>
+      {/* <ResearchandDevelopmentv1/> */}
       {/* <ResearchandDevelopmentv2/> */}
+      <ResearchandDevelopmentv4/>
       <ResearchandDevelopmentv3/>
+      
 
      <ProfileCard/>
      
