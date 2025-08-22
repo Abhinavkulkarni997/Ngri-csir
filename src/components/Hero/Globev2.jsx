@@ -730,7 +730,9 @@ export default function GlobeRealistic() {
         </div>
       </div> */}
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
-     <img src={HeroBanner} alt="Hero Banner" className="w-full h-full object-cover absolute  opacity-50 z-10  " />
+     <div className="flex items-center justify-center absolute inset-0 z-10 ">
+     <img src={HeroBanner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50   " />
+     </div>
       <Canvas 
       className="absolute inset-0 z-0"
         camera={{ 
@@ -754,7 +756,7 @@ export default function GlobeRealistic() {
         <ambientLight intensity={0.2} />
 
         <Billboard position={hyderabadCoords}>
-          {/* <Text
+          <Text
             fontSize={0.07}
             color="white"
             anchorX="center"
@@ -766,7 +768,7 @@ export default function GlobeRealistic() {
             outlineOpacity={1}
           >
             {"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute"}
-          </Text> */}
+          </Text>
         </Billboard>
 
         <OrbitControls 
