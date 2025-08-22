@@ -138,16 +138,16 @@ const ResearchandDevelopmentv3 = () => {
 
   return (
     // <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'}}>
-    <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in'>
+    <section className='bg-gradient-to-br  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in'>
 
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
        
       <div className='relative min-h-[1000px] flex  items-center justify-center w-full md:w-1/2'>
       
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
-       <div className='absolute inset-0 hexagon  bg-[#A9A9A9]'></div>
-      <div className='absolute inset-2 hexagon bg-blue-800/80   flex flex-col items-center justify-center  font-serif text-white hexagon p-4 ' >
-      <h1 className='uppercase font-serif  text-white font-medium text-xl'>{ResearchData[0].title}</h1>
+       <div className='absolute inset-0 hexagon  bg-white'></div>
+      <div className='absolute inset-2 hexagon    flex flex-col items-center justify-center  font-serif text-black hexagon p-4 ' >
+      <h1 className='uppercase font-serif  text-black font-medium text-xl'>{ResearchData[0].title}</h1>
       <div className='flex justify-center items-center'>
        <button  onClick={changeHexagonLeft}><CiCircleChevLeft size={30}/></button>
       <button onClick={changeHexagonRight}><CiCircleChevRight size={30}/></button>
@@ -174,11 +174,11 @@ const ResearchandDevelopmentv3 = () => {
            onClick={() => setCurrentPosition(index)}>
           {
             isSelected ? (
-              <div className="moving-border-hexagon  w-full h-full flex items-center justify-center relative ">
+              <div className="hexagon bg-blue-500 w-full h-full flex items-center justify-center relative ">
                {/* <div className="absolute inset-0 hexagon bg-white"></div> */}
-             <div className="absolute inset-2 hexagon bg-blue-800/80 flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 z-10" > 
+             <div className="absolute inset-2 hexagon  flex flex-col items-center justify-center text-white font-serif font-bold hexagon  z-10" > 
           {researchitem.image && (
-          <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 ' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
@@ -187,10 +187,10 @@ const ResearchandDevelopmentv3 = () => {
           </div>
             ):(
               <>
-              <div className="absolute inset-0 hexagon bg-[#a9a9a9]"></div>
-             <div className='absolute inset-2 hexagon bg-blue-800/80  flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4' >
+              <div className="absolute inset-0 hexagon bg-white "></div>
+             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon ' >
           {researchitem.image && (
-          <img src={researchitem.image} className='w-24 h-24 rounded-full  mb-1 ' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 ' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
@@ -204,11 +204,11 @@ const ResearchandDevelopmentv3 = () => {
       </div>
       </div>
 
-
+    {/* title and image and description container */}
       <div className=' flex flex-col items-center justify-center px-8 w-full md:w-1/2'>
         <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse text-black'>{currentResearch.title}</h1>
         {currentResearch.image &&(
-        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-gray-300  rounded-lg border-8 moving-border w-80 h-80  '/>
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-white  rounded-lg border-8 moving-border w-80 h-80  '/>
         )}
         {currentResearch.description && (
           <>
