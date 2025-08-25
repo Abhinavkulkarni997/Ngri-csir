@@ -1,6 +1,7 @@
 import { FaFacebook, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialYoutube } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const socialmedia = [
   {
@@ -55,11 +56,16 @@ const SocialMedia = () => {
                     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
                   ></iframe>
                 )}
+                
               </div>
+              {/* <Link to=""><button className="mt-8 px-6 py-3 bg-white text-[#2F6281] font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">View More</button></Link> */}
             </div>
+            
           ))}
         </div>
       </div>
+              
+
     </section>
   );
 };

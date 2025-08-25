@@ -476,7 +476,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
   <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins">About
    <MdOutlineKeyboardArrowDown  size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
-   <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+   <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] xl:min-w-[220px] 2xl:min-w-[220px] transform ">
   <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
     <div className="w-5 h-5 xl:w-4 xl:h-4 2xl:w-6 2xl:h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
@@ -503,7 +503,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
   <a  className="font-bold text-white hover:border-b-4 border-b-white  py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 cursor-pointer">R & D Groups
   <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
-       <div className="absolute top-0 -left-32 xl:-left-32 2xl:-left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+       <div className="absolute top-8 -left-32 xl:-left-32 2xl:-left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[400px] xl:min-w-[560px] 2xl:min-w-[560px] transform">
   <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[10rem] xl:group-hover:translate-x-[8rem] 2xl:group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
@@ -540,7 +540,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
 <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 ">People
 <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
-   <div className="absolute top-0 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+   <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[200px] 2xl:min-w-[200px] transform">
   <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white rounded-xl shadow-xl w-full">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
@@ -565,7 +565,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <li className="relative group">
     <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3" >Resources
  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
-    <div className="absolute top-0 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+    <div className="absolute top-8 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[160px] 2xl:min-w-[200px] transform">
    <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
@@ -593,7 +593,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  <li className="relative group " onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)} >
 <a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10  xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3">
 Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
-    <div className="absolute top-0 -left-20 xl:-left-24 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+    <div className="absolute top-8 -left-20 xl:-left-24 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[250px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
@@ -645,12 +645,12 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 
 {/* Language dropdown */}
  <li className="relative group">
- <img src={Language} alt={"Language"} className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-8 2xl:w-8 lg:w-6 lg:h-6 rounded-full"/>
+ <img src={Language} alt={"Language"} className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-8 2xl:w-8 lg:w-6 lg:h-6 rounded-full cursor-pointer"/>
  <a href="#language" className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12">
  
 
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/> */}
- <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+ <div className="absolute top-8 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500 ease-in-out rounded-sm">
@@ -675,10 +675,10 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 hover:rotate-180"/> */}
  
-  <div className="absolute top-0 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
+  <div className="absolute top-8 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-    <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500 ease-in-out rounded-sm">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
+    <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500 ease-in-out rounded-sm ">
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
@@ -833,11 +833,11 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
    )}
    </li>
 
-   
-      {/* language dropdown */}
+   {/* language dropdown */}
  <li>
-    <button  className="flex justify-between items-center w-full" onClick={()=>setLanguageOpen(!languageOpen)}>
-   <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full"/>
+ 
+    <button  className="flex justify-between items-center w-full " onClick={()=>setLanguageOpen(!languageOpen)}>
+   <img src={Language} alt={"Language"} className="h-8 w-8 rounded-full "/>
  <MdOutlineKeyboardArrowDown  className={`transition-transform ${languageOpen?"rotate-180":""}`} size={24}/></button></li>
     {languageOpen &&(
     <ul className="space-y-2 text-white text-sm pl-4 font-normal mt-4 mb-4">
