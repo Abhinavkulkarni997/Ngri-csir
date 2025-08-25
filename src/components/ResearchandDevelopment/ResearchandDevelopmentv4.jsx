@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from "react-router-dom";
 // import c1 from "../../assets/images/ResearchandDevelopment/c1.jpg";
 // import c3 from "../../assets/images/ResearchandDevelopment/c3.jpg";
@@ -194,7 +194,13 @@ const ResearchData = [
 // }
 
 
+
 const ResearchandDevelopmentv4 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+const modalOpen=()=>{
+  setIsOpen(true);
+}
   return (
     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 '>
       <div className='max-w-7xl mx-auto'>
@@ -202,7 +208,7 @@ const ResearchandDevelopmentv4 = () => {
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
       <div className='absolute inset-2 hexagon  flex flex-col items-center justify-center text-black font-serif  hexagon p-4 ' >
-      <h1 className='uppercase font-serif  text-black font-bold text-xl'>{ResearchData[0].title}</h1>
+      <h1 className='uppercase font-serif  text-black font-bold text-xl animate-pulse'>{ResearchData[0].title}</h1>
       </div>
       </div>
       <div className='relative w-full h-full'>
@@ -220,7 +226,7 @@ const ResearchandDevelopmentv4 = () => {
           }
           if(isTop){
             angle=-180*(Math.PI/180);
-            radius=-625
+            radius=-620;
           }
           
          {/* if(isTop){
@@ -229,24 +235,25 @@ const ResearchandDevelopmentv4 = () => {
          } */}
          if(isBottom){
           angle=180*(Math.PI/180)
-          radius=625;
+          radius=620;
          }
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
 
           return(
-          <div className='absolute w-60 h-60 transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
-          <div className='absolute inset-0 hexagon  bg-white'></div>
+          <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
+          <div className='absolute inset-0 hexagon  bg-blue-50 '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
-          <Link to={researchitem.researchPageURL} className='flex flex-col items-center justify-center'>
+             <button onClick={() => modalOpen(true)} className='flex flex-col items-center justify-center'>
+          {/* <Link to={researchitem.researchPageURL} className='flex flex-col items-center justify-center'> */}
           {researchitem.image && (
-            
-          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-2 'alt={researchitem.title}/>
+
+          <img src={researchitem.image} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
           )}
-          <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
-          </h1>
+          {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}</h1> */}
          {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
-          </Link>
+          {/* </Link> */}
+          </button>
           </div>
           </div>
           );

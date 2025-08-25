@@ -147,7 +147,7 @@ const ResearchandDevelopmentv3 = () => {
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
       <div className='absolute inset-2 hexagon    flex flex-col items-center justify-center  font-serif text-black hexagon p-4 ' >
-      <h1 className='uppercase font-serif  text-black font-medium text-xl'>{ResearchData[0].title}</h1>
+      <h1 className='uppercase font-serif  text-black font-medium text-xl animate-pulse'>{ResearchData[0].title}</h1>
       <div className='flex justify-center items-center'>
        <button  onClick={changeHexagonLeft}><CiCircleChevLeft size={30}/></button>
       <button onClick={changeHexagonRight}><CiCircleChevRight size={30}/></button>
