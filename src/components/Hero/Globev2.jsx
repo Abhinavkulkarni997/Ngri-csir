@@ -457,8 +457,8 @@ import * as THREE from "three";
 import { useRef, useEffect, useMemo, useState } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import HeroBanner from '../../assets/images/Hero/Home-Banner-2025.png';
-import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
-import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
+import earthDay from "../../assets/textures/8k_earth_daymap.jpg";
+import earthNight from "../../assets/textures/8k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
 
 function handleScrollDown() {
@@ -731,7 +731,7 @@ export default function GlobeRealistic() {
       </div> */}
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
      <div className="flex items-center justify-center absolute inset-0 z-10 ">
-     <img src={HeroBanner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50   " />
+     <img src={HeroBanner} alt="Hero_Banner" className="max-w-4xl  w-full h-full  opacity-50 rounded-full   " />
      </div>
       <Canvas 
       className="absolute inset-0 z-0"

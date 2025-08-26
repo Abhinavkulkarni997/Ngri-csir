@@ -199,7 +199,8 @@ const ResearchData = [
 
 
 const ResearchandDevelopmentv4 = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const [selectedId,setSelectedId]=useState(null);
 
 // const modalOpen=()=>{
 //   setIsOpen(!isOpen);
@@ -246,22 +247,25 @@ const ResearchandDevelopmentv4 = () => {
           return(
           <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
           <div className='absolute inset-0 hexagon  bg-blue-50 '></div>
-             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4 ' >
-            <button onClick={() => setIsOpen(true)} className='flex flex-col items-center justify-center text-black'> click Me</button>
-             {isOpen ? (
-             <> 
-        <button onClick={()=>setIsOpen(false)} className='absolute top-0 right-0 m-2 '> </button> 
-          {/* <Link to={researchitem.researchPageURL} className='flex flex-col items-center justify-center'> */}
-          {researchitem.image && (
-          <img src={researchitem.image}  className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
+        <img src={researchitem.image} onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+          {selectedId===researchitem.id &&  (
+            <div className='absolute inset-0 bg-white hexagon flex flex-col items-center justify-center p-4 text-black'>
+              <button onClick={()=>setSelectedId(null)} className=' text-black'> <IoClose/></button>
+              <img src={researchitem.image} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+              <p className='text-black line-clamp-3 '>{researchitem.description}</p>
+              {researchitem.researchPageURL && (
+                <Link to={researchitem.researchPageURL} className='text-blue-500 underline'>
+                  Read more
+                </Link>
+              )}
+            </div>
           )}
-          {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}</h1> */}
-         {/* <p className='font-serif text-xs text-white overflow-hidden text-pretty line-clamp-2 font-center'> {researchitem.description}</p> */}
-          {/* </Link> */}
+        
 
-          <button onClick={()=>setIsOpen(false)} className=' text-black'> <IoClose/></button>
-            </>):null}
-             
+        
+            
+
           </div>
           </div>
           );
