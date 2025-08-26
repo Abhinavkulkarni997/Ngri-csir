@@ -261,10 +261,12 @@ const ResearchandDevelopmentv4 = () => {
             <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center rounded-lg'>
               <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose size={24}/></button>
               <h2 className='text-xl font-bold mb-4 text-center  font-serif text-pretty'>{selectedItem.title}</h2>
+              <hr className='w-full p-2'></hr>
               <img src={selectedItem.image} className='w-40 h-40  border-2 border-gray-300 mb-2 object-cover mt-4  ' alt={selectedItem.title}/>
               <p className='text-gray-600 line-clamp-6 mt-4 mb-4 text-pretty font-serif text-sm text-left'>{selectedItem.description}</p>
+              <hr className='w-full border-gray-300 p-2  mt-2'></hr>
               {selectedItem.researchPageURL && (
-                <Link to={selectedItem.researchPageURL} className='text-blue-600 mt-4 hover:bg-blue-600 hover:text-white bg-blue-100 rounded-lg p-4'>
+                <Link to={selectedItem.researchPageURL} className='text-blue-600 mt-4 hover:bg-[#2F6281] hover:text-white bg-blue-50 rounded-lg p-4'>
                   Read more
                 </Link>
               )}
