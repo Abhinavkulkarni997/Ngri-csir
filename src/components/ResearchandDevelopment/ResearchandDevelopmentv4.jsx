@@ -199,13 +199,10 @@ const ResearchData = [
 
 
 const ResearchandDevelopmentv4 = () => {
-  // const [isOpen, setIsOpen] = useState(false);
   const [selectedId,setSelectedId]=useState(null);
   const selectedItem=ResearchData.find(item=>item.id===selectedId);
 
-// const modalOpen=()=>{
-//   setIsOpen(!isOpen);
-// }
+
   return (
     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 '>
       <div className='max-w-7xl mx-auto'>
@@ -247,7 +244,7 @@ const ResearchandDevelopmentv4 = () => {
 
           return(
           <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
-          <div className='absolute inset-0 hexagon  bg-blue-50 '></div>
+          <div className='absolute inset-0 hexagon  bg-blue-100 '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
         <img src={researchitem.image} onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
         </div>
@@ -260,11 +257,12 @@ const ResearchandDevelopmentv4 = () => {
 
       {/* {Modal Content} */}
       {selectedId &&  (
-            <div className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50'>
-            <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center'>
-              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose/></button>
-              <img src={selectedItem.image} className='w-40 h-40 hexagon  mb-2 object-fill  ' alt={selectedItem.title}/>
-              <p className='text-black line-clamp-3 mb-4'>{selectedItem.description}</p>
+            <div className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 '>
+            <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center rounded-lg'>
+              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose size={24}/></button>
+              <h2 className='text-xl font-bold mb-4 text-center  font-serif text-pretty'>{selectedItem.title}</h2>
+              <img src={selectedItem.image} className='w-40 h-40  border-2 border-gray-300 mb-2 object-cover mt-4  ' alt={selectedItem.title}/>
+              <p className='text-black line-clamp-6 mt-4 mb-4 text-pretty font-serif text-sm text-left'>{selectedItem.description}</p>
               {selectedItem.researchPageURL && (
                 <Link to={selectedItem.researchPageURL} className='text-blue-500 mt-4 bg-blue-100 rounded-lg p-4'>
                   Read more
