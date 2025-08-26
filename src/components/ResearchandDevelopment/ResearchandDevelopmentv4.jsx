@@ -201,6 +201,7 @@ const ResearchData = [
 const ResearchandDevelopmentv4 = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const [selectedId,setSelectedId]=useState(null);
+  const selectedItem=ResearchData.find(item=>item.id===selectedId);
 
 // const modalOpen=()=>{
 //   setIsOpen(!isOpen);
@@ -249,30 +250,29 @@ const ResearchandDevelopmentv4 = () => {
           <div className='absolute inset-0 hexagon  bg-blue-50 '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
         <img src={researchitem.image} onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
-          {selectedId===researchitem.id &&  (
-            <div className='absolute inset-0 bg-white hexagon flex flex-col items-center justify-center p-4 text-black'>
-              <button onClick={()=>setSelectedId(null)} className=' text-black'> <IoClose/></button>
-              <img src={researchitem.image} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
-              <p className='text-black line-clamp-3 '>{researchitem.description}</p>
-              {researchitem.researchPageURL && (
-                <Link to={researchitem.researchPageURL} className='text-blue-500 underline'>
-                  Read more
-                </Link>
-              )}
-            </div>
-          )}
-        
-
-        
-            
-
-          </div>
-          </div>
+        </div>
+        </div>
           );
         })}
       </div>
       </div>
       </div>
+
+      {/* {Modal Content} */}
+      {selectedId &&  (
+            <div className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50'>
+            <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center'>
+              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose/></button>
+              <img src={selectedItem.image} className='w-40 h-40 hexagon  mb-2 object-fill  ' alt={selectedItem.title}/>
+              <p className='text-black line-clamp-3 mb-4'>{selectedItem.description}</p>
+              {selectedItem.researchPageURL && (
+                <Link to={selectedItem.researchPageURL} className='text-blue-500 mt-4 bg-blue-100 rounded-lg p-4'>
+                  Read more
+                </Link>
+              )}
+            </div>
+            </div>
+          )}
     </section>
   )
 }
