@@ -264,9 +264,9 @@ const ResearchandDevelopmentv4 = () => {
               <hr className='w-full p-2'></hr>
               <img src={selectedItem.image} className='w-40 h-40  border-2 border-gray-300 mb-2 object-cover mt-4  ' alt={selectedItem.title}/>
               <p className='text-gray-600 line-clamp-6 mt-4 mb-4 text-pretty font-serif text-sm text-left'>{selectedItem.description}</p>
-              <hr className='w-full border-gray-300 p-2  mt-2'></hr>
+              <hr className='mx-auto  h-1 w-full border-gray-300 p-2  mt-2'></hr>
               {selectedItem.researchPageURL && (
-                <Link to={selectedItem.researchPageURL} className='text-blue-600 mt-4 hover:bg-[#2F6281] hover:text-white bg-blue-50 rounded-lg p-4'>
+                <Link to={selectedItem.researchPageURL} className='text-[#2F6281] mt-4 hover:bg-[#2F6281] hover:text-white bg-white rounded-lg p-4 border border-[#2F6281]'>
                   Read more
                 </Link>
               )}
