@@ -373,6 +373,7 @@ const column1=[{
     link: "https://ngri.res.in/banner_gallery.php"
   }]
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
 const renderColumn = (columnData) => 
         columnData.map((column,index) => (
           <li className="flex items-center gap-x-2 " key={index}>
@@ -500,7 +501,7 @@ const renderColumn = (columnData) =>
 
       {/* Bottom section: All rights reserved*/}
       <div className="border-t border-white/20 text-center  text-white py-6 px-4 text-sm  ">
-          © 2025 Crafted and maintained by CSIR-NGRI's IT Division, Hyderabad.
+          © {currentYear} Crafted and maintained by CSIR-NGRI's IT Division, Hyderabad.
           All rights reserved.
       </div>
     </footer>
