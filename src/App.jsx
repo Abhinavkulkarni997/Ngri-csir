@@ -13,6 +13,7 @@ import LatestNotifications from './components/Latestnotifications/LatestNotifica
 import EnewsLetter from './components/EnewsLetter/EnewsLetter.jsx';
 import ResearchNewsCard from './components/ResearchNewsCard/ResearchNewsCard.jsx';
 import ImageGallery from './components/carousel/ImageGallery.jsx';
+import ImageGalleryv1 from './components/carousel/ImageGalleryv1.jsx';
 import Brochures from './components/Brochures/Brochures.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar.jsx';
@@ -39,8 +40,8 @@ function App() {
       {/* <Hero/> */}
       {/* <Globe/> */}
       <Globev2/>
-
-      <ImageGallery/>
+      {/* <ImageGallery/> */}
+      <ImageGalleryv1/>
       <ResearchroundUp/>
       {/* <ResearchDevelopment/> */}
       {/* <ResearchandDevelopmentv1/> */}

@@ -268,11 +268,8 @@ useEffect(()=>{
 
       {/* {Modal Content} */}
       {selectedId &&  (
-            <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: 0.3}}
-            whileFocus={{scale:1.05}}
+            <div
+ 
              className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 overflow-hidden'>
             <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center rounded-lg'>
               <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose size={24}/></button>
@@ -287,7 +284,7 @@ useEffect(()=>{
                 </Link>
               )}
             </div>
-            </motion.div>
+            </div>
           )}
     </section>
   )

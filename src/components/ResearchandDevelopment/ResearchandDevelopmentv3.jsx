@@ -14,6 +14,7 @@ import '../../App.css';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
  import { FiArrowUpRight } from "react-icons/fi";
  import './ResearchDevelopment.css';
+ 
  import earthNight from '../../assets/textures/earth_night.jpg'
 const ResearchData = [
   {
