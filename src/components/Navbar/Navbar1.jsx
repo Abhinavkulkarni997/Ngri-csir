@@ -594,7 +594,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 <a className=" cursor-pointer font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10  xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3">
 Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
     <div className="absolute top-8 -left-20 xl:-left-24 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 xl:min-w-[250px] 2xl:min-w-[250px] transform text-nowrap">
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[250px] xl:min-w-[250px] 2xl:min-w-[250px] transform text-nowrap">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>

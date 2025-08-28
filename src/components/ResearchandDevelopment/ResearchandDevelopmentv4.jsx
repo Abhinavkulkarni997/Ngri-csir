@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 // import c1 from "../../assets/images/ResearchandDevelopment/c1.jpg";
 // import c3 from "../../assets/images/ResearchandDevelopment/c3.jpg";
@@ -25,6 +25,7 @@ import '../../App.css';
 import { FcButtingIn } from 'react-icons/fc';
 import { IoClose } from "react-icons/io5";
  import { FiArrowUpRight } from "react-icons/fi";
+ import {motion} from 'framer-motion';
 const ResearchData = [
   {
     id:0,
@@ -202,7 +203,16 @@ const ResearchandDevelopmentv4 = () => {
   const [selectedId,setSelectedId]=useState(null);
   const selectedItem=ResearchData.find(item=>item.id===selectedId);
 
-
+useEffect(()=>{
+  if(selectedId!==null){
+    document.body.classList.add('overflow-y-hidden');
+  }else{
+    document.body.classList.remove('overflow-y-hidden');
+  }
+  return ()=>{
+    document.body.classList.remove('overflow-y-hidden');
+  }
+},[selectedId])
   return (
     <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 '>
       <div className='max-w-7xl mx-auto'>
@@ -246,7 +256,8 @@ const ResearchandDevelopmentv4 = () => {
           <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
           <div className='absolute inset-0 hexagon  bg-blue-100  '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
-        <img src={researchitem.image} onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+        <img src={researchitem.image}  onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+        {/* onMouseEnter={()=>setSelectedId(researchitem.id)} */}
         </div>
         </div>
           );
@@ -257,7 +268,12 @@ const ResearchandDevelopmentv4 = () => {
 
       {/* {Modal Content} */}
       {selectedId &&  (
-            <div className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 '>
+            <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.3}}
+            whileFocus={{scale:1.05}}
+             className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 overflow-hidden'>
             <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center rounded-lg'>
               <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose size={24}/></button>
               <h2 className='text-xl font-bold mb-4 text-center  font-serif text-pretty'>{selectedItem.title}</h2>
@@ -271,7 +287,7 @@ const ResearchandDevelopmentv4 = () => {
                 </Link>
               )}
             </div>
-            </div>
+            </motion.div>
           )}
     </section>
   )

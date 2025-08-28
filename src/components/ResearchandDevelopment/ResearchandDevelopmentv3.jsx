@@ -167,11 +167,14 @@ const ResearchandDevelopmentv3 = () => {
 
           const isSelected=index===selectedIndex;
           return(
-          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2`}
+          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 cursor-pointer`}
            key={researchitem.id} 
            style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, 
            zIndex:isSelected?20:10}} 
-           onClick={() => setCurrentPosition(index)}>
+          //  onMouseEnter={() => setCurrentPosition(index)}
+          //  onMouseLeave={() => setCurrentPosition(0)}
+           onClick={() => setCurrentPosition(index)}
+           >
           {
             isSelected ? (
               <div className="hexagon bg-[#2F6281] w-full h-full flex items-center justify-center relative ">
@@ -187,8 +190,8 @@ const ResearchandDevelopmentv3 = () => {
           </div>
             ):(
               <>
-              <div className="absolute inset-0 hexagon bg-white "></div>
-             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon ' >
+              <div className="absolute inset-0 hexagon bg-white cursor-pointer "></div>
+             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon cursor-pointer ' >
           {researchitem.image && (
           <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 ' alt={researchitem.title}/>
           )}
