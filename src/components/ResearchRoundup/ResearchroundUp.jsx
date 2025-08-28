@@ -53,7 +53,7 @@ const ResearchroundUp = () => {
   return (
     <section className=' bg-white  py-16 px-4 sm:px-8'>
     <div className='max-w-7xl mx-auto'>
-     <h1 className='text-[#550000] text-4xl md:text-5xl  uppercase  mb-12 font-bold text-center font-serif '>Research RoundUP</h1>
+     <h1 className='text-[#2F6281] text-2xl md:text-5xl  uppercase  mb-12 font-bold text-center font-serif '>Research RoundUP</h1>
     <div className='flex  flex-wrap gap-6 justify-center'>
     {ResearchroundUp.map((researchItem,index)=>(
       <motion.div className='group w-full sm:w-[300px] perspective border-4 border-transparent' key={researchItem.id}
@@ -89,7 +89,7 @@ const ResearchroundUp = () => {
  <div className="absolute bottom-0 right-0 w-10 h-10 bg-[#2f6281] rounded-tl-lg transition-all duration-300 group-hover:w-full group-hover:h-[170px] z-0" />
 
            <div className='relative z-10'>
-        <h2 className='text-lg font-semibold  text-gray-900  line-clamp-3 loading-relaxed  transition-colors duration-200 group-hover:text-white'>
+        <h2 className='text-lg font-semibold  text-gray-900  line-clamp-3 loading-relaxed  transition-colors duration-200 group-hover:text-white text-start'>
           {researchItem.description}</h2>
           
       {/* Read More */}
