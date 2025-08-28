@@ -208,7 +208,7 @@ const ResearchandDevelopmentv4 = () => {
       <div className='max-w-7xl mx-auto'>
       <div className='relative min-h-[1000px] flex  items-center justify-center'>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
-       <div className='absolute inset-0 hexagon  bg-white'></div>
+       <div className='absolute inset-0 hexagon  p-4'></div>
       <div className='absolute inset-2 hexagon  flex flex-col items-center justify-center text-black font-serif  hexagon p-4 ' >
       <h1 className='uppercase font-serif  text-black font-bold text-xl animate-pulse'>{ResearchData[0].title}</h1>
       </div>
@@ -244,7 +244,7 @@ const ResearchandDevelopmentv4 = () => {
 
           return(
           <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
-          <div className='absolute inset-0 hexagon  bg-blue-100 '></div>
+          <div className='absolute inset-0 hexagon  bg-blue-100  '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
         <img src={researchitem.image} onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
         </div>
