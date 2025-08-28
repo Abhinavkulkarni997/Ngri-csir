@@ -384,7 +384,7 @@ const ImageGallery = () => {
                 href={Imagegallery[currentIndex].pageURL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#2F6281] text-white px-6 py-3 rounded-lg hover:bg-[#2F6281] transition-colors duration-200 font-medium border border-[#2F6281]"
+                className="inline-block  text-[#2F6281] hover:text-white px-6 py-3 rounded-lg hover:bg-[#2F6281] transition-colors duration-200 font-medium border border-[#2F6281]"
               >
                 Read Full Article<FiArrowUpRight size={20} className='inline-flex mb-1' />
               </a>
