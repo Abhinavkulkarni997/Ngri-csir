@@ -478,7 +478,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
    <MdOutlineKeyboardArrowDown  size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] xl:min-w-[220px] 2xl:min-w-[220px] transform ">
-  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white  rounded-xl shadow-xl w-full border-t-blue-500 ">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white  rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4 ">
     <div className="w-5 h-5 xl:w-4 xl:h-4 2xl:w-6 2xl:h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -505,7 +505,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
   <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
        <div className="absolute top-8 -left-32 xl:-left-32 2xl:-left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[400px] xl:min-w-[560px] 2xl:min-w-[560px] transform">
-  <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[10rem] xl:group-hover:translate-x-[8rem] 2xl:group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -542,7 +542,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[200px] 2xl:min-w-[200px] transform">
-  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white rounded-xl shadow-xl w-full">
+  <div className="relative top-6 p-4 xl:p-3 2xl:p-6  bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -567,7 +567,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
     <div className="absolute top-8 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[160px] 2xl:min-w-[200px] transform">
-   <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full">
+   <div className="relative top-6 p-4 xl:p-3 2xl:p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-8 h-8 xl:w-6 xl:h-6 2xl:w-10 2xl:h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] xl:group-hover:translate-x-[3rem] 2xl:group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -595,7 +595,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
     <div className="absolute top-8 -left-20 xl:-left-24 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[250px] transform text-nowrap">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[5rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10 ">
@@ -604,8 +604,8 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  <ul className="relative" onMouseEnter={()=>setIsCarrersMenuOpen(true)} onMouseLeave={()=>setIsCarrersMenuOpen(false)}>
  <li className="cursor-pointer font-semibold px-4 py-2 hover:bg-[#2F6281] flex items-center justify-between gap-2 text-start hover:scale-105 hover:text-center hover:text-white">Careers<MdOutlineKeyboardArrowRight  size={20}/></li>
  {carrersMenuOpen && (
-   <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64">
-     <ul >
+   <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 cursor-pointer space-y-2 font-poppins font-semibold z-50 w-64 border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4 ">
+     <ul className="text-start" >
        <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/openings-at-ngri.php">Openings</a></li>
        <li className="hover:text-white hover:bg-[#2F6281] block px-3 py-1 rounded hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/past-openings-at-ngri.php">Past Openings</a></li>
      </ul>
@@ -617,7 +617,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  <ul className="relative"  onMouseEnter={()=>setIsHrdgMenuOpen(true)} onMouseLeave={()=>setIsHrdgMenuOpen(false)}>
  <li className="cursor-pointer font-semibold px-4 py-2 font-poppins flex items-center justify-between gap-2 text-start hover:bg-[#2F6281] hover:text-white hover:scale-105 hover:text-center">HRDG<MdOutlineKeyboardArrowRight  size={20}/></li>
  {hrdgMenuOpen && (
-  <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start ">
+  <div className="absolute top-0 right-full ml-2 bg-white shadow-lg rounded-lg p-4 font-poppins font-semibold space-y-2 mt-4 text-start border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <ul>
       <li className="hover:text-white hover:bg-[#2F6281]  block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/hrdg.php">Info</a></li>
       <li className="hover:text-white hover:bg-[#2F6281] block px-2 py-2 hover:scale-105 hover:text-center"><a href="https://www.ngri.res.in/cms/training-for-csir-ngri-staff.php">Training For CSIR-NGRI Staff</a></li>
@@ -652,7 +652,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180"/> */}
  <div className="absolute top-8 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500 ease-in-out rounded-sm">
     </div>
     <div className="relative z-10">
