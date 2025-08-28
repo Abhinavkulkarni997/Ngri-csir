@@ -174,7 +174,7 @@ const ResearchandDevelopmentv3 = () => {
            onClick={() => setCurrentPosition(index)}>
           {
             isSelected ? (
-              <div className="hexagon bg-blue-500 w-full h-full flex items-center justify-center relative ">
+              <div className="hexagon bg-[#2F6281] w-full h-full flex items-center justify-center relative ">
                {/* <div className="absolute inset-0 hexagon bg-white"></div> */}
              <div className="absolute inset-2 hexagon  flex flex-col items-center justify-center text-white font-serif font-bold hexagon  z-10" > 
           {researchitem.image && (
@@ -214,7 +214,7 @@ const ResearchandDevelopmentv3 = () => {
           <>
           <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem] text-left text-black'>{currentResearch.description}</p>
           {currentResearch.researchPageURL && (
-         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-blue-800 hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 moving-border border-1 text-black border-blue-600 '>
+         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-[#2F6281] hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 moving-border border-1 text-black border-blue-600 '>
          <Link to={currentResearch.researchPageURL}>
          Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
          )}

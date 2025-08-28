@@ -24,7 +24,7 @@ import c10 from "../../assets/images/ResearchandDevelopment/C10.png";
 import '../../App.css';
 import { FcButtingIn } from 'react-icons/fc';
 import { IoClose } from "react-icons/io5";
-
+ import { FiArrowUpRight } from "react-icons/fi";
 const ResearchData = [
   {
     id:0,
@@ -267,7 +267,7 @@ const ResearchandDevelopmentv4 = () => {
               <hr className='mx-auto  h-1 w-full border-gray-300 p-2  mt-2'></hr>
               {selectedItem.researchPageURL && (
                 <Link to={selectedItem.researchPageURL} className='text-[#2F6281] mt-4 hover:bg-[#2F6281] hover:text-white bg-white rounded-lg p-4 border border-[#2F6281]'>
-                  Read more
+                  Read more<FiArrowUpRight size={20} className='inline-flex mb-1' />
                 </Link>
               )}
             </div>
