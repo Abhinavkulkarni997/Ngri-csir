@@ -1,4 +1,3 @@
-
 import React,{useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 // import c1 from "../../assets/images/ResearchandDevelopment/c1.jpg";

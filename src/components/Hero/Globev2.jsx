@@ -688,12 +688,12 @@ export default function GlobeRealistic() {
     setCurrentTime(sunData);
   };
 
-  const formatTime = (timeHours) => {
-    if (!timeHours) return '';
-    const hours = Math.floor(timeHours);
-    const minutes = Math.floor((timeHours - hours) * 60);
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} IST`;
-  };
+  // const formatTime = (timeHours) => {
+  //   if (!timeHours) return '';
+  //   const hours = Math.floor(timeHours);
+  //   const minutes = Math.floor((timeHours - hours) * 60);
+  //   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} IST`;
+  // };
 
   return (
     <div className="w-full h-screen bg-black relative  mt-16" >
@@ -732,7 +732,7 @@ export default function GlobeRealistic() {
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
      <div className="flex items-center justify-center absolute inset-0 z-10 ">
      {/* <img src={HeroBanner} alt="Hero_Banner" className="max-w-4xl  w-full h-full  opacity-100 rounded-full  p-8 " /> */}
-     <img src={HeroBanner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50  " />
+     <img src={HeroBanner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50 backdrop-blur-md bg-white/20 shadow-2xl  " />
      </div>
       <Canvas 
       className="absolute inset-0 z-0"

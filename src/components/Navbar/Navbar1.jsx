@@ -669,7 +669,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  </a></li>
 
  {/* Screenreader access dropdown */}
- <li className="relative group hover:border-b-4 border-b-white ">
+ <li className="relative group ">
  <img src={diff_abled} alt={diff_abled} className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-8 2xl:w-8 lg:h-6 lg:w-6 rounded-full cursor-pointer "/>
  <a href="#screenreaderaccess" className="font-bold text-white ">
  
