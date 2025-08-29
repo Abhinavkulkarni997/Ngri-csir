@@ -213,13 +213,13 @@ useEffect(()=>{
   }
 },[selectedId])
   return (
-    <section className='bg-white py-5 px-4 sm:px-4 mb-8 mt-8 '>
+    <section className='bg-white py-5 px-4 sm:px-6 lg:px-8  mb-8 mt-8 '>
       <div className='max-w-7xl mx-auto'>
-      <div className='relative min-h-[1000px] flex  items-center justify-center'>
-      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
+      <div className='relative min-h-[60vh] md:min-h[80vh] lg:min-h[90vh] xl:min-h-[100vh] flex  items-center justify-center'>
+      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-60 xl:h-60 z-20'>
        <div className='absolute inset-0 hexagon  p-4'></div>
-      <div className='absolute inset-2 hexagon  flex flex-col items-center justify-center text-black font-serif  hexagon p-4 ' >
-      <h1 className='uppercase font-serif  text-black font-bold text-xl animate-pulse'>{ResearchData[0].title}</h1>
+      <div className='absolute inset-2 hexagon  flex flex-col items-center justify-center text-black font-serif  hexagon p-2 sm:p-4 ' >
+      <h1 className='uppercase font-serif  text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center animate-pulse'>{ResearchData[0].title}</h1>
       </div>
       </div>
       <div className='relative w-full h-full'>
@@ -252,10 +252,13 @@ useEffect(()=>{
           const top=Math.sin(angle)*radius;
 
           return(
-          <div className='absolute w-60 h-60  transform  -translate-x-1/2 -translate-y-1/2' key={researchitem.id} style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
+          <div className='absolute w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60  transform  -translate-x-1/2 -translate-y-1/2'
+           key={researchitem.id} 
+           style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
           <div className='absolute inset-0 hexagon  bg-blue-100  '></div>
-             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-4  cursor-pointer' >
-        <img src={researchitem.image}  onClick={()=>setSelectedId(researchitem.id)} className='w-40 h-40 hexagon  mb-2 object-fill 'alt={researchitem.title}/>
+             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-2 sm:p-4  cursor-pointer' >
+        <img src={researchitem.image}  onClick={()=>setSelectedId(researchitem.id)} 
+        className='w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 xl:w-40 xl:h-40 hexagon  mb-2 object-fill hover:scale-105 transition-transform duration-200' alt={researchitem.title}/>
         {/* onMouseEnter={()=>setSelectedId(researchitem.id)} */}
         </div>
         </div>
@@ -269,17 +272,17 @@ useEffect(()=>{
       {selectedId &&  (
             <div
  
-             className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 overflow-hidden'>
-            <div className='max-w-md bg-white p-6 w-full relative flex flex-col items-center justify-center rounded-lg'>
-              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-4 right-4'> <IoClose size={24}/></button>
-              <h2 className='text-xl font-bold mb-4 text-center  font-serif text-pretty'>{selectedItem.title}</h2>
-              <hr className='w-full p-2'></hr>
-              <img src={selectedItem.image} className='w-40 h-40  border-2 border-gray-300 mb-2 object-cover mt-4  ' alt={selectedItem.title}/>
-              <p className='text-gray-600 line-clamp-6 mt-4 mb-4 text-pretty font-serif text-sm text-left'>{selectedItem.description}</p>
-              <hr className='mx-auto  h-1 w-full border-gray-300 p-2  mt-2'></hr>
+             className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 p-4 '>
+            <div className='max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl bg-white p-4 sm:p-6 w-full relative flex flex-col items-center justify-center rounded-lg max-h-[90vh] overflow-y-auto'>
+              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-100 rounded-full p-1'> <IoClose size={20} className='sm:w-6 sm:h-6'/></button>
+              <h2 className='text-lg sm:text-xl font-bold mb-4 text-center  font-serif text-pretty pr-8'>{selectedItem.title}</h2>
+              <hr className='w-full mb-4'></hr>
+              <img src={selectedItem.image} className='w-32 h-32 sm:w-40 sm:h-40  border-2 border-gray-300 mb-4 object-cover  ' alt={selectedItem.title}/>
+              <p className='text-gray-800 line-clamp-6  mb-4 text-pretty font-serif text-xs sm:text-sm text-left leading-relaxed'>{selectedItem.description}</p>
+              <hr className=' w-full border-gray-300 mb-4'></hr>
               {selectedItem.researchPageURL && (
-                <Link to={selectedItem.researchPageURL} className='text-[#2F6281] mt-4 hover:bg-[#2F6281] hover:text-white bg-white rounded-lg p-4 border border-[#2F6281]'>
-                  Read more<FiArrowUpRight size={20} className='inline-flex mb-1' />
+                <Link to={selectedItem.researchPageURL} className='text-[#2F6281]  hover:bg-[#2F6281] hover:text-white bg-white rounded-lg p-3 sm:p-4 border border-[#2F6281] transition-colors duration-200  text-sm sm:text-base flex items-center gap-2'>
+                  Read more<FiArrowUpRight size={16} className='sm:w-5 sm:h-5' />
                 </Link>
               )}
             </div>
