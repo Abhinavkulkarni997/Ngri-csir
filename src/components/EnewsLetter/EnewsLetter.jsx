@@ -10,7 +10,7 @@ const EnewsLetter = () => {
       transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.02 }}
     
-    className="bg-white  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto  min-h-fit border border-bg-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16  border-t-indigo-500 mx-auto   ">
+    className="bg-white  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto  min-h-fit border border-bg-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16   mx-auto  border-t-4 border-b-4 border-t-[#2f6281] border-b-[#2F6281]">
       
       <Link to="https://www.ngri.res.in/ngri-news/archive-enewsletter.php">
       <img src={enews} alt="E-newsletter" className="w-20 h-20 sm:w-24 sm:h-24 md:h-28 md:w-28 lg:w-32 lg:h-32  mx-auto object-contain rounded-md " />

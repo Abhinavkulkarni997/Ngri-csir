@@ -145,8 +145,6 @@ useEffect(()=>{
             <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.youtube.com/@csir-ngri" className='p-2 sm:p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li> 
         )
       }
-      
-      
         </ul>
         <hr className='w-full  pt-2 sm:pt-4 border-1 border-gray-400'></hr>
         {activeTab==='image' && (
@@ -155,13 +153,11 @@ useEffect(()=>{
 <li className='px-2 sm:px-3 py-1 text-sm sm:text-base'>2025</li>
 <li className='px-2 sm:px-3 py-1 text-sm sm:text-base'>2024</li>
         </ul>
-
         )}
       
-
 {
     activeTab==='image' && (
-        <div className='grid grid-cols-1 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
+        <div className='grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 lg:gap-4 p-2 sm:p-4 auto-rows-[120px] sm:auto-rows-[150px] lg:auto-rows-auto'>
    
 {shuffledImage.map((img,index)=>{
     
@@ -169,7 +165,7 @@ useEffect(()=>{
  
    return(
     <div key={img.id} 
-    className= {`${span} relative cursor-pointer w-full h-full  overflow-hidden rounded-xl group`}>
+    className= {`${span} relative cursor-pointer w-full h-full  overflow-hidden rounded-lg sm:rounded-xl group min-h-[120px] sm:min-h-[150px]`}>
   
     <img src=
     {img.image} alt={`Image ${img.description} `}
@@ -177,7 +173,7 @@ useEffect(()=>{
     />
     {/* Overlay Effect */}
     <div className='absolute inset-0  flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-    <h1 className='text-[#FFFFFF]  md:hover:text-sm hover:text-sm lg:hover:text-sm font-bold text-center px-2 '> {img.description}</h1>
+    <h1 className='text-[#FFFFFF]  text-xs sm:text-sm lg:text-base  font-bold text-center px-2 leading-tight'> {img.description}</h1>
     </div>
     
     </div>
@@ -193,18 +189,18 @@ useEffect(()=>{
     
 {
     activeTab==='video' && (
- <div className='grid grid-cols-1  md:grid-cols-4 gap-4'>
+ <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3  sm:gap-4 lg:gap-6'>
 {Videos.map((video)=>(
     <div key={video.id} 
-    className='relative border-8 border-blue-200 cursor-pointer max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
+    className='relative border-4 sm:border-8 border-blue-200 cursor-pointer  w-full max-w-sm overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 '>
     <iframe src=
     {video.URL}
      alt={video.description}
     allowFullScreen
     allow="accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture; web-share"
-    className='border-0 w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover'
+    className='border-0 w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] xl:h-[280px] object-cover'
     />     
-    <h1 className='p-4 text-sm  text-gray-600 font-bold   h-full'>{video.description}</h1>
+    <h1 className='p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base   text-gray-600 font-bold   h-full leading-tight'>{video.description}</h1>
     </div>
 ))}
 </div>
