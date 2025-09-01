@@ -147,8 +147,8 @@ const ResearchandDevelopmentv3 = () => {
       
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
-      <div className='absolute inset-2 hexagon    flex flex-col items-center justify-center  font-serif text-black hexagon p-4 ' >
-      <h1 className='uppercase font-serif  text-black font-medium text-xl animate-pulse'>{ResearchData[0].title}</h1>
+      <div className='absolute inset-2  flex flex-col items-center justify-center  font-serif text-black p-4 hexagon' >
+      <h1 className='uppercase font-serif  text-black font-medium text-xl animate-pulse '>{ResearchData[0].title}</h1>
       <div className='flex justify-center items-center'>
        <button  onClick={changeHexagonLeft}><CiCircleChevLeft size={30}/></button>
       <button onClick={changeHexagonRight}><CiCircleChevRight size={30}/></button>
@@ -182,7 +182,7 @@ const ResearchandDevelopmentv3 = () => {
                {/* <div className="absolute inset-0 hexagon bg-white"></div> */}
              <div className="absolute inset-2 hexagon  flex flex-col items-center justify-center text-white font-serif font-bold hexagon  z-10" > 
           {researchitem.image && (
-          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 hover:scale-105 transition-transform duration-300' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-full h-full hexagon   hover:scale-105 transition-transform duration-300 object-fill' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
@@ -191,10 +191,10 @@ const ResearchandDevelopmentv3 = () => {
           </div>
             ):(
               <>
-              <div className="absolute inset-0 hexagon bg-white cursor-pointer "></div>
-             <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon cursor-pointer ' >
+              <div className="absolute inset-0 hexagon bg-white cursor-pointer shadow-md hover:shadow-lg transition-shadow duration-300"></div>
+             <div className='absolute inset-1 sm:inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon cursor-pointer ' >
           {researchitem.image && (
-          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 hover:scale-105 transition-transform duration-300' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-full h-full hexagon  hover:scale-105 transition-transform duration-300 cursor-pointer object-fill opacity-90 hover:opacity-100' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
@@ -209,17 +209,19 @@ const ResearchandDevelopmentv3 = () => {
       </div>
 
     {/* title and image and description container */}
-      <div className=' flex flex-col items-center justify-center px-8 w-full md:w-1/2'>
-        <h1 className='font-bold font-serif mb-8 text-2xl animate-pulse text-black'>{currentResearch.title}</h1>
+      <div className=' flex flex-col items-center justify-center px-2 sm:px-4 lg:px-8 w-full lg:w-1/2 order-1 lg:order-2'>
+        <h1 className='font-bold font-serif mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl animate-pulse text-black text-center leading-tight'>{currentResearch.title}</h1>
         {currentResearch.image &&(
-        <img src={currentResearch.image} alt={currentResearch.title} className='mb-2 mt-2 border-white  rounded-lg border-8 moving-border w-80 h-80  '/>
+        <img src={currentResearch.image} alt={currentResearch.title} className='mb-4 sm:mb-6 mt-2 border-[#2F6281]  rounded-lg border-4 sm:border-6 lg:border-8 moving-border 
+        w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 md:w-64 md:h-64 xl:w-80 xl:h-80  cursor-pointer object-fill  shadow-lg'/>
         )}
         {currentResearch.description && (
           <>
-          <p className='font-serif text-base leading-relaxed pl-8 [-text-indent:2rem] text-left text-black'>{currentResearch.description}</p>
+          <p className='font-serif text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed   text-left text-black px-2 sm:px-4 lg:px-8  sm:text-justify max-w-full overflow-hidden line-clamp-[9] mt-1 '>{currentResearch.description}</p>
           {currentResearch.researchPageURL && (
-         <button className='mt-4 rounded-full transition-all duration-700 hover:shadow-[#2F6281] hover:shadow-[inset_10rem_0_0_0] hover:text-white text-sm p-4 moving-border border-1 text-black border-blue-600 '>
-         <Link to={currentResearch.researchPageURL}>
+         <button className='mt-4 sm:mt-6 lg:mt-8 rounded-full transition-all duration-700 hover:shadow-[#2F6281] hover:shadow-[inset_10rem_0_0_0] hover:text-white 
+         text-xs sm:text-sm lg:text-base p-2 sm:p-3 lg:p-4 moving-border border-1 text-black border-blue-600 w-auto min-w-fit mx-auto'>
+         <Link to={currentResearch.researchPageURL} target='_blank' rel="noreferrer" className='flex items-center gap-1 sm:gap-2'>
          Read More <FiArrowUpRight size={20} className='inline-flex mb-1' /></Link></button>
          )}
           </>
