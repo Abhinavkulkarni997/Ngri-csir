@@ -182,7 +182,7 @@ const ResearchandDevelopmentv3 = () => {
                {/* <div className="absolute inset-0 hexagon bg-white"></div> */}
              <div className="absolute inset-2 hexagon  flex flex-col items-center justify-center text-white font-serif font-bold hexagon  z-10" > 
           {researchitem.image && (
-          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 ' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 hover:scale-105 transition-transform duration-300' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}
@@ -194,7 +194,7 @@ const ResearchandDevelopmentv3 = () => {
               <div className="absolute inset-0 hexagon bg-white cursor-pointer "></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon cursor-pointer ' >
           {researchitem.image && (
-          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 ' alt={researchitem.title}/>
+          <img src={researchitem.image} className='w-60 h-60 hexagon  mb-1 hover:scale-105 transition-transform duration-300' alt={researchitem.title}/>
           )}
           {/* <h1 className='font-serif text-xs text-white mb-1 text-center'> {researchitem.title}
           </h1> */}

@@ -126,34 +126,34 @@ useEffect(()=>{
 
 
   return (
-<section className='bg-[#E5F5FD]  py-8 px-4 sm:px-4'>
-   <h1 className='text-center text-xl text-[#455cc5] font-bold font-sans mb-4'>NGRI GALLERY</h1>
+<section className='bg-[#E5F5FD]  py-4 sm:py-6 lg:py-8  px-2 sm:px-4 lg:px-6'>
+   <h1 className='text-center text-lg sm:text-xl lg:text-2xl text-[#455cc5] font-bold font-sans mb-4 sm:mb-6'>NGRI GALLERY</h1>
 <div className='max-w-7xl mx-auto'>
-    <div className='bg-white p-6  rounded-2xl shadow-md cursor-pointer'>
-        <ul className='flex flex-wrap gap-4  mt-4 mb-8 font-sans font-semibold'>
+    <div className='bg-white p-3 sm:p-4 lg:p-6   rounded-2xl shadow-md cursor-pointer'>
+        <ul className='flex flex-col sm:flex-row  flex-wrap gap-2 sm:gap-4  mt-2 sm:mt-4  mb-4 sm:mb-8 font-sans font-semibold'>
         
-   <button onClick={()=>setActiveTab('image')} ><li className={ `${activeTab==='image'? 'p-2 bg-blue-800 rounded-lg text-white inline-flex gap-4 ':'inline-flex gap-4 p-2 rounded-lg border-2 border-blue-800 text-blue-800 hover:bg-blue-800  hover:text-white'}`}><FaRegImage size={20} ></FaRegImage>Photo Gallery</li></button>
-   <button onClick={()=>setActiveTab('video')}> <li className={`${activeTab==='video'? 'bg-blue-800 text-white ml-1 p-2  border-l rounded-lg mx-4 inline-flex gap-4':'inline-flex p-2 gap-4 border-2 rounded-lg text-blue-800 hover:text-white hover:bg-blue-800 border-blue-800'}`}><MdOutlineVideoLibrary size={20}></MdOutlineVideoLibrary>Video Gallery</li> </button>
+   <button onClick={()=>setActiveTab('image')} className='w-full sm:w-auto' ><li className={ `${activeTab==='image'? 'p-2 sm:p-3 bg-blue-800 rounded-lg text-white inline-flex gap-2 sm:gap-4 items-center justify-center w-full sm:w-auto':'inline-flex gap-2 sm:gap-4 items-center justify-center p-2 sm:p-3 rounded-lg border-2 border-blue-800 text-blue-800 hover:bg-blue-800  hover:text-white w-full sm:w-auto'}`}><FaRegImage size={16} className='sm:w-5 sm:h-5'></FaRegImage><span className='text-sm sm:text-base'> Photo Gallery</span></li></button>
+   <button onClick={()=>setActiveTab('video')} className='w-full sm:w-auto'> <li className={`${activeTab==='video'? 'bg-blue-800 text-white  p-2 sm:p-3  xl:mx-4 border-l rounded-lg  inline-flex gap-2 sm:gap-4 items-center justify-center w-full sm:w-auto':'inline-flex p-2 sm:p-3 gap-2 sm:gap-4 items-center justify-center border-2 rounded-lg text-blue-800 hover:text-white hover:bg-blue-800 border-blue-800 w-full sm:w-auto'}`}><MdOutlineVideoLibrary size={16} className='sm:w-5 sm:h-5'></MdOutlineVideoLibrary><span className='text-sm sm:text-base'>Video Gallery</span></li> </button>
       {
         activeTab==='image' && (
-            <li className='pt-2 ml-auto  '><Link to="https://www.ngri.res.in/gallery.php" className='p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex '>View More <FiArrowUpRight size={20}/></Link></li> 
+            <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.ngri.res.in/gallery.php" className='p-2 sm:p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li> 
         )
       }
       
       {
         activeTab==='video' && (
-            <li className='pt-2 ml-auto  '><Link to="https://www.youtube.com/@csir-ngri" className='p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex'>View More <FiArrowUpRight size={20}/></Link></li> 
+            <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.youtube.com/@csir-ngri" className='p-2 sm:p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li> 
         )
       }
       
       
         </ul>
-        <hr className='w-full  pt-4 border-1 border-gray-400'></hr>
+        <hr className='w-full  pt-2 sm:pt-4 border-1 border-gray-400'></hr>
         {activeTab==='image' && (
-  <ul className='cursor-pointer flex flex-wrap gap-2 p-4 mb-4 justify-between items-center bg-sky-50  rounded-lg bg-no-repeat w-[250px]'>
-        <li className='bg-blue-500 rounded-lg shadow-md px-4 font-sans text-white'>All</li>
-<li>2025</li>
-<li>2024</li>
+  <ul className='cursor-pointer flex flex-wrap gap-2 sm:gap-3 p-2 sm:p-4 mb-2 sm:mb-4 justify-start items-center bg-sky-50  rounded-lg bg-no-repeat w-full sm:w-[250px]'>
+        <li className='bg-blue-500 rounded-lg shadow-md px-2 sm:px-4 py-1 sm:py-2 font-sans text-white text-sm sm:text-base'>All</li>
+<li className='px-2 sm:px-3 py-1 text-sm sm:text-base'>2025</li>
+<li className='px-2 sm:px-3 py-1 text-sm sm:text-base'>2024</li>
         </ul>
 
         )}
@@ -161,7 +161,7 @@ useEffect(()=>{
 
 {
     activeTab==='image' && (
-        <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
+        <div className='grid grid-cols-1 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 auto-cols-[150px]'>
    
 {shuffledImage.map((img,index)=>{
     

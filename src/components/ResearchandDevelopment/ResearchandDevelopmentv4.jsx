@@ -228,6 +228,9 @@ useEffect(()=>{
           const newIndex=index-1;
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
+
+          
+
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
             radius=220;
@@ -271,7 +274,6 @@ useEffect(()=>{
       {/* {Modal Content} */}
       {selectedId &&  (
             <div
- 
              className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 p-4 '>
             <div className='max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl bg-white p-4 sm:p-6 w-full relative flex flex-col items-center justify-center rounded-lg max-h-[90vh] overflow-y-auto'>
               <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-100 rounded-full p-1'> <IoClose size={20} className='sm:w-6 sm:h-6'/></button>
@@ -292,4 +294,4 @@ useEffect(()=>{
   )
 }
 
-export default ResearchandDevelopmentv4
+export default ResearchandDevelopmentv4;
