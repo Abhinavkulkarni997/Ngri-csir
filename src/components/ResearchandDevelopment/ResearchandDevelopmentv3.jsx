@@ -162,7 +162,14 @@ const ResearchandDevelopmentv3 = () => {
           const selectedIndex=currentPosition;
           let displayIndex=(index-selectedIndex+10)%10;
           const angle=(displayIndex*36)*(Math.PI/180);
-          const   radius=240;
+          {/* const   radius=240; */}
+
+            let radius;
+              if (window.innerWidth < 640) radius = 120; // mobile
+              else if (window.innerWidth < 768) radius = 160; // sm
+              else if (window.innerWidth < 1024) radius = 200; // md
+              else if (window.innerWidth < 1280) radius = 220; // lg
+              else radius = 240; // xl and above
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
 
