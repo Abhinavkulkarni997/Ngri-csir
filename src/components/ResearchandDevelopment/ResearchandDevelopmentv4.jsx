@@ -276,7 +276,8 @@ useEffect(()=>{
             <div
              className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 p-4 '>
             <div className='max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl bg-white p-4 sm:p-6 w-full relative flex flex-col items-center justify-center rounded-lg max-h-[90vh] overflow-y-auto'>
-              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-100 rounded-full p-1'> <IoClose size={20} className='sm:w-6 sm:h-6'/></button>
+              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-100 rounded-full p-1'> 
+              <IoClose size={20} className='sm:w-6 sm:h-6'/></button>
               <h2 className='text-lg sm:text-xl font-bold mb-4 text-center  font-serif text-pretty pr-8'>{selectedItem.title}</h2>
               <hr className='w-full mb-4'></hr>
               <img src={selectedItem.image} className='w-32 h-32 sm:w-40 sm:h-40  border-2 border-gray-300 mb-4 object-cover  ' alt={selectedItem.title}/>
