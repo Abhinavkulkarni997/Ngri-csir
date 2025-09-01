@@ -139,17 +139,17 @@ const ResearchandDevelopmentv3 = () => {
 
   return (
     // <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'}}>
-    <section className='bg-gradient-to-br  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in'>
+    <section className='bg-gradient-to-br  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 lg:px-6  mt-8 w-full transition-all duration-700 animate-fade-in min-h-screen'>
 
-      <div className='max-w-7xl mx-auto flex flex-col md:flex-row'>
+      <div className='max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12'>
        
-      <div className='relative min-h-[1000px] flex  items-center justify-center w-full md:w-1/2'>
+      <div className='relative  min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1000px] flex  items-center justify-center w-full lg:w-1/2 order-1 lg:order-2'>
       
-      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 z-20'>
+      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-60 xl:h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
-      <div className='absolute inset-2  flex flex-col items-center justify-center  font-serif text-black p-4 hexagon' >
-      <h1 className='uppercase font-serif  text-black font-medium text-xl animate-pulse '>{ResearchData[0].title}</h1>
-      <div className='flex justify-center items-center'>
+      <div className='absolute inset-1 sm:inset-2  flex flex-col items-center justify-center  font-serif text-black p-2 sm:p-4 hexagon' >
+      <h1 className='uppercase font-serif  text-black font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl animate-puls text-center leading-tight '>{ResearchData[0].title}</h1>
+      <div className='flex justify-center items-center mt-2'>
        <button  onClick={changeHexagonLeft}><CiCircleChevLeft size={30}/></button>
       <button onClick={changeHexagonRight}><CiCircleChevRight size={30}/></button>
       </div>
