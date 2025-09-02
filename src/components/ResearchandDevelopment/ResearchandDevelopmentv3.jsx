@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import c1 from "../../assets/images/ResearchandDevelopment/C1.png";
 import c3 from "../../assets/images/ResearchandDevelopment/C3.png";
@@ -127,6 +127,13 @@ const ResearchData = [
 
 const ResearchandDevelopmentv3 = () => {
     const [currentPosition,setCurrentPosition]=useState(0);
+    const [windowWidth,setWindowWidth]=useState(window.innerWidth);
+
+    useEffect(()=>{
+      const handleResizeResolution=()=>setWindowWidth(window.innerWidth);
+      window.addEventListener('resize',handleResizeResolution);
+      return ()=>window.removeEventListener('resize',handleResizeResolution);
+    },[])
 
     const changeHexagonRight=()=>{
         setCurrentPosition((prev)=>(prev+1)%10);
@@ -168,10 +175,10 @@ const ResearchandDevelopmentv3 = () => {
           {/* const   radius=240; */}
 
             let radius;
-              if (window.innerWidth < 640) radius = 120; // mobile
-              else if (window.innerWidth < 768) radius = 160; // sm
-              else if (window.innerWidth < 1024) radius = 200; // md
-              else if (window.innerWidth < 1280) radius = 220; // lg
+              if (windowWidth < 640) radius = 120; // mobile
+              else if (windowWidth < 768) radius = 160; // sm
+              else if (windowWidth < 1024) radius = 200; // md
+              else if (windowWidth < 1280) radius = 220; // lg
               else radius = 240; // xl and above
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
