@@ -151,7 +151,7 @@ const ResearchandDevelopmentv3 = () => {
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-60 xl:h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
       <div className='absolute inset-1 sm:inset-2  flex flex-col items-center justify-center  font-serif text-black p-2 sm:p-4 hexagon' >
-      <h1 className='uppercase font-serif  text-[#2F6281] font-medium text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg animate-puls text-center leading-tight break-words max-w-full overflow-hidden' style={{wordBreak:'break-word',hyphens:'auto'}}>{ResearchData[0].title}</h1>
+      <h1 className='uppercase font-serif  text-[#2F6281] font-medium text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg  text-center leading-tight break-words max-w-full overflow-hidden' style={{wordBreak:'break-word',hyphens:'auto'}}>{ResearchData[0].title}</h1>
       <div className='flex justify-center items-center mt-2'>
        <button  onClick={changeHexagonLeft} className='hover:scale-105 transition-transform text-[#2F6281]'><CiCircleChevLeft size={30} className='hover:bg-[#1D4D6E] rounded-full hover:text-white' /></button>
       <button onClick={changeHexagonRight} className='hover:scale-105 transition-transform text-[#2F6281] '><CiCircleChevRight size={30} className='hover:bg-[#1D4D6E] rounded-full hover:text-white' /></button>

@@ -219,7 +219,7 @@ useEffect(()=>{
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-60 xl:h-60 z-20'>
        <div className='absolute inset-0 hexagon  p-4'></div>
       <div className='absolute inset-2 hexagon  flex flex-col items-center justify-center text-black font-serif  hexagon p-2 sm:p-4 ' >
-      <h1 className='uppercase font-serif  text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center animate-pulse'>{ResearchData[0].title}</h1>
+      <h1 className='uppercase font-serif  text-[#2F6281] font-medium text-[0.65rem]  sm:text-xs md:text-sm lg:text-base xl:text-lg text-center max-w-full break-words leading-tight overflow-hidden '>{ResearchData[0].title}</h1>
       </div>
       </div>
       <div className='relative w-full h-full'>
@@ -229,8 +229,7 @@ useEffect(()=>{
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
 
-          
-
+      
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
             radius=220;
@@ -276,7 +275,7 @@ useEffect(()=>{
             <div
              className='fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50 p-4 '>
             <div className='max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl bg-white p-4 sm:p-6 w-full relative flex flex-col items-center justify-center rounded-lg max-h-[90vh] overflow-y-auto'>
-              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-100 rounded-full p-1'> 
+              <button onClick={()=>setSelectedId(null)} className=' text-black absolute top-3 sm:top-4 right-3 sm:right-4 z-10 hover:bg-gray-300 rounded-full p-1'> 
               <IoClose size={20} className='sm:w-6 sm:h-6'/></button>
               <h2 className='text-lg sm:text-xl font-bold mb-4 text-center  font-serif text-pretty pr-8'>{selectedItem.title}</h2>
               <hr className='w-full mb-4'></hr>
