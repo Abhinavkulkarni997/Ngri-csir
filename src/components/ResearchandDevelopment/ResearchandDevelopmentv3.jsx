@@ -141,17 +141,20 @@ const ResearchandDevelopmentv3 = () => {
     // <section className='bg-gradient-to-r  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4  mt-8 w-full transition-all duration-700 animate-fade-in' style={{backgroundImage:`url(${earthNight})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'}}>
     <section className='bg-gradient-to-br  from-[#E5F5FD] via-[#E5F5FD] to-white py-5 px-4 sm:px-4 lg:px-6  mt-8 w-full transition-all duration-700 animate-fade-in min-h-screen'>
 
-      <div className='max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12'>
-       
-      <div className='relative  min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1000px] flex  items-center justify-center w-full lg:w-1/2 order-1 lg:order-2'>
-      
+      <div className='max-w-7xl mx-auto'>
+          {/* <h1 className="uppercase font-serif font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#2F6281] ">
+  Research and Development
+</h1> */}
+
+      <div className='flex flex-col lg:flex-row gap-8 lg:gap-12 '>
+      <div className='relative  min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[800px] xl:min-h-[1000px] flex  items-center justify-center w-full lg:w-1/2'>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-60 xl:h-60 z-20'>
        <div className='absolute inset-0 hexagon  bg-white'></div>
       <div className='absolute inset-1 sm:inset-2  flex flex-col items-center justify-center  font-serif text-black p-2 sm:p-4 hexagon' >
-      <h1 className='uppercase font-serif  text-black font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl animate-puls text-center leading-tight '>{ResearchData[0].title}</h1>
+      <h1 className='uppercase font-serif  text-[#2F6281] font-medium text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg animate-puls text-center leading-tight break-words max-w-full overflow-hidden' style={{wordBreak:'break-word',hyphens:'auto'}}>{ResearchData[0].title}</h1>
       <div className='flex justify-center items-center mt-2'>
-       <button  onClick={changeHexagonLeft}><CiCircleChevLeft size={30}/></button>
-      <button onClick={changeHexagonRight}><CiCircleChevRight size={30}/></button>
+       <button  onClick={changeHexagonLeft} className='hover:scale-105 transition-transform text-[#2F6281]'><CiCircleChevLeft size={30} className='hover:bg-[#1D4D6E] rounded-full hover:text-white' /></button>
+      <button onClick={changeHexagonRight} className='hover:scale-105 transition-transform text-[#2F6281] '><CiCircleChevRight size={30} className='hover:bg-[#1D4D6E] rounded-full hover:text-white' /></button>
       </div>
       
       </div>
@@ -175,7 +178,8 @@ const ResearchandDevelopmentv3 = () => {
 
           const isSelected=index===selectedIndex;
           return(
-          <div className={`absolute w-36 h-36 transform  -translate-x-1/2 -translate-y-1/2 cursor-pointer`}
+          <div className={`absolute xl:w-36 xl:h-36 transform  -translate-x-1/2 -translate-y-1/2 cursor-pointer
+          w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32` }
            key={researchitem.id} 
            style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, 
            zIndex:isSelected?20:10}} 
@@ -214,9 +218,10 @@ const ResearchandDevelopmentv3 = () => {
         })}
       </div>
       </div>
+     
 
     {/* title and image and description container */}
-      <div className=' flex flex-col items-center justify-center px-2 sm:px-4 lg:px-8 w-full lg:w-1/2 order-1 lg:order-2'>
+      <div className='flex flex-col items-center justify-center px-2 sm:px-4 lg:px-8 w-full lg:w-1/2 order-2 lg:order-1'>
         <h1 className='font-bold font-serif mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl animate-pulse text-black text-center leading-tight'>{currentResearch.title}</h1>
         {currentResearch.image &&(
         <img src={currentResearch.image} alt={currentResearch.title} className='mb-4 sm:mb-6 mt-2 border-[#2F6281]  rounded-lg border-4 sm:border-6 lg:border-8 moving-border 
@@ -236,7 +241,7 @@ const ResearchandDevelopmentv3 = () => {
         
       </div>
       </div>
-       
+       </div>
     </section>
   )
 }
