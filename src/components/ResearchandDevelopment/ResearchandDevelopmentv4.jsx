@@ -201,6 +201,14 @@ const ResearchData = [
 const ResearchandDevelopmentv4 = () => {
   const [selectedId,setSelectedId]=useState(null);
   const selectedItem=ResearchData.find(item=>item.id===selectedId);
+  const [windowWidth,setWindowWidth]=useState(window.innerWidth);
+
+useEffect(()=>{
+    const handleResizeResolution=()=>setWindowWidth(window.innerWidth);
+    window.addEventListener('resize',handleResizeResolution);
+    return ()=>window.removeEventListener('resize',handleResizeResolution);
+},[])
+
 
 useEffect(()=>{
   if(selectedId!==null){
@@ -229,17 +237,43 @@ useEffect(()=>{
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
 
-      
+          let baseRadius,outerRadius,topBottomRadius;
+          if(windowWidth< 640){
+            baseRadius=100;
+            outerRadius=160;
+            topBottomRadius=280;
+          }
+          if(windowWidth<768){
+            baseRadius=130;
+            outerRadius=220;
+            topBottomRadius=300;
+          }
+          if(windowWidth<1024){
+            baseRadius=160;
+            outerRadius=280;
+            topBottomRadius=450;
+          }
+          if(windowWidth<1280){
+            baseRadius=180;
+            outerRadius=500;
+            topBottomRadius=300;
+          }
+          else{
+            baseRadius=220;
+            outerRadius=600;
+            topBottomRadius=380;
+          }
+
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
-            radius=220;
+            radius=baseRadius;
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
-            radius=380;
+            radius=outerRadius;
           }
           if(isTop){
             angle=-180*(Math.PI/180);
-            radius=-620;
+            radius=-topBottomRadius;
           }
           
          {/* if(isTop){
@@ -248,7 +282,7 @@ useEffect(()=>{
          } */}
          if(isBottom){
           angle=180*(Math.PI/180)
-          radius=620;
+          radius=topBottomRadius;
          }
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;

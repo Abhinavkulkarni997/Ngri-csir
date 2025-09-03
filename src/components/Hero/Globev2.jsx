@@ -453,7 +453,7 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, Stars, Text, Billboard } from "@react-three/drei";
 import * as THREE from "three";
-import { useRef, useEffect, useMemo, useState } from "react";
+import { useRef, useEffect, useMemo, useState, use } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import HeroBanner from '../../assets/images/Hero/Home-Banner-2025.png';
 import earthDay from "../../assets/textures/8k_earth_daymap.jpg";
@@ -565,6 +565,50 @@ function latLongToVector3(lat, lon, radius = 1.01) {
   return [x, y, z];
 }
 
+const useResponsiveValues=()=>{
+  const [dimensions,setDimensions]=useState({
+    width:typeof window !== "undefined" ? window.innerWidth : 0,
+    height:typeof window !== "undefined" ? window.innerHeight : 0
+  })
+
+  useEffect(()=>{
+  const handleResize=()=>{
+    setDimensions({
+      width:window.innerWidth,
+      height:window.innerHeight 
+    
+  })
+  }
+  window.addEventListener('resize',handleResize);
+  return ()=>window.removeEventListener('resize',handleResize);
+
+},[]);
+
+const isMobile=dimensions.width < 768;
+const isTablet=dimensions.width >= 768 && dimensions.width < 1024;
+const isDesktop=dimensions.width >= 1024;
+
+const cameraDistance=useMemo(()=>{
+  if(isMobile) return 4.5;
+  if(isTablet) return 3.5;
+  return 2.5;
+},[isMobile,isTablet]);
+
+const textSize=useMemo(()=>{
+  if(isMobile) return 0.04;
+  if(isTablet) return 0.06;
+  return 0.07;
+},[isMobile,isTablet]);
+
+const fov=useMemo(()=>{
+  if(isMobile) return 60;
+  if(isTablet) return 50;
+  return 45;
+},[isMobile,isTablet]);
+return {isMobile,isTablet,isDesktop,cameraDistance,textSize,fov};
+}
+
+
 const EarthRealistic = ({ speedMultiplier = 1, onTimeUpdate }) => {
   const earthRef = useRef();
   const cloudRef = useRef();
@@ -660,6 +704,10 @@ const EarthRealistic = ({ speedMultiplier = 1, onTimeUpdate }) => {
 };
 
 export default function GlobeRealistic() {
+ 
+
+  const {isMobile,isTablet,isDesktop,cameraDistance,textSize,fov}=useResponsiveValues();
+
   const hyderabadCoords = latLongToVector3(17.4163, 78.5510, 1.05);
   const indiaCenter = latLongToVector3(20.5937, 78.9629, 1.01);
   const controlsRef = useRef();
@@ -670,11 +718,13 @@ export default function GlobeRealistic() {
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
 
   // Calculate camera position to view both India and the text
-  const cameraPosition = new THREE.Vector3(
-    indiaCenter[0] * 2.5,
-    indiaCenter[1] * 2.5 + 0.8,
-    indiaCenter[2] * 2.5
-  );
+
+  const cameraPosition = useMemo(()=>{
+    return new THREE.Vector3(
+    indiaCenter[0] * cameraDistance,
+    indiaCenter[1] * cameraDistance+(isMobile? 0.5 : 0.8),
+    indiaCenter[2] * cameraDistance
+  );},[cameraDistance,isMobile,indiaCenter]);
 
   useEffect(() => {
     if (controlsRef.current) {
@@ -695,7 +745,7 @@ export default function GlobeRealistic() {
   // };
 
   return (
-    <div className="w-full h-screen bg-black relative  mt-16" >
+    <div className="w-full h-screen bg-black relative  mt-4 sm:mt-8 md:mt-12 lg:mt-16" >
       {/* Time Display */}
       {/* {currentTime && (
         <div className="absolute top-4 left-4 z-20 text-white bg-black bg-opacity-50 p-3 rounded">
@@ -731,7 +781,7 @@ export default function GlobeRealistic() {
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
      <div className="flex items-center justify-center absolute inset-0 z-10 ">
      {/* <img src={HeroBanner} alt="Hero_Banner" className="max-w-4xl  w-full h-full  opacity-100 rounded-full  p-8 " /> */}
-     <img src={HeroBanner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50 backdrop-blur-md bg-white/20 shadow-2xl  " />
+     <img src={HeroBanner} alt="Hero_Banner" className={`$ w-full h-full opacity-40 sm:opacity-45 md:opacity-50 backdrop-blur-md bg-white/10 sm:bg-white/15 md:bg-white/20  shadow-xl sm:shadow-2xl ${isMobile ? 'max-w-6xl' : 'max-w-8xl'}`} />
      {/* <img src={Banner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50 backdrop-blur-md bg-white/20 shadow-2xl  " /> */}
      </div>
       <Canvas 
@@ -748,28 +798,29 @@ export default function GlobeRealistic() {
         <Stars 
           radius={100} 
           depth={50} 
-          count={5000} 
+          count={isMobile?3000 :isTablet?4000:5000} 
           factor={4} 
           saturation={0} 
           fade 
         />
 
-        <ambientLight intensity={0.2} />
+        <ambientLight intensity={1.5} />
 
         <Billboard position={hyderabadCoords}>
-          {/* <Text
-            fontSize={0.07}
+          <Text
+            fontSize={textSize}
             color="white"
             anchorX="center"
             anchorY="middle"
-            maxWidth={1.5}
+            maxWidth={isMobile?1.0 :isTablet? 1.3 :1.5}
             lineHeight={1.2}
             outlineWidth={0.01}
             outlineColor="#000000"
             outlineOpacity={1}
           >
-            {"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute"}
-          </Text> */}
+          {
+            isMobile ? '\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute':"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute"}
+          </Text>
         </Billboard>
 
         <OrbitControls 
@@ -777,8 +828,8 @@ export default function GlobeRealistic() {
           enableZoom={false} 
           enablePan={false} 
           enableRotate={false}
-          minDistance={2}
-          maxDistance={5}
+          minDistance={isMobile ? 3:2}
+          maxDistance={isMobile ? 6:5}
         />
 
         <EarthRealistic 
@@ -787,12 +838,13 @@ export default function GlobeRealistic() {
         />
       </Canvas>
 
-      <div className="absolute bottom-4 sm:bottom-[30px] left-0 right-0 flex justify-center z-20">
+      <div className="absolute bottom-2 sm:bottom-4 md:bottom-[30px] left-0 right-0 flex justify-center z-20">
         <button
           onClick={handleScrollDown}
-          className="text-white p-4 rounded-full hover:bg-white hover:text-black transition-colors"
+          className="text-white p-2
+           rounded-full sm:p-3 md:p-4 hover:bg-white hover:text-black transition-colors"
         >
-          <MdOutlineKeyboardDoubleArrowDown size={32} />
+          <MdOutlineKeyboardDoubleArrowDown size={isMobile ? 24 : isTablet ? 28:32} />
         </button>
       </div>
     </div>
