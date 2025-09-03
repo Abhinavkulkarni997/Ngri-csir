@@ -456,8 +456,8 @@ import * as THREE from "three";
 import { useRef, useEffect, useMemo, useState, use } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import HeroBanner from '../../assets/images/Hero/Home-Banner-2025.png';
-import earthDay from "../../assets/textures/8k_earth_daymap.jpg";
-import earthNight from "../../assets/textures/8k_earth_nightmap.jpg";
+import earthDay from "../../assets/textures/2k_earth_daymap.jpg";
+import earthNight from "../../assets/textures/2k_earth_nightmap.jpg";
 import earthClouds from "../../assets/textures/earth_clouds.png";
 import  Banner from '../../assets/images/Hero/home-banner1.svg';
 function handleScrollDown() {
@@ -781,7 +781,7 @@ export default function GlobeRealistic() {
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
      <div className="flex items-center justify-center absolute inset-0 z-10 ">
      {/* <img src={HeroBanner} alt="Hero_Banner" className="max-w-4xl  w-full h-full  opacity-100 rounded-full  p-8 " /> */}
-     <img src={HeroBanner} alt="Hero_Banner" className={`$ w-full h-full opacity-40 sm:opacity-45 md:opacity-50 backdrop-blur-md bg-white/10 sm:bg-white/15 md:bg-white/20  shadow-xl sm:shadow-2xl ${isMobile ? 'max-w-6xl' : 'max-w-8xl'}`} />
+     <img src={HeroBanner} alt="Hero_Banner" className={`$ max-w-4xl rounded-full w-full h-full opacity-40 sm:opacity-45 md:opacity-50 backdrop-blur-md bg-white/10 sm:bg-white/15 md:bg-white/20  shadow-xl sm:shadow-2xl ${isMobile ? 'max-w-6xl' : 'max-w-8xl'}`} />
      {/* <img src={Banner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50 backdrop-blur-md bg-white/20 shadow-2xl  " /> */}
      </div>
       <Canvas 
