@@ -201,14 +201,7 @@ const ResearchData = [
 const ResearchandDevelopmentv4 = () => {
   const [selectedId,setSelectedId]=useState(null);
   const selectedItem=ResearchData.find(item=>item.id===selectedId);
-  const [windowWidth,setWindowWidth]=useState(window.innerWidth);
-
-useEffect(()=>{
-    const handleResizeResolution=()=>setWindowWidth(window.innerWidth);
-    window.addEventListener('resize',handleResizeResolution);
-    return ()=>window.removeEventListener('resize',handleResizeResolution);
-},[])
-
+  
 
 useEffect(()=>{
   if(selectedId!==null){
@@ -237,43 +230,18 @@ useEffect(()=>{
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
 
-          let baseRadius,outerRadius,topBottomRadius;
-          if(windowWidth< 640){
-            baseRadius=100;
-            outerRadius=160;
-            topBottomRadius=280;
-          }
-          if(windowWidth<768){
-            baseRadius=130;
-            outerRadius=220;
-            topBottomRadius=300;
-          }
-          if(windowWidth<1024){
-            baseRadius=160;
-            outerRadius=280;
-            topBottomRadius=450;
-          }
-          if(windowWidth<1280){
-            baseRadius=180;
-            outerRadius=500;
-            topBottomRadius=300;
-          }
-          else{
-            baseRadius=220;
-            outerRadius=600;
-            topBottomRadius=380;
-          }
+          
 
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
-            radius=baseRadius;
+            radius=200;
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
-            radius=outerRadius;
+            radius=320;
           }
           if(isTop){
             angle=-180*(Math.PI/180);
-            radius=-topBottomRadius;
+            radius=-490;
           }
           
          {/* if(isTop){
@@ -282,7 +250,7 @@ useEffect(()=>{
          } */}
          if(isBottom){
           angle=180*(Math.PI/180)
-          radius=topBottomRadius;
+          radius=490;
          }
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
@@ -291,7 +259,8 @@ useEffect(()=>{
           <div className='absolute w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60  transform  -translate-x-1/2 -translate-y-1/2'
            key={researchitem.id} 
            style={{left:`calc(50% + ${left}px)` ,top:`calc(50% + ${top}px)`, zIndex:10}} >
-          <div className='absolute inset-0 hexagon  bg-blue-100  '></div>
+                {/* <div className='absolute inset-0 hexagon   bg-blue-100'></div> */}
+          <div className='absolute inset-0 hexagon  '></div>
              <div className='absolute inset-2 hexagon   flex flex-col items-center justify-center text-white font-serif font-bold hexagon p-2 sm:p-4  cursor-pointer' >
         <img src={researchitem.image}  onClick={()=>setSelectedId(researchitem.id)} 
         className='w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 xl:w-40 xl:h-40 hexagon  mb-2 object-fill hover:scale-105 transition-transform duration-200' alt={researchitem.title}/>
