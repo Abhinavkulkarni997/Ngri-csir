@@ -230,18 +230,27 @@ useEffect(()=>{
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
 
+          const getRadius=(baseRadius)=>{
+            const screenWidth = typeof window !== 'undefined' ? window.innerWidth:768;
+            if(screenWidth<480) return baseRadius*0.4;
+            if(screenWidth<640) return baseRadius*0.5; //for sm
+            if(screenWidth<768) return baseRadius*0.6; //for md
+            if(screenWidth<1024) return baseRadius*0.7; //for lg
+            if(screenWidth<1280) return baseRadius*0.78; //for xl
+            return baseRadius*1.1; //for xl
+          }
           
 
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
-            radius=200;
+            radius=getRadius(200);
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
-            radius=320;
+            radius=getRadius(320);
           }
           if(isTop){
             angle=-180*(Math.PI/180);
-            radius=-490;
+            radius=getRadius(-490);
           }
           
          {/* if(isTop){
@@ -250,7 +259,7 @@ useEffect(()=>{
          } */}
          if(isBottom){
           angle=180*(Math.PI/180)
-          radius=490;
+          radius=getRadius(520);
          }
           const left=Math.cos(angle)*radius;
           const top=Math.sin(angle)*radius;
@@ -284,7 +293,7 @@ useEffect(()=>{
               <hr className='w-full mb-4'></hr>
               <img src={selectedItem.image} className='w-32 h-32 sm:w-40 sm:h-40  border-2 border-gray-300 mb-4 object-cover  ' alt={selectedItem.title}/>
               <p className='text-gray-800 line-clamp-6  mb-4 text-pretty font-serif text-xs sm:text-sm text-left leading-relaxed'>{selectedItem.description}</p>
-              <hr className=' w-full border-gray-300 mb-4'></hr>
+              <hr className=' w-full border-gray-300 mb-3 sm:mb-4 md:mb-6'></hr>
               {selectedItem.researchPageURL && (
                 <Link to={selectedItem.researchPageURL} className='text-[#2F6281]  hover:bg-[#2F6281] hover:text-white bg-white rounded-lg p-3 sm:p-4 border border-[#2F6281] transition-colors duration-200  text-sm sm:text-base flex items-center gap-2'>
                   Read more<FiArrowUpRight size={16} className='sm:w-5 sm:h-5' />
