@@ -201,7 +201,15 @@ const ResearchData = [
 const ResearchandDevelopmentv4 = () => {
   const [selectedId,setSelectedId]=useState(null);
   const selectedItem=ResearchData.find(item=>item.id===selectedId);
-  
+  const [windowWidth,setWindowWidth]=useState(window.innerWidth);
+
+useEffect(()=>{
+const windowResize=()=>setWindowWidth(window.innerWidth);
+window.addEventListener('resize',windowResize);
+return ()=>{
+  window.removeEventListener('resize',windowResize);
+}
+},[])
 
 useEffect(()=>{
   if(selectedId!==null){
@@ -229,28 +237,28 @@ useEffect(()=>{
           const newIndex=index-1;
           const isTop=newIndex===6;
           const isBottom=newIndex===8;
-
+          
           const getRadius=(baseRadius)=>{
-            const screenWidth = typeof window !== 'undefined' ? window.innerWidth:768;
-            if(screenWidth<480) return baseRadius*0.4;
-            if(screenWidth<640) return baseRadius*0.5; //for sm
-            if(screenWidth<768) return baseRadius*0.6; //for md
-            if(screenWidth<1024) return baseRadius*0.7; //for lg
-            if(screenWidth<1280) return baseRadius*0.78; //for xl
-            return baseRadius*1.1; //for xl
+            const windowWidth = typeof window !== 'undefined' ? window.innerWidth:768;
+            if(windowWidth<480) return baseRadius*0.3;
+            if(windowWidth<640) return baseRadius*0.4; //for sm
+            if(windowWidth<768) return baseRadius*0.5; //for md
+            if(windowWidth<1024) return baseRadius*0.7; //for lg
+            if(windowWidth<1280) return baseRadius*0.75; //for xl
+            return baseRadius*0.8; //for xl
           }
           
 
           if(index<6){
             angle=(newIndex*60-90)*(Math.PI/180)
-            radius=getRadius(200);
+            radius=getRadius(190);
           }else{
             angle=((newIndex-6)*(360/(ResearchData.length-7))-90)*(Math.PI/180)
             radius=getRadius(320);
           }
           if(isTop){
             angle=-180*(Math.PI/180);
-            radius=getRadius(-490);
+            radius=getRadius(-520);
           }
           
          {/* if(isTop){
