@@ -623,7 +623,19 @@ const EarthRealistic = ({ speedMultiplier = 1, onTimeUpdate }) => {
     return createEarthMaterial(dayMap, nightMap);
   }, [dayMap, nightMap]);
 
-  useFrame(() => {
+  useFrame(({clock}) => {
+    const elapsedTime = clock.getElapsedTime();
+    const earthRotationSpeed=0.015;
+    const cloudRotationSpeed=0.015;
+
+    if(earthRef.current){
+      earthRef.current.rotation.y=elapsedTime*earthRotationSpeed;
+    }
+
+    if(cloudRef.current){
+      cloudRef.current.rotation.y=elapsedTime*cloudRotationSpeed;
+    }
+
     const sunData = getSunPosition(speedMultiplier);
     const sunPosition = sunData.position;
     
@@ -781,7 +793,7 @@ export default function GlobeRealistic() {
       {/* <div className="w-full h-full relative" style={{ backgroundImage: `url(${HeroBanner})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat' }}></div> */}
      <div className="flex items-center justify-center absolute inset-0 z-10 ">
      {/* <img src={HeroBanner} alt="Hero_Banner" className="max-w-4xl  w-full h-full  opacity-100 rounded-full  p-8 " /> */}
-     <img src={HeroBanner} alt="Hero_Banner" className={`$ max-w-4xl rounded-full w-full h-full opacity-40 sm:opacity-45 md:opacity-50 backdrop-blur-md bg-white/10 sm:bg-white/15 md:bg-white/20  shadow-xl sm:shadow-2xl ${isMobile ? 'max-w-6xl' : 'max-w-8xl'}`} />
+     {/* <img src={HeroBanner} alt="Hero_Banner" className={`$ max-w-4xl rounded-full w-full h-full opacity-40 sm:opacity-45 md:opacity-50 backdrop-blur-md bg-white/10 sm:bg-white/15 md:bg-white/20  shadow-xl sm:shadow-2xl ${isMobile ? 'max-w-6xl' : 'max-w-8xl'}`} /> */}
      {/* <img src={Banner} alt="Hero_Banner" className="max-w-8xl  w-full h-full  opacity-50 backdrop-blur-md bg-white/20 shadow-2xl  " /> */}
      </div>
       <Canvas 
