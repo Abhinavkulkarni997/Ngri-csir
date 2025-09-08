@@ -831,7 +831,7 @@ export default function GlobeRealistic() {
             outlineOpacity={1}
           >
           {
-            isMobile ? '\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute':"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nNational Geophysical Research Institute"}
+            isMobile ? '\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nCSIR-National Geophysical Research Institute':"\t\t\tराष्ट्रीय भूभौतिकीय अनुसंधान संस्थान\nCSIR-National Geophysical Research Institute"}
           </Text>
         </Billboard>
 
