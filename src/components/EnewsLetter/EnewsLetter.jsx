@@ -4,13 +4,14 @@ import {motion} from "framer-motion";
 const EnewsLetter = () => {
   return (
       <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      whileHover={{ scale: 1.02 }}
+      // viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6,delay:0.3 }}
+      whileFocus={{scale:1.05}}
+      whileHover={{ scale: 1.05 }}
     
-    className="bg-white  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto  min-h-fit border border-bg-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16   mx-auto  border-t-4 border-b-4 border-t-[#2f6281] border-b-[#2F6281]">
+    className="bg-white  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto  min-h-fit border border-bg-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16 sm:ml-4 md:ml-6 lg:ml-8   mx-auto  border-t-4 border-b-4 border-t-[#2f6281] border-b-[#2F6281] hover:scale-105 transition-transform duration-300">
       
       <Link to="https://www.ngri.res.in/ngri-news/archive-enewsletter.php">
       <img src={enews} alt="E-newsletter" className="w-20 h-20 sm:w-24 sm:h-24 md:h-28 md:w-28 lg:w-32 lg:h-32  mx-auto object-contain rounded-md " />

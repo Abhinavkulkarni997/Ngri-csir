@@ -4,16 +4,17 @@ import { motion } from "framer-motion";
 const ResearchNewsCard = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      whileHover={{ scale: 1.02 }}
-    className="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl min-h-fit h-auto border border-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16 mx-auto sm:ml-4 md:ml-6 lg:ml-8 border-t-4 border-b-4 border-t-[#2f6281] border-b-[#2f6281] hover:scale-105 ">
+      // viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      whileFocus={{ scale: 1.05 }}
+      whileHover={{ scale: 1.05 }}
+    className="bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl min-h-fit h-auto border border-gray-200 rounded-md shadow-lg py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8  mt-8 sm:mt-12 md:mt-16 mx-auto sm:ml-4 md:ml-6 lg:ml-8 border-t-4 border-b-4 border-t-[#2f6281] border-b-[#2f6281]  hover:scale-105 transition-transform duration-300">
       <Link to="https://www.ngri.res.in/cms/rnews.php" target="_blank" rel="noopener noreferrer">
-          <img src={renews} alt="ResearchNews" className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28 lg:h-32 mx-auto object-contain rounded-md " />
+          <img src={renews} alt="ResearchNews" className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28 lg:h-32 lg:w-32 mx-auto object-contain rounded-md " />
           {/* <hr className="w-full  mt-2 border-1 border-[#2f6281]"></hr> */}
-          <a href="#" className="block text-center text-lg sm:text-xl md:text-2xl  text-blue-500 hover:text-blue-700 font-semibold mt-3 sm:mt-4 md:mt-6 transition-colors">Research News</a>
+          <a href="#" className="block text-center text-lg sm:text-xl md:text-2xl  text-blue-600 hover:text-blue-700 font-semibold mt-2 sm:mt-3 md:mt-4 transition-colors">Research News</a>
           </Link>
           <p className="text-xs sm:text-sm md:text-base  leading-relaxed text-center text-gray-700 font-serif mt-3 sm:mt-4 md:mt-6 ">Explore Monthly Research Papers for the Latest Insights</p>
       </motion.div>
