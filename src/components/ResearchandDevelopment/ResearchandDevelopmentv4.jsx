@@ -240,7 +240,7 @@ useEffect(()=>{
           
           const getRadius=(baseRadius)=>{
             const windowWidth = typeof window !== 'undefined' ? window.innerWidth:768;
-            if(windowWidth<480) return baseRadius*0.3;
+            if(windowWidth<480) return baseRadius*0.4;
             if(windowWidth<640) return baseRadius*0.4; //for sm
             if(windowWidth<768) return baseRadius*0.5; //for md
             if(windowWidth<1024) return baseRadius*0.7; //for lg

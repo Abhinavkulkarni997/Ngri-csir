@@ -470,11 +470,11 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 <div className="hidden xl:flex  lg:flex space-x-1 lg:space-x-2 xl:space-x-3  2xl:space-x-8   ">
 <ul className=" flex  justify-center space-x-1 lg:space-x-2 xl:space-x-3 2xl:space-x-6 ">
   {/* Home */}
-  <li><a href="/" className="font-bold  hover:border-b-2 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-base xl:text-xs 2xl:text-base text-white px-1 xl:px-2 2xl:px-3 font-poppins">Home</a></li>
+  <li><a href="/" className="font-bold  hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-12 2xl:py-12  text-xs lg:text-base xl:text-xs 2xl:text-base text-white px-1 xl:px-2 2xl:px-3 font-poppins">Home</a></li>
  
  {/* About dropdown */}
  <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-  <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins">About
+  <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 font-poppins cursor-pointer">About
    <MdOutlineKeyboardArrowDown  size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[220px] xl:min-w-[220px] 2xl:min-w-[220px] transform ">
@@ -538,7 +538,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* People DropDown */}
 <li className="relative group" onMouseEnter={()=>setHoverOpen(true)} onMouseLeave={()=>setHoverOpen(false)}>
-<a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 ">People
+<a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12  text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 cursor-pointer">People
 <MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
    <div className="absolute top-8 -left-16 xl:-left-12 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[200px] 2xl:min-w-[200px] transform">
@@ -563,7 +563,7 @@ const [screenReaderOpen,setScreenReaderOpen]=useState(false);
 
 {/* Resources Dropdown */}
   <li className="relative group">
-    <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3" >Resources
+    <a  className="font-bold text-white hover:border-b-4 border-b-white py-8 lg:py-10 xl:py-8 2xl:py-12 text-xs lg:text-sm xl:text-xs 2xl:text-base px-1 xl:px-2 2xl:px-3 cursor-pointer" >Resources
  <MdOutlineKeyboardArrowDown size={20} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5"/>
     <div className="absolute top-8 -left-16 xl:-left-10 2xl:-left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[160px] xl:min-w-[160px] 2xl:min-w-[200px] transform">
@@ -674,11 +674,11 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  <a href="#screenreaderaccess" className="font-bold text-white ">
  
 {/* <MdOutlineKeyboardArrowDown size={24} className="inline-flex ml-1 transition-transform duration-300  group-hover:rotate-180 hover:rotate-180"/> */}
- 
-  <div className="absolute top-8 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible 
-  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
+
+  <div className="absolute top-8 -left-20 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible
+  group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform pointer-events-none hover:pointer-events-auto">
   <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
-    <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500 ease-in-out rounded-sm ">
+    <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500  ease-in-out rounded-sm pointer-events-none hover:pointer-events-auto">
     </div>
     <div className="relative z-10 ">
     <div className="grid grid-cols-1 gap-6 ">
@@ -707,8 +707,8 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 </div>
 
 {isMenuOpen &&(
-<div className="lg:hidden bg-white/10 backdrop-blur-md border-t border-white/20">
-<ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start">
+<div className="lg:hidden bg-white/10 backdrop-blur-md border-t border-white/20  ">
+<ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start ">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white current" onClick={()=>setIsMenuOpen(false)} >Home</a></li>
  
 {/* About us dropdown  */}
