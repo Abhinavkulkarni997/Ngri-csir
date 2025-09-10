@@ -26,7 +26,7 @@ import ResearchandDevelopmentv2 from './components/ResearchandDevelopment/Resear
 import ResearchandDevelopmentv3 from './components/ResearchandDevelopment/ResearchandDevelopmentv3.jsx';
 import ResearchandDevelopmentv4 from './components/ResearchandDevelopment/ResearchandDevelopmentv4.jsx';
 import Loading from './components/LazyLoading/LazyLoading.jsx';
-// import NgriGallery from './components/NGRIGallery/NgriGallery';
+
 
 // const NgriGalleryLazy = React.lazy(() => import('./components/NGRIGallery/NgriGallery'));
 // const ImageGalleryLazy=React.lazy(()=>import('./components/carousel/ImageGalleryv1.jsx'));
