@@ -677,7 +677,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 
   <div className="absolute top-8 -left-20 transition-all group-hover:translate-y-5 translate-y-0 opacity-0 invisible
   group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px]">
-  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4">
+  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full border-t-[#2F6281] border-t-4 border-b-[#2F6281] border-b-4 pointer-events-auto">
     <div className="w-6 h-6 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[4rem] duration-500  ease-in-out rounded-sm pointer-events-none hover:pointer-events-auto">
     </div>
     <div className="relative z-10 ">
@@ -701,13 +701,14 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 
 {/* -----------------------------------------------------------------Mobile view of Navigation Menu----------------------------------------------------- */}
 {/* Mobile Menu Button */}
-<button onClick={toggleMenuOpen} className="lg:hidden text-white text-xl p-2 rounded-lg hover:bg-sky-500/50 transition-colors" aria-label="Toggle menu">
+<button onClick={toggleMenuOpen} className="lg:hidden text-white text-xl p-2 rounded-lg hover:bg-sky-500/50 transition-colors " aria-label="Toggle menu">
 {isMenuOpen?<RiCloseFill size={20}/>:<FaBars size={20} />}
 </button>
 </div>
 
 {isMenuOpen &&(
-<div className="lg:hidden bg-white/10 backdrop-blur-md border-t border-white/20  ">
+  <div className="overflow-y-auto fixed inset-0 z-40 hide-scrollbar">
+<div className="lg:hidden bg-white/10 backdrop-blur-md border-t border-white/20 ">
 <ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start ">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white current" onClick={()=>setIsMenuOpen(false)} >Home</a></li>
  
@@ -822,8 +823,6 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
           </ul>
         )}  
           </li>
-
-
        <li><Link to="https://www.ngri.res.in/cms/AcSIR.php">AcSIR</Link></li>
       <li><Link to="https://www.ngri.res.in/cms/sac.php">Student Affairs Committee</Link></li>
       <li><Link to="https://rectt.ngri.res.in/jigyasa/">Jigyasa</Link></li>
@@ -863,6 +862,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  Staff Corner</button></Link></li>
  {/* </div> */}
  </ul>
+</div>
 </div>
 )}
 
