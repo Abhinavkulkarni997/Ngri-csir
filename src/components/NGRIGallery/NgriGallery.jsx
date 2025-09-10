@@ -148,7 +148,9 @@ useEffect(()=>{
       
       {
         activeTab==='video' && (
-            <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.youtube.com/@csir-ngri" className='p-2 sm:p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li> 
+                        <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.youtube.com/@csir-ngri" className='p-2 sm:p-4 rounded-full border-2 text-[#2F6281] border-[#2F6281] hover:bg-[#2F6281] hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li> 
+
+            /* <li className='pt-2 w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end'><Link to="https://www.youtube.com/@csir-ngri" className='p-2 sm:p-4 rounded-full border-2 text-blue-800 border-blue-800 hover:bg-blue-800 hover:text-white inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base'>View More <FiArrowUpRight size={16} className='sm:w-5 sm:h-5'/></Link></li>  */
         )
       }
         </ul>
