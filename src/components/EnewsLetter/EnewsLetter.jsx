@@ -18,7 +18,7 @@ const EnewsLetter = () => {
         <a href="#" className="block text-center text-lg sm:text-xl md:text-2xl  text-blue-600 mt-2 sm:mt-3 md:mt-4 font-semibold hover:text-blue-700 transition-colors text-nowrap font-serif">E-NewsLetter</a>
       </Link>
         
-        <div className="flex flex-row space-x-3 sm:space-x-4 md:space-x-6 justify-center mt-3 sm:mt-4 md:mt-6">
+        <div className="flex flex-row space-x-3 sm:space-x-4 md:space-x-6 justify-center mt-2 sm:mt-3 md:mt-4">
          <a href="https://www.ngri.res.in/upload/uploadfiles/newsletter/May2025-eng/"
          target="_blank"
           rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const EnewsLetter = () => {
 
         </div>
        
-        <p className="text-xs sm:text-sm md:text-base leading-relaxed text-center text-gray-700 font-serif mt-3 sm:mt-4 md:mt-6 ">Volume 7, Issue 5, May 2025</p>
+        <p className="text-xs sm:text-sm md:text-base leading-relaxed text-center text-gray-700 font-serif mt-2 sm:mt-3 md:mt-4 ">Volume 7, Issue 5, May 2025</p>
       </motion.div>
     
   );
