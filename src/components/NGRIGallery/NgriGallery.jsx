@@ -128,7 +128,10 @@ useEffect(()=>{
   return (
 <section className='bg-[#E5F5FD]  py-4 sm:py-6 lg:py-8  px-2 sm:px-4 lg:px-6'>
    {/* <h1 className='text-center text-lg sm:text-xl lg:text-2xl text-[#455cc5] font-bold font-sans mb-4 sm:mb-6'>NGRI GALLERY</h1> */}
-      <h1 className='text-center text-lg sm:text-xl lg:text-2xl text-[#2F6281] font-bold font-sans mb-4 sm:mb-6'>NGRI GALLERY</h1>
+      {/* <h1 className='text-center text-lg sm:text-xl lg:text-2xl text-[#2F6281] font-bold font-sans mb-4 sm:mb-6'>NGRI GALLERY</h1> */}
+      <h1 className="text-center text-xl sm:text-2xl md:text-3xl text-[#2F6281] font-bold font-sans mb-4 sm:mb-6 md:mb-8 font-serif">
+  NGRI GALLERY
+</h1>
 <div className='max-w-7xl mx-auto'>
     <div className='bg-white p-3 sm:p-4 lg:p-6   rounded-2xl shadow-md cursor-pointer'>
         <ul className='flex flex-col sm:flex-row  flex-wrap gap-2 sm:gap-4  mt-2 sm:mt-4  mb-4 sm:mb-8 font-sans font-semibold'>

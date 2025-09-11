@@ -37,15 +37,12 @@ import Loading from './components/LazyLoading/LazyLoading.jsx';
 function App() {
   return (
     <>
-   
       <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       {/* <Navbar/> */}
       <Navbar1/>
     <ScrollProgressBar/>
       <SocialIconsFixed/>
-
       <main className='flex-grow'>
-
       {/* <Hero/> */}
       {/* <Globe/> */}
       <Globev2/>
@@ -76,17 +73,13 @@ function App() {
            <ResearchNewsCard/>
            <EnewsLetter/>
       </div>
-
       {/* <Suspense fallback={<Loading/>}>
       <NgriGalleryLazy/>
       </Suspense> */}
         <NgriGallery/>
       <SocialMedia/>
-       
       <Brochures/>
-
       </main>
-         
       <Footer/>
       <ScrollToTop/>
     

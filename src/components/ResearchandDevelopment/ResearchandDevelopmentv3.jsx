@@ -229,14 +229,20 @@ const ResearchandDevelopmentv3 = () => {
 
     {/* title and image and description container */}
       <div className='flex flex-col items-center justify-center px-2 sm:px-4 lg:px-8 w-full lg:w-1/2 order-2 lg:order-1'>
-        <h1 className='font-bold font-serif mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl animate-pulse text-black text-center leading-tight'>{currentResearch.title}</h1>
+        {/* <h1 className='font-bold font-serif mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl animate-pulse text-black text-center leading-tight'>{currentResearch.title}</h1> */}
+        <h2 className="font-bold font-sans mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl text-black text-center leading-tight">
+  {currentResearch.title}
+</h2>
         {currentResearch.image &&(
         <img src={currentResearch.image} alt={currentResearch.title} className='mb-4 sm:mb-6 mt-2 border-[#2F6281]  rounded-lg border-4 sm:border-6 lg:border-8 moving-border 
         w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 md:w-64 md:h-64 xl:w-80 xl:h-80  cursor-pointer object-fill  shadow-lg'/>
         )}
         {currentResearch.description && (
           <>
-          <p className='font-serif text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed   text-left text-black px-2 sm:px-4 lg:px-8  sm:text-justify max-w-full overflow-hidden line-clamp-[9] mt-1 '>{currentResearch.description}</p>
+          {/* <p className='font-serif text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed   text-left text-black px-2 sm:px-4 lg:px-8  sm:text-justify max-w-full overflow-hidden line-clamp-[9] mt-1 '>{currentResearch.description}</p> */}
+          <p className="font-serif text-sm sm:text-base md:text-lg leading-relaxed text-left text-black px-2 sm:px-4 lg:px-8 sm:text-justify max-w-full overflow-hidden line-clamp-[9] mt-2">
+  {currentResearch.description}
+</p>
           {currentResearch.researchPageURL && (
          <button className='mt-4 sm:mt-6 lg:mt-8 rounded-full transition-all duration-700 hover:shadow-[#2F6281] hover:shadow-[inset_10rem_0_0_0] hover:text-white 
          text-xs sm:text-sm lg:text-base p-2 sm:p-3 lg:p-4 moving-border border-1 text-black border-blue-600 w-auto min-w-fit mx-auto'>

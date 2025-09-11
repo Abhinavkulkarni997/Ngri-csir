@@ -100,7 +100,10 @@ const ProfileCard = () => {
     // <section className="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 py-10 px-6">
     <section className="bg-[#e2eff7] py-10 px-4 sm:px-6 md:px-10 lg:px-20">
       {/* <h1 className="text-[#550000] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase">Our Leadership</h1> */}
-            <h1 className="text-[#2F6281] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase">Our Leadership</h1>
+            {/* <h1 className="text-[#2F6281] text-2xl sm:text-3xl font-bold text-center mb-10 uppercase">Our Leadership</h1> */}
+            <h1 className="text-[#2F6281] text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-10 uppercase font-serif">
+  Our Leadership
+</h1>
       <div className="grid gap-6 sm:gap-8 justify-items-center max-w-7xl mx-auto
                       grid-cols-1 
                       min-[640px]:grid-cols-2 
@@ -109,6 +112,10 @@ const ProfileCard = () => {
                       xl:grid-cols-4">
         {profiles.map((profile) => (
           <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 ,delay: 0.3 * profiles.indexOf(profile) }}
+          whileFocus={{ scale: 1.05 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             key={profile.id}

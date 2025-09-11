@@ -53,7 +53,10 @@ const ResearchroundUp = () => {
   return (
     <section className=' bg-white  py-16 px-4 sm:px-8'>
     <div className='max-w-7xl mx-auto'>
-     <h1 className='text-[#2F6281] text-2xl md:text-5xl  uppercase  mb-12 font-bold text-center font-serif '>Research RoundUP</h1>
+     {/* <h1 className='text-[#2F6281] text-2xl md:text-5xl  uppercase  mb-12 font-bold text-center font-serif '>Research RoundUP</h1> */}
+     <h1 className="text-[#2F6281] text-xl sm:text-2xl md:text-4xl lg:text-5xl uppercase mb-6 md:mb-8 lg:mb-12 font-bold text-center font-serif">
+  Research RoundUP
+</h1>
     <div className='flex  flex-wrap gap-6 justify-center'>
     {ResearchroundUp.map((researchItem,index)=>(
       <motion.div className='group w-full sm:w-[300px] perspective border-4 border-transparent' key={researchItem.id}
@@ -61,7 +64,7 @@ const ResearchroundUp = () => {
       initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.3 }}
                whileHover={{ rotateY: 5, rotateX: 5, scale: 1.03 }}
                style={{ transformStyle: "preserve-3d" }}
       

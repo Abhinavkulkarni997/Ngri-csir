@@ -376,9 +376,10 @@ const ImageGallery = () => {
         {/* Description */}
         <div className="text-center px-4">
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl md:text-2xl text-[#2F6281] font-semibold font-serif mb-4">
+            {/* <p className="text-xl md:text-2xl text-[#2F6281] font-semibold font-serif mb-4">
               {Imagegallery[currentIndex].description}
-            </p>
+            </p> */}
+            <p className="text-lg md:text-xl text-[#2F6281] font-semibold font-serif mb-4">{Imagegallery[currentIndex].description}</p>
             {Imagegallery[currentIndex].pageURL && (
               <a
                 href={Imagegallery[currentIndex].pageURL}

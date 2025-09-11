@@ -2,7 +2,7 @@ import { FaFacebook, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const socialmedia = [
   {
     id: 0,
@@ -28,14 +28,24 @@ const SocialMedia = () => {
     // <section className=" bg-[#550000] bg-indigo-600 py-16 px-4 sm:px-8">
      <section className="bg-[#2F6281]  py-16 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto ">
-        <h1 className="text-3xl font-bold text-white mb-10 ">
+        {/* <h1 className="text-3xl font-bold text-white mb-10 ">
           Social Engagements
-        </h1>
+        </h1> */}
+    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 lg:mb-10">
+  Social Engagements
+</h1>
+
         <div className="flex flex-wrap gap-6 justify-center ">
           {socialmedia.map((mediaItem) => (
-            <div
+            <motion.div
               className=" flex flex-col bg-white  rounded-2xl shadow-lg p-4  w-full sm:w-[48%] lg:w-[32%] h-[500px] overflow-y-auto"
               key={mediaItem.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5,delay: 0.3 * socialmedia.indexOf(mediaItem) }}
+              whileFocus={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }}
+            //   whileTap={{ scale: 0.95 }}
             >
               <div className="flex items-center gap-3 mb-4  font-semibold  ">
                 <mediaItem.icon size={30} className=" text-2xl " />
@@ -59,7 +69,7 @@ const SocialMedia = () => {
                 
               </div>
               {/* <Link to=""><button className="mt-8 px-6 py-3 bg-white text-[#2F6281] font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">View More</button></Link> */}
-            </div>
+            </motion.div>
             
           ))}
         </div>
