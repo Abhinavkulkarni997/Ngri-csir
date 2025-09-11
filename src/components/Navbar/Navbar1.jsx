@@ -707,8 +707,8 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 </div>
 
 {isMenuOpen &&(
-  <div className="overflow-y-auto  z-40 hide-scrollbar">
-<div className="lg:hidden bg-white/10  border-t border-white/20 ">
+  
+<div className="lg:hidden bg-white/10  border-t border-white/20 overflow-y-auto max-h-80 ">
 <ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start ">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white current" onClick={()=>setIsMenuOpen(false)} >Home</a></li>
  
@@ -858,12 +858,12 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
  )}
  </li>
  {/* <div className="flex flex-col space-y-2 p-4"> */}
- <li><Link to="https://www.ngri.res.in/staff_corner.php"><button className="text-white hover:text-gray-600 font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3] rounded-xl px-4 py-2">
+ <li><Link to="https://www.ngri.res.in/staff_corner.php"><button className="text-white hover:text-gray-600 font-bold transition-all duration-150 ease-in-out hover:bg-[#FFFFE3] rounded-xl px-4 py-2 w-full">
  Staff Corner</button></Link></li>
  {/* </div> */}
  </ul>
 </div>
-</div>
+
 )}
 
 </nav>
