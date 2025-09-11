@@ -31,10 +31,11 @@ const SocialMedia = () => {
         {/* <h1 className="text-3xl font-bold text-white mb-10 ">
           Social Engagements
         </h1> */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 md:mb-12 lg:mb-16">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 lg:mb-10">
   Social Engagements
 </h1>
+<div className="mt-2 w-28 h-1 mx-auto    rounded-full bg-white"></div>
         </div>
   
 

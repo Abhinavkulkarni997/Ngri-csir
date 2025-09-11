@@ -707,8 +707,8 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 </div>
 
 {isMenuOpen &&(
-  <div className="overflow-y-auto fixed inset-0 z-40 hide-scrollbar">
-<div className="lg:hidden bg-white/10 backdrop-blur-md border-t border-white/20 ">
+  <div className="overflow-y-auto  z-40 hide-scrollbar">
+<div className="lg:hidden bg-white/10  border-t border-white/20 ">
 <ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start ">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white current" onClick={()=>setIsMenuOpen(false)} >Home</a></li>
  
