@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SiFacebook } from "react-icons/si";
 import { SiYoutube } from "react-icons/si";       
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';   
 import { useRef } from 'react'; 
 
-const SocialIconsFixed = () => {
+const SocialIconsFixed = ({isMenuOpen}) => {
     const iconContainer=useRef(null);
+
+    useEffect(()=>{
+      if(isMenuOpen){
+        document.body.style.overflow='hidden';
+      }else{
+        document.body.style.overflow='auto';
+      }
+      return ()=>{document.body.style.overflow='unset'}
+    },[isMenuOpen])
 
    
   return (

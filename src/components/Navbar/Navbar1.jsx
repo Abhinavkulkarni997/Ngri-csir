@@ -414,7 +414,7 @@
 // export default Navbar1;
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/CSIR-logo.png"; 
 import logo1 from "../../assets/images/ngri-logo.png"; 
@@ -442,9 +442,25 @@ const [carrersOpen,setCarrersOpen]=useState(false);
 const [hrdgOpen,setHrdgOpen]=useState(false);
 const [languageOpen,setLanguageOpen]=useState(false);
 const [screenReaderOpen,setScreenReaderOpen]=useState(false);
+
+
   const toggleMenuOpen=()=>{
     setIsMenuOpen(!isMenuOpen);
   }
+
+useEffect(()=>{
+  if(isMenuOpen){
+ document.body.style.overflow='hidden';
+  }else{
+    document.body.style.overflow='auto';
+  }
+
+return ()=>{
+  document.body.style.overflow='unset'
+}
+ 
+},[isMenuOpen]);
+
 
   return (
   // <nav className=" fixed top-0 left-0 bg-gradient-to-br from-purple-500 via-blue-700 to-indigo-700  bg-sky-500/40 backdrop-blur-md border-b border-white/20 w-full max-w-full opacity-80 overflow-x-clip shadow-md z-50">
@@ -708,7 +724,7 @@ Join Us<MdOutlineKeyboardArrowDown size={16} className="inline-flex ml-1 transit
 
 {isMenuOpen &&(
   
-<div className="lg:hidden bg-white/10  border-t border-white/20 overflow-y-auto max-h-80 ">
+<div className="lg:hidden bg-white/10  border-t border-white/20 overflow-y-auto    max-h-[80vh] scrollbar-hide">
 <ul className="flex flex-col space-y-2 p-4 text-white font-bold text-start ">
   <li><a href="#home" className="font-bold  hover:border-b-4 border-b-indigo-700 py-12  text-white current" onClick={()=>setIsMenuOpen(false)} >Home</a></li>
  

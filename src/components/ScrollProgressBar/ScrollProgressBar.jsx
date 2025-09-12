@@ -1,7 +1,15 @@
 import React from 'react'
 import {useState,useEffect} from 'react';
-const ScrollProgressBar = () => {
+const ScrollProgressBar = ({isMenuOpen}) => {
     const [scrollProgress, setScrollProgress] = useState(0);
+
+    // useEffect(()=>{
+    //   if(isMenuOpen){
+    //     document.style.body='hidden';
+    //   }
+    // })
+
+
 
     useEffect(()=>{
 const handleScroll = () => {
@@ -19,7 +27,7 @@ const handleScroll = () => {
   return (
      <div className="fixed left-0 w-full h-1  z-50" style={{ top: `${document.querySelector('nav')?.offsetHeight || 110}px` }}>
       <div
-        className="h-full bg-[#FFFFE3] transition-all duration-75 ease-out"
+        className="h-full bg-[#FFFFE3] transition-all duration-[50] ease-out"
         style={{ width: `${scrollProgress}%` }}
       ></div>
     </div>
