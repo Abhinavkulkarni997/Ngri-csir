@@ -27,7 +27,7 @@ const handleScroll = () => {
   return (
      <div className="fixed left-0 w-full h-1  z-50" style={{ top: `${document.querySelector('nav')?.offsetHeight || 110}px` }}>
       <div
-        className="h-full bg-[#FFFFE3] transition-all duration-[50] ease-out"
+        className="h-full bg-[#FFFFE3] transition-all duration-[5] ease-out"
         style={{ width: `${scrollProgress}%` }}
       ></div>
     </div>
